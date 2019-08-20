@@ -1,33 +1,32 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { StarterHomeComponent } from "./starter-home.component";
-
+import { LandingPageComponent } from "./landing-page.component";
 import {
+	BreadcrumbModule,
+	ButtonModule,
 	GridModule,
-	ListModule,
-	TabsModule,
-	TilesModule
+	TabsModule
 } from "carbon-components-angular";
 
-describe("HomeComponent", () => {
-	let component: StarterHomeComponent;
-	let fixture: ComponentFixture<StarterHomeComponent>;
+describe("LandingPageComponent", () => {
+	let component: LandingPageComponent;
+	let fixture: ComponentFixture<LandingPageComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
+			declarations: [ LandingPageComponent ],
 			imports: [
+				BreadcrumbModule,
+				ButtonModule,
 				GridModule,
-				ListModule,
-				TabsModule,
-				TilesModule
-			],
-			declarations: [ StarterHomeComponent ]
+				TabsModule
+			]
 		})
 		.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(StarterHomeComponent);
+		fixture = TestBed.createComponent(LandingPageComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
