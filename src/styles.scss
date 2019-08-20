@@ -1,9 +1,9 @@
 @import './assets/carbon-overrides.scss';
 
 $feature-flags: (
-    grid-columns-16: true,
-    css--body: false, // we're providing our own body styles
-    css--reset: false // prevent thousands of resets being included...
+	grid-columns-16: true,
+	css--body: false, // we're providing our own body styles
+	css--reset: false // prevent thousands of resets being included...
 );
 
 body {
