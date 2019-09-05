@@ -97,7 +97,8 @@ export class RepoTableComponent implements OnInit {
 
 	selectPage(page) {
 		const offset = this.model.pageLength * (page - 1);
-		this.model.data = this.prepareData(this.data.slice(offset, offset + this.model.pageLength));
+		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
+		this.model.data = this.prepareData(pageRawData);
 		this.model.currentPage = page;
 	}
 
@@ -121,6 +122,6 @@ export class RepoTableComponent implements OnInit {
 				})
 			]);
 		}
-		return this.model.data = newData;
+		return newData;
 	}
 }
