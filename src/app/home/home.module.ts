@@ -3,8 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { HomeRoutingModule } from "./home-routing.module";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
-import { InfoSectionComponent } from "./../info/info-section/info-section.component";
-import { InfoCardComponent } from "./../info/info-card/info-card.component";
+import { InfoModule } from "../info/info.module";
 
 import {
 	BreadcrumbModule,
@@ -13,15 +12,17 @@ import {
 	TabsModule
 } from "carbon-components-angular";
 
+
 @NgModule({
-	declarations: [LandingPageComponent, InfoSectionComponent, InfoCardComponent],
+	declarations: [LandingPageComponent],
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
 		BreadcrumbModule,
 		ButtonModule,
 		GridModule,
-		TabsModule
+		TabsModule,
+		InfoModule
 	]
 })
 export class HomeModule { }
