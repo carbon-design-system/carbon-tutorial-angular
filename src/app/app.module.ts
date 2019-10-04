@@ -6,6 +6,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { TutorialHeaderModule } from "./tutorial-header/tutorial-header.module";
+import { GraphQLModule } from "./graphql.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
 	declarations: [
@@ -16,7 +18,9 @@ import { TutorialHeaderModule } from "./tutorial-header/tutorial-header.module";
 		BrowserAnimationsModule,
 		FormsModule,
 		AppRoutingModule,
-		TutorialHeaderModule
+		TutorialHeaderModule,
+		GraphQLModule,
+		HttpClientModule
 	],
 	bootstrap: [AppComponent]
 })
