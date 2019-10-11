@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+	"build": "ng build",
+	"deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
     "test": "ng test",
     "test:once": "ng test --watch=false",
     "lint": "ng lint",
