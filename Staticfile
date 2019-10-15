@@ -1,1 +1,2 @@
 root: dist
+pushstate: enabled
