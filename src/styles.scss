@@ -1,57 +1,24 @@
-@import './assets/carbon-overrides.scss';
-
 $feature-flags: (
 	grid-columns-16: true,
-	css--body: false, // we're providing our own body styles
-	css--reset: false // prevent thousands of resets being included...
 );
 
-body {
-	// To change the theme uncomment the below import and which ever carbon theme you want to use
-	// @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-	// $carbon--theme: $carbon--theme--g100;
-	// $carbon--theme: $carbon--theme--g90;
-	// $carbon--theme: $carbon--theme--g10;
+// To change the theme uncomment the below import and which ever carbon theme you want to use
+// @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
+// $carbon--theme: $carbon--theme--g100;
+// $carbon--theme: $carbon--theme--g90;
+// $carbon--theme: $carbon--theme--g10;
 
-	// Feature flags
-	$css--font-face: true;
-	$css--plex: true;
-	// Global styles
-	@import "~carbon-components/scss/globals/scss/css--font-face";
-	@import "~carbon-components/scss/globals/grid/grid";
-	// Carbon components
-	@import "~carbon-components/scss/components/breadcrumb/breadcrumb";
-	@import "~carbon-components/scss/components/button/button";
-	@import "~carbon-components/scss/components/data-table/data-table";
-	@import "~carbon-components/scss/components/link/link";
-	@import "~carbon-components/scss/components/pagination/pagination";
-	@import "~carbon-components/scss/components/tabs/tabs";
-	@import "~carbon-components/scss/components/ui-shell/ui-shell";
-
-	color: $text-01;
-	background-color: $ui-background;
-
-	@import "~carbon-components/scss/globals/scss/css--reset";
-	@include reset;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	min-width: 100vw;
-	min-height: 100vh;
-	font-family: "IBM Plex Sans", Arial, sans-serif;
-
-	p {
-		@include type-style('expressive-paragraph-01');
-		max-width: 800px;
-	}
-
-	li {
-		@include type-style('body-long-02');
-	}
-}
-
-.header-icon {
-    fill: white;
-}
+// Feature flags
+$css--font-face: true;
+$css--plex: true;
+// Global styles
+@import "~carbon-components/scss/globals/scss/css--font-face";
+@import "~carbon-components/scss/globals/grid/grid";
+// Carbon components
+@import "~carbon-components/scss/components/breadcrumb/breadcrumb";
+@import "~carbon-components/scss/components/button/button";
+@import "~carbon-components/scss/components/data-table/data-table";
+@import "~carbon-components/scss/components/link/link";
+@import "~carbon-components/scss/components/pagination/pagination";
+@import "~carbon-components/scss/components/tabs/tabs";
+@import "~carbon-components/scss/components/ui-shell/ui-shell";
