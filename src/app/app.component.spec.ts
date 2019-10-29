@@ -1,10 +1,10 @@
-import { TestBed, async } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { AppComponent } from "./app.component";
-import { TutorialHeaderModule } from "./tutorial-header/tutorial-header.module";
+import { AppComponent } from './app.component';
+import { TutorialHeaderModule } from './header/tutorial-header.module';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [
@@ -17,7 +17,7 @@ describe("AppComponent", () => {
 		}).compileComponents();
 	}));
 
-	it("should create the app", async(() => {
+	it('should create the app', async(() => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
