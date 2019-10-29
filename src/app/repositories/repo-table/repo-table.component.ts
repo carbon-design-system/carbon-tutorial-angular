@@ -3,21 +3,21 @@ import {
 	OnInit,
 	ViewChild,
 	TemplateRef
-} from "@angular/core";
+} from '@angular/core';
 
 import {
 	Table,
 	TableModel,
 	TableItem,
 	TableHeaderItem
-} from "carbon-components-angular";
-import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
+} from 'carbon-components-angular';
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
-	selector: "app-repo-table",
-	templateUrl: "./repo-table.component.html",
-	styleUrls: ["./repo-table.component.scss"]
+	selector: 'app-repo-table',
+	templateUrl: './repo-table.component.html',
+	styleUrls: ['./repo-table.component.scss']
 })
 export class RepoTableComponent implements OnInit {
 	data = [];
@@ -25,7 +25,7 @@ export class RepoTableComponent implements OnInit {
 	skeletonModel = Table.skeletonModel(10, 6);
 	skeleton = true;
 
-	@ViewChild("linkTemplate", null)
+	@ViewChild('linkTemplate', null)
 	protected linkTemplate: TemplateRef<any>;
 
 	constructor(private apollo: Apollo) { }
@@ -33,12 +33,12 @@ export class RepoTableComponent implements OnInit {
 	ngOnInit() {
 		this.model = new TableModel();
 		this.model.header = [
-			new TableHeaderItem({data: "Name"}),
-			new TableHeaderItem({data: "Created"}),
-			new TableHeaderItem({data: "Updated"}),
-			new TableHeaderItem({data: "Open Issues"}),
-			new TableHeaderItem({data: "Stars"}),
-			new TableHeaderItem({data: "Links"})
+			new TableHeaderItem({data: 'Name'}),
+			new TableHeaderItem({data: 'Created'}),
+			new TableHeaderItem({data: 'Updated'}),
+			new TableHeaderItem({data: 'Open Issues'}),
+			new TableHeaderItem({data: 'Stars'}),
+			new TableHeaderItem({data: 'Links'})
 		];
 
 		this.apollo.watchQuery({
@@ -80,7 +80,7 @@ export class RepoTableComponent implements OnInit {
 			if (response.error) {
 				const errorData = [];
 			 	errorData.push([
-					new TableItem({data: "error!" })
+					new TableItem({data: 'error!' })
 				]);
 				this.model.data = errorData;
 			} else if (response.loading) {

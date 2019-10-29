@@ -1,12 +1,12 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { HeaderModule } from "carbon-components-angular/ui-shell/ui-shell.module";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeaderModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 
-import { TutorialHeaderComponent } from "./tutorial-header.component";
-import { Notification20Module } from "@carbon/icons-angular/lib/notification/20";
-import { UserAvatar20Module } from "@carbon/icons-angular/lib/user--avatar/20";
-import { AppSwitcher20Module } from "@carbon/icons-angular/lib/app-switcher/20";
+import { TutorialHeaderComponent } from './tutorial-header.component';
+import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
+import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
+import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 
-describe("TutorialHeaderComponent", () => {
+describe('TutorialHeaderComponent', () => {
 	let component: TutorialHeaderComponent;
 	let fixture: ComponentFixture<TutorialHeaderComponent>;
 
@@ -29,7 +29,7 @@ describe("TutorialHeaderComponent", () => {
 		fixture.detectChanges();
 	});
 
-	it("should create", () => {
+	it('should create', () => {
 		expect(component).toBeTruthy();
 	});
 });

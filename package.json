@@ -27,7 +27,7 @@
     "@carbon/icons-angular": "^10.4.0",
     "apollo-angular": "^1.7.0",
     "carbon-components": "^10.7.0",
-    "carbon-components-angular": "^3.19.4",
+    "carbon-components-angular": "^3.21.2",
     "core-js": "^2.5.2",
     "rxjs": "^6.4.0",
     "tslib": "^1.9.0",
