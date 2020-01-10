@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RepoTableComponent } from '../repo-table/repo-table.component';
 
 @Component({
 	selector: 'app-repo-page',
