@@ -6,7 +6,7 @@ import { Notification20Module } from '@carbon/icons-angular/lib/notification/20'
 import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
 import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 
-describe('TutorialHeaderComponent', () => {
+describe('HeaderComponent', () => {
 	let component: HeaderComponent;
 	let fixture: ComponentFixture<HeaderComponent>;
 
