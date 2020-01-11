@@ -17,6 +17,7 @@ import { Application32Module } from "@carbon/icons-angular/lib/application/32";
 		Globe32Module,
 		Application32Module,
 		GridModule
-	]
+	],
+	exports: [InfoCardComponent, InfoSectionComponent]
 })
 export class InfoModule { }

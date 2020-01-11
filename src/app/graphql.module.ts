@@ -11,7 +11,7 @@ export function createApollo(httpLink: HttpLink) {
 		link: httpLink.create({
 			uri,
 			headers: new HttpHeaders({
-				'Authorization': `Bearer ${environment.githubPersonalAccessToken}`
+				'Authorization': `token ${environment.githubPersonalAccessToken}`
 			})
 		}),
 		cache: new InMemoryCache(),
