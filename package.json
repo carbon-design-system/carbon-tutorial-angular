@@ -25,12 +25,19 @@
     "@angular/platform-browser-dynamic": "^8.2.0",
     "@angular/router": "^8.2.0",
     "@carbon/icons-angular": "^10.4.0",
+    "apollo-angular": "^1.8.0",
+    "carbon-components": "^10.7.0",
+    "carbon-components-angular": "^3.21.2",
     "core-js": "^2.5.2",
     "rxjs": "^6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1",
-    "carbon-components": "^10.7.0",
-    "carbon-components-angular": "^3.21.2"
+    "apollo-angular-link-http": "^1.9.0",
+    "apollo-link": "^1.2.11",
+    "apollo-client": "^2.6.0",
+    "apollo-cache-inmemory": "^1.6.0",
+    "graphql-tag": "^2.10.0",
+    "graphql": "^14.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.802.1",

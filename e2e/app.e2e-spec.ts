@@ -9,6 +9,10 @@ describe('carbon-angular-starter App', () => {
 
 	it('should display message saying app works', () => {
 		page.navigateTo();
-		expect(page.getParagraphText()).toEqual('app works!');
+
+		let paragraphText = '';
+		page.getParagraphText().then(v => paragraphText = v);
+
+		expect(paragraphText).toEqual('app works!');
 	});
 });
