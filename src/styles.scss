@@ -8,3 +8,8 @@ $feature-flags: (
 // $carbon--theme: $carbon--theme--g10;
 
 @import "~carbon-components/scss/globals/scss/styles";
+
+.bx--grid--full-width {
+	margin-right: 0;
+	margin-left: 0;
+}
