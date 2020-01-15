@@ -4,7 +4,6 @@
 .info-card {
 	display: flex;
 	flex-direction: column;
-	padding: 0 $spacing-05;
 
 	.info-card__heading {
 		@include carbon--type-style("productive-heading-03");
