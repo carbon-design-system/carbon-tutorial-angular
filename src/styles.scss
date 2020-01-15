@@ -1,6 +1,7 @@
 $feature-flags: (
 	grid-columns-16: true,
 );
+
 // To change the theme uncomment the below import and which ever carbon theme you want to use
 // @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
 // $carbon--theme: $carbon--theme--g100;
@@ -12,6 +13,11 @@ $feature-flags: (
 .bx--grid--full-width {
     padding-left: 1rem;
 	padding-right: 1rem;
+}
+
+.bx--grid--full-width .bx--grid--full-width {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .bx--grid--full-width .bx--row {
