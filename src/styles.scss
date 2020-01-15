@@ -13,3 +13,12 @@ $feature-flags: (
     padding-left: 1rem;
 	padding-right: 1rem;
 }
+
+.bx--grid--full-width .bx--row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.landing-page__r2 .bx--tabs__nav {
+	right: 0;
+}
