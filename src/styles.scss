@@ -28,6 +28,11 @@ $css--plex: true;
 	padding-right: 1rem;
 }
 
+.bx--grid--full-width .bx--grid--full-width {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .bx--grid--full-width .bx--row {
 	margin-left: 0;
 	margin-right: 0;

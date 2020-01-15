@@ -47,7 +47,7 @@
 
 	// left border in just the 2nd column items
 	@include carbon--breakpoint(md) {
-		app-info-card:nth-child(even) {
+		app-info-card:nth-child(odd) {
 			border-left: 1px solid $ui-03;
 		}
 	}
