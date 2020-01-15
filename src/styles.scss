@@ -10,6 +10,6 @@ $feature-flags: (
 @import "~carbon-components/scss/globals/scss/styles";
 
 .bx--grid--full-width {
-	margin-right: 0;
-	margin-left: 0;
+    padding-left: 1rem;
+	padding-right: 1rem;
 }
