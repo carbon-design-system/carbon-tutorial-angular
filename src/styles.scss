@@ -23,25 +23,4 @@ $css--plex: true;
 @import "~carbon-components/scss/components/tabs/tabs";
 @import "~carbon-components/scss/components/ui-shell/ui-shell";
 
-.bx--grid--full-width {
-    padding-left: 1rem;
-	padding-right: 1rem;
-}
-
-.bx--grid--full-width .bx--grid--full-width {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.bx--grid--full-width .bx--row {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.landing-page__r2 .bx--tabs__nav {
-	right: 0;
-}
-
-.bx--header__nav {
-	display: block;
-}
+@import './assets/scss/carbon-overrides.scss';
