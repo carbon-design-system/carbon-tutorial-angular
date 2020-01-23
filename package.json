@@ -33,7 +33,7 @@
 		"carbon-components-angular": "^3.32.1"
 	},
 	"devDependencies": {
-		"@angular-devkit/build-angular": "~0.803.6",
+		"@angular-devkit/build-angular": "^0.803.23",
 		"@angular/cli": "^8.3.6",
 		"@angular/compiler-cli": "^8.2.8",
 		"@types/jasmine": "^3.4.0",
@@ -47,7 +47,7 @@
 		"karma-coverage-istanbul-reporter": "^2.0.5",
 		"karma-jasmine": "~2.0.1",
 		"karma-jasmine-html-reporter": "^1.4.0",
-		"node-sass": "^4.12.0",
+		"node-sass": "^4.13.1",
 		"postcss-loader": "3.0.0",
 		"protractor": "^5.4.2",
 		"ts-node": "~8.4.1",
