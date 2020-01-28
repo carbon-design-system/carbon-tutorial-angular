@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>CarbonAngularTutorial</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ffff00" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+	<app-root></app-root>
+	<script>
+		// Uncomment the following lines to activate the service worker
+		if (navigator.serviceWorker) {
+		  navigator.serviceWorker.register("sw.js").then(() => {
+		    console.log("Service worker installed");
+		  }, err => {
+		    console.error("Service worker error:", err);
+		  });
+		}
+	</script>
+</body>
+
+</html>
