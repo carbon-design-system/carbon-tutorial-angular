@@ -2,8 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RepositoriesRoutingModule } from './repositories-routing.module';
+import {
+	GridModule,
+	TableModule,
+	LinkModule,
+	PaginationModule,
+} from 'carbon-components-angular';
+
 import { RepoPageComponent } from './repo-page/repo-page.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from './repo-table/repo-table.component';
 
 @NgModule({
@@ -12,7 +18,9 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 		CommonModule,
 		RepositoriesRoutingModule,
 		GridModule,
- 		TableModule
-	]
+		TableModule,
+		LinkModule,
+		PaginationModule,
+	],
 })
-export class RepositoriesModule { }
+export class RepositoriesModule {}

@@ -7,13 +7,14 @@
 		"experimentalDecorators": true,
 		"lib": [
 			"es2016",
-			"dom"
+			"dom",
+			"esnext.asynciterable"
 		],
 		"outDir": "../out-tsc/app",
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
-		"types": []
+		"types": [],
 	},
 	"include": [
 		"**/*"
