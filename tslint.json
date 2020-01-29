@@ -19,6 +19,7 @@
 			"tabs",
 			2
 		],
+		
 		"interface-over-type-literal": true,
 		"label-position": true,
 		"max-line-length": [

@@ -1,18 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 
 import { AppComponent } from './app.component';
-import { TutorialHeaderModule } from './tutorial-header/tutorial-header.module';
+import { GraphQLModule } from './graphql.module';
+import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [
-				AppComponent
+				AppComponent,
+				HeaderComponent
 			],
 			imports: [
 				RouterTestingModule,
-				TutorialHeaderModule
+				UIShellModule,
+				GraphQLModule
 			]
 		}).compileComponents();
 	}));
