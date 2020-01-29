@@ -125,11 +125,8 @@
 			"check-type",
 			"check-preblock"
 		],
-
-		// [ENABLED, "attribute" | "element", "selectorPrefix" | ["listOfPrefixes"], "camelCase" | "kebab-case"]
 		"directive-selector": [true, "attribute", ["app", "test"], "camelCase"],
 		"component-selector": [true, "element", ["app", "test"], "kebab-case"],
-
 		"no-inputs-metadata-property": true,
 		"no-outputs-metadata-property": true,
 		"no-host-metadata-property": true,
@@ -139,7 +136,6 @@
 		"no-forward-ref": true,
 		"use-lifecycle-interface": true,
 		"use-pipe-transform-interface": true,
-
 		"templates-use-public": true,
 		"invoke-injectable": true
 	}

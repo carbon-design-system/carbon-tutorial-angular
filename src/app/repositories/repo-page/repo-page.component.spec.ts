@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { GridModule, TableModule } from 'carbon-components-angular';
+
 import { RepoPageComponent } from './repo-page.component';
+import { RepoTableComponent } from '../repo-table/repo-table.component';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -8,9 +11,9 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent ]
-		})
-		.compileComponents();
+			declarations: [RepoPageComponent, RepoTableComponent],
+			imports: [GridModule, TableModule],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
