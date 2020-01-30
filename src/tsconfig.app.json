@@ -16,6 +16,11 @@
 		"baseUrl": "",
 		"types": []
 	},
+		"compilerOptions": {
+			"sourceMap": true,
+			"declaration": false,
+			"resolveJsonModule": true
+		},	
 	"include": [
 		"**/*"
 	],
