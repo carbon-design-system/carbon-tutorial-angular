@@ -1,0 +1,6 @@
+---
+applications:
+  - name: carbon-tutorial-angular-ahmnouira
+    memory: 128M
+    buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+    disk_quota: 128M

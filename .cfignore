@@ -1,0 +1,5 @@
+.git/
+src/
+node_modules/
+.gitignore
+README.md
