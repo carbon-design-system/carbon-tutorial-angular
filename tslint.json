@@ -82,6 +82,7 @@
 			"check-whitespace"
 		],
 		"prefer-const": true,
+		"prettier": true,
 		"quotemark": [
 			true,
 			"single"
@@ -126,7 +127,6 @@
 			"check-preblock"
 		],
 
-		// [ENABLED, "attribute" | "element", "selectorPrefix" | ["listOfPrefixes"], "camelCase" | "kebab-case"]
 		"directive-selector": [true, "attribute", ["app", "test"], "camelCase"],
 		"component-selector": [true, "element", ["app", "test"], "kebab-case"],
 
