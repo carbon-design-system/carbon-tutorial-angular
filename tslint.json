@@ -82,6 +82,7 @@
 			"check-whitespace"
 		],
 		"prefer-const": true,
+		"prettier": true,
 		"quotemark": [
 			true,
 			"single"
