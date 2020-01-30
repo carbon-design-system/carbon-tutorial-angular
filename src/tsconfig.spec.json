@@ -2,12 +2,14 @@
 	"compilerOptions": {
 		"sourceMap": true,
 		"declaration": false,
+		"resolveJsonModule": true,
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"lib": [
+			"es2016",
 			"dom",
-			"es2016"
+			"esnext.asynciterable"
 		],
 		"outDir": "../out-tsc/spec",
 		"module": "esnext",
@@ -20,8 +22,8 @@
 	},
 	"files": [
 		"test.ts",
-	  "polyfills.ts"
-  ],
+		"polyfills.ts"
+	],
 	"include": [
 		"**/*.spec.ts"
 	]
