@@ -12,12 +12,12 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-import { InfoSectionComponent } from './info/info-section/info-section.component';
+
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HeaderComponent,
+		HeaderComponent
 	],
 	imports: [
 		BrowserModule,
@@ -30,7 +30,7 @@ import { InfoSectionComponent } from './info/info-section/info-section.component
 		AppSwitcher20Module,
 		GraphQLModule,
 		HttpClientModule,
-		InfoSectionComponent
+
 	],
 	bootstrap: [AppComponent]
 })

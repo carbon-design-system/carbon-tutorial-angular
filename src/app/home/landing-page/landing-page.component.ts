@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoSectionComponent } from '../../info/info-section/info-section.component';
+
 
 
 @Component({
