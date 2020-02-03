@@ -140,7 +140,7 @@
 		"use-lifecycle-interface": true,
 		"use-pipe-transform-interface": true,
 
-		"templates-use-public": true,
-		"invoke-injectable": true
+		"templates-use-public":false,
+		"invoke-injectable": false
 	}
 }
