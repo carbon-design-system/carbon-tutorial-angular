@@ -1,4 +1,3 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 import {
@@ -6,10 +5,6 @@ import {
 	TableItem,
 	TableHeaderItem,
 } from 'carbon-components-angular';
-
-@NgModule({
-	schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
-})
 
 @Component({
 	selector: 'app-repo-table',
