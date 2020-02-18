@@ -21,5 +21,10 @@
 	"exclude": [
 		"test.ts",
 		"**/*.spec.ts"
+	],
+	"lib": [
+		"es2016",
+		"dom",
+		"esnext.asynciterable"
 	]
 }
