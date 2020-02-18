@@ -1,3 +1,7 @@
+$feature-flags: (
+	grid-columns-16: true,
+);
+
 // To change the theme uncomment the below import and which ever carbon theme you want to use
 // @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
 // $carbon--theme: $carbon--theme--g100;
@@ -6,6 +10,4 @@
 
 @import "~carbon-components/scss/globals/scss/styles";
 
-.bx--header__nav {
-	display: block;
-}
+@import './assets/scss/carbon-overrides.scss';
