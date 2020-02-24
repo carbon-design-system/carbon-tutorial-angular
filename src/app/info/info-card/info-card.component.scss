@@ -1,0 +1,54 @@
+@import "~carbon-components/scss/globals/scss/typography";
+@import "~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family";
+
+@mixin info-section-background() {
+  background-color: $ui-01;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -$spacing-05;
+    top: 0;
+    right: -$spacing-05;
+    bottom: 0;
+    background: $ui-01;
+    z-index: -1;
+  }
+}
+
+.info-section {
+  @include info-section-background;
+  display: flex;
+  height: fit-content;
+
+  &.info-section__r1 {
+    padding-top: $spacing-09;
+    padding-bottom: $spacing-09;
+    height: auto;
+  }
+
+  .info-section__heading {
+    @include carbon--type-style("heading-01");
+    @include carbon--font-weight("semibold");
+  }
+}
+.info-card {
+  display: flex;
+  flex-direction: column;
+  .info-card__heading {
+    @include carbon--type-style("productive-heading-03");
+  }
+  .info-card__body {
+    margin-top: $spacing-06;
+    flex-grow: 1;
+    @include type-style("body-long-01");
+    // prevent large line lengths between small and medium viewports
+    @include carbon--breakpoint-between(321px, md) {
+      max-width: 75%;
+    }
+  }
+  .info-card__icon {
+    margin-top: $spacing-09;
+  }
+}
