@@ -18,7 +18,7 @@ export class RepoTableComponent implements OnInit {
 	model = new TableModel();
 	skeletonModel = Table.skeletonModel(10, 6);
 	skeleton = true;
-	data = [];
+	data: any = [];
 	@ViewChild('linkTemplate', null)
 	protected linkTemplate: TemplateRef<any>;
 

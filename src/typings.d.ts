@@ -1,4 +1,4 @@
 /* SystemJS module definition */
-declare var module: {
-	id: string,
-};
+// type moduleProps = { id: string }
+
+declare var module: NodeModule
