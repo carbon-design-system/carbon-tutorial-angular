@@ -14,9 +14,9 @@ describe('HeaderComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [HeaderComponent],
-			imports: [UIShellModule,Notification20Module, UserAvatar20Module, AppSwitcher20Module]
+			imports: [UIShellModule, Notification20Module, UserAvatar20Module, AppSwitcher20Module]
 		  });
-		  
+
 		TestBed.configureTestingModule({
 			declarations: [ HeaderComponent ]
 		})
