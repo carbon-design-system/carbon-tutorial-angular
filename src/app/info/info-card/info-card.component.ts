@@ -17,8 +17,12 @@ export class InfoCardComponent implements OnInit {
 
 	// Take in a phrase and separate the third word in an array
 	createArrayFromPhrase(phrase) {
+		if ( phrase ) {
 		const splitPhrase = phrase.split(' ');
 		const thirdWord = splitPhrase.pop();
 		return [splitPhrase.join(' '), thirdWord];
+		} else {
+			return ['', ''];
+		}
 	}
 }
