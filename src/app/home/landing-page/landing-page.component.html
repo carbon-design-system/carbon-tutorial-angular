@@ -1,6 +1,6 @@
 <div ibmGrid class="bx--grid--full-width landing-page">
 	<div ibmRow class="landing-page__banner">
-		<div ibmCol [columnNumbers]="{'lg': 16}">
+		<div ibmCol [columnNumbers]="{ lg: 16 }">
 			<ibm-breadcrumb noTrailingSlash="true" ariaLabel="Page navigation">
 				<ibm-breadcrumb-item href="/">
 					Getting started
@@ -15,45 +15,64 @@
 		<div ibmCol class="bx--no-gutter">
 			<ibm-tabs ariaLabel="Tab navigation">
 				<ibm-tab heading="About">
-					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
+					<div
+						ibmGrid
+						class="bx--grid--no-gutter bx--grid--full-width"
+					>
 						<div ibmRow class="landing-page__tab-content">
-							<div ibmCol [columnNumbers]="{'md': 4, 'lg': 7}">
+							<div ibmCol [columnNumbers]="{ md: 4, lg: 7 }">
 								<h2 class="landing-page__subheading">
 									What is Carbon?
 								</h2>
 								<p class="landing-page__p">
-									Carbon is IBM’s open-source design system for digital
-									products and experiences. With the IBM Design Language
-									as its foundation, the system consists of working code,
-									design tools and resources, human interface guidelines,
-									and a vibrant community of contributors.
+									Carbon is IBM’s open-source design system
+									for digital products and experiences. With
+									the IBM Design Language as its foundation,
+									the system consists of working code, design
+									tools and resources, human interface
+									guidelines, and a vibrant community of
+									contributors.
 								</p>
 								<button ibmButton>Learn more</button>
 							</div>
-							<div ibmCol class="bx--offset-lg-1" [columnNumbers]="{'md': 4, 'lg': 8}">
+							<div
+								ibmCol
+								class="bx--offset-lg-1"
+								[columnNumbers]="{ md: 4, lg: 8 }"
+							>
 								<img
-								class="landing-page__illo"
-								src="../../../assets/tab-illo.png"
-								alt="Carbon illustration"
+									class="landing-page__illo"
+									src="../../../assets/tab-illo.png"
+									alt="Carbon illustration"
 								/>
 							</div>
 						</div>
 					</div>
 				</ibm-tab>
 				<ibm-tab heading="Design">
-					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
+					<div
+						ibmGrid
+						class="bx--grid--no-gutter bx--grid--full-width"
+					>
 						<div ibmRow class="landing-page__tab-content">
-							<div ibmCol [columnNumbers]="{'lg': 16}">
-								Rapidly build beautiful and accessible experiences. The Carbon kit contains all resources you need to get started.
+							<div ibmCol [columnNumbers]="{ lg: 16 }">
+								Rapidly build beautiful and accessible
+								experiences. The Carbon kit contains all
+								resources you need to get started.
 							</div>
 						</div>
 					</div>
 				</ibm-tab>
 				<ibm-tab heading="Develop">
-					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
+					<div
+						ibmGrid
+						class="bx--grid--no-gutter bx--grid--full-width"
+					>
 						<div ibmRow class="landing-page__tab-content">
-							<div ibmCol [columnNumbers]="{'lg': 16}">
-								Carbon provides styles and components in Vanilla, React, Angular, and Vue for anyone building on the web.
+							<div ibmCol [columnNumbers]="{ lg: 16 }">
+								Carbon provides styles and components in
+								Vanilla, React, Angular, and Vue for anyone
+								building on the web.
 							</div>
 						</div>
 					</div>
@@ -62,11 +81,6 @@
 		</div>
 	</div>
 	<div ibmRow class="landing-page__r3">
-		<div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">
-			<h3 class="landing-page__label">The Principles</h3>
-		</div>
-		<div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">Carbon is Open</div>
-		<div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">Carbon is Modular</div>
-		<div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">Carbon is Consistent</div>
+		<app-info-section></app-info-section>
 	</div>
 </div>
