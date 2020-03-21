@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { RepoPageComponent } from './repo-page.component';
+import { RepoPageComponent } from "./repo-page.component";
+import { RepoTableComponent } from "../repo-table/repo-table.component";
 
-describe('RepoPageComponent', () => {
+import { GridModule, TableModule } from "carbon-components-angular";
+
+describe("RepoPageComponent", () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent ]
-		})
-		.compileComponents();
+			declarations: [RepoPageComponent, RepoTableComponent],
+			imports: [GridModule, TableModule]
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -19,7 +22,7 @@ describe('RepoPageComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });
