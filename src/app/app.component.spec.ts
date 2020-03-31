@@ -12,27 +12,14 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [HeaderComponent],
+			declarations: [AppComponent, HeaderComponent],
 				imports: [UIShellModule, Notification20Module, UserAvatar20Module, AppSwitcher20Module]
 		}).compileComponents();
 	}));
 
-	it('should create the app', () => {
+	it('should create the app', async(() => {
 		const fixture = TestBed.createComponent(AppComponent);
-		const app = fixture.componentInstance;
+		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
-	});
-
-	it(`should have as title 'carbon-angular-tutorial'`, () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		const app = fixture.componentInstance;
-		expect(app.title).toEqual('carbon-angular-tutorial');
-	});
-
-	it('should render title', () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		fixture.detectChanges();
-		const compiled = fixture.nativeElement;
-		expect(compiled.querySelector('.content span').textContent).toContain('carbon-angular-tutorial app is running!');
-	});
+	}));
 });
