@@ -15,7 +15,7 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
 	declarations: [
 		AppComponent,
-		HeaderComponent
+		HeaderComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -25,7 +25,7 @@ import { HeaderComponent } from './header/header.component';
 		UIShellModule,
 		Notification20Module,
 		UserAvatar20Module,
-		AppSwitcher20Module
+		AppSwitcher20Module,
 	],
 	bootstrap: [AppComponent]
 })

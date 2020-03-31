@@ -8,12 +8,15 @@ const routes: Routes = [
 	},
 	{
 		path: 'repos',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		loadChildren: () =>
+			import('./repositories/repositories.module').then(
+				m => m.RepositoriesModule
+			)
 	}
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, {useHash: true})],
+	imports: [RouterModule.forRoot(routes, { useHash: true })],
 	exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
