@@ -7,16 +7,23 @@ import { AppComponent } from './app.component';
 
 
 // carbon-components-angular default imports
-import { UIShellModule } from 'carbon-components-angular';
+import { UIShellModule, TableModule, PaginationModule, GridModule, BreadcrumbModule, TabsModule } from 'carbon-components-angular';
 import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
 import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
 import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RepositoriesModule } from './repositories/repositories.module';
+import { HomeModule } from './home/home.module';
+import { HomeRoutingModule } from './home/home-routing.module';
+import { LandingPageComponent } from './home/landing-page/landing-page.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HeaderComponent
+		HeaderComponent,
+		// LandingPageComponent
 	],
 	imports: [
 		BrowserModule,
@@ -26,7 +33,16 @@ import { HeaderComponent } from './header/header.component';
 		UIShellModule,
 		Notification20Module,
 		UserAvatar20Module,
-		AppSwitcher20Module
+		AppSwitcher20Module,
+		HttpClientModule,
+		TableModule,
+		PaginationModule,
+		GridModule,
+		RepositoriesModule,
+		GraphQLModule,
+		BreadcrumbModule,
+		TabsModule,
+		HomeModule
 	],
 	bootstrap: [AppComponent]
 })

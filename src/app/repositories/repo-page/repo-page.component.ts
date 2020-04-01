@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Apollo } from 'apollo-angular';
 
 @Component({
 	selector: 'app-repo-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoPageComponent implements OnInit {
 
-	constructor() { }
+	constructor(private apollo: Apollo) { }
 
 	ngOnInit() {
 	}

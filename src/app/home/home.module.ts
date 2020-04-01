@@ -18,7 +18,7 @@ import {
 		BreadcrumbModule,
 		ButtonModule,
 		GridModule,
-		TabsModule
+		TabsModule,
 	]
 })
 export class HomeModule { }
