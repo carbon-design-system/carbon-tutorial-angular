@@ -19,6 +19,9 @@ import {
 		ButtonModule,
 		GridModule,
 		TabsModule,
-	]
+	],
+	entryComponents: [LandingPageComponent]
 })
-export class HomeModule { }
+export class HomeModule {
+	static entry = LandingPageComponent;
+ }

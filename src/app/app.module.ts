@@ -16,14 +16,12 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RepositoriesModule } from './repositories/repositories.module';
 import { HomeModule } from './home/home.module';
-import { HomeRoutingModule } from './home/home-routing.module';
 import { LandingPageComponent } from './home/landing-page/landing-page.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
-		// LandingPageComponent
 	],
 	imports: [
 		BrowserModule,
@@ -38,11 +36,9 @@ import { LandingPageComponent } from './home/landing-page/landing-page.component
 		TableModule,
 		PaginationModule,
 		GridModule,
-		RepositoriesModule,
 		GraphQLModule,
 		BreadcrumbModule,
 		TabsModule,
-		HomeModule
 	],
 	bootstrap: [AppComponent]
 })
