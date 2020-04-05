@@ -9,7 +9,8 @@
 		"test": "ng test",
 		"test:once": "ng test --watch=false",
 		"lint": "ng lint",
-		"e2e": "ng e2e"
+		"e2e": "ng e2e",
+		"deploy": "del -rf .\\dist && yarn build && cf push -f manifest.yml"
 	},
 	"engines": {
 		"node": ">= 10.9"
@@ -24,23 +25,26 @@
 		"@angular/platform-browser": "^8.2.0",
 		"@angular/platform-browser-dynamic": "^8.2.0",
 		"@angular/router": "^8.2.0",
+		"@babel/compat-data": "^7.8.0",
 		"@carbon/icons-angular": "^10.7.0",
 		"apollo-angular": "^1.7.0",
+		"apollo-angular-link-http": "^1.6.0",
+		"apollo-cache-inmemory": "^1.3.2",
+		"apollo-client": "^2.6.0",
+		"apollo-link": "^1.2.11",
 		"carbon-components": "^10.9.1",
 		"carbon-components-angular": "^3.32.1",
+		"cloudfoundry-cli": "^0.8.0",
 		"core-js": "^2.5.2",
+		"graphql": "^14.3.1",
+		"graphql-tag": "^2.10.0",
 		"rxjs": "^6.4.0",
 		"tslib": "^1.9.0",
-		"zone.js": "~0.9.1",
-		"apollo-angular-link-http": "^1.6.0",
-		"apollo-link": "^1.2.11",
-		"apollo-client": "^2.6.0",
-		"apollo-cache-inmemory": "^1.3.2",
-		"graphql-tag": "^2.10.0",
-		"graphql": "^14.3.1"
+		"yarn": "^1.22.4",
+		"zone.js": "~0.9.1"
 	},
 	"devDependencies": {
-		"@angular-devkit/build-angular": "~0.802.1",
+		"@angular-devkit/build-angular": "^0.803.24",
 		"@angular/cli": "^8.2.1",
 		"@angular/compiler-cli": "^8.2.0",
 		"@types/jasmine": "^2.8.2",
@@ -54,7 +58,7 @@
 		"karma-coverage-istanbul-reporter": "^2.0.5",
 		"karma-jasmine": "~2.0.1",
 		"karma-jasmine-html-reporter": "^1.4.0",
-		"node-sass": "^4.12.0",
+		"node-sass": "^4.13.1",
 		"postcss-loader": "3.0.0",
 		"protractor": "^5.4.2",
 		"ts-node": "~8.0.3",
