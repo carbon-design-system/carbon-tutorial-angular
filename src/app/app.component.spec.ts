@@ -9,13 +9,9 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			imports: [
-				RouterTestingModule
-			],
-			declarations: [
-				AppComponent
-			],
-		}).compileComponents();
+			declarations: [AppComponent, HeaderComponent],
+			imports: [RouterTestingModule, UIShellModule, Notification20Module, UserAvatar20Module, AppSwitcher20Module]
+		 }).compileComponents();
 	}));
 
 	it('should create the app', () => {
