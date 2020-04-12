@@ -5,8 +5,8 @@ import { RepoPageComponent } from './repo-page/repo-page.component';
 
 const routes: Routes = [
 	{
-	  path: '',
-	  component: RepoPageComponent
+		path: '',
+		component: RepoPageComponent
 	}
  ];
 
