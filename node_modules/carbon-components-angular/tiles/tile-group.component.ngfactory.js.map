@@ -1,0 +1,1 @@
+{"version":3,"file":"tile-group.component.ngfactory.js","sourceRoot":"","sources":["../src/tiles/tile-group.component.ngfactory.ts","../src/tiles/tile-group.component.ts.TileGroup.html"],"names":[],"mappings":";;;;;;;;;;;;0DCAA,eAAwC","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n","<ng-content select=\"ibm-selection-tile\"></ng-content>"]}
