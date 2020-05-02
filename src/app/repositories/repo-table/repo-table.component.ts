@@ -89,6 +89,7 @@ export class RepoTableComponent implements OnInit {
 			} else {
 				// If we're here, we've got our data!
 				this.data = response.data.organization.repositories.nodes;
+				console.log(this.data);
 				this.model.totalDataLength = response.data.organization.repositories.totalCount;
 				this.selectPage(1);
 			}
