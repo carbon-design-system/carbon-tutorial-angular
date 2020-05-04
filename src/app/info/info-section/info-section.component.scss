@@ -6,7 +6,7 @@
 	position: relative;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		left: -$spacing-05;
 		top: 0;
@@ -18,21 +18,6 @@
 }
 
 .info-section {
-	@include info-section-background;
-	display: flex;
-	height: fit-content;
-
-	&.info-section__r1 {
-		padding-top: $spacing-09;
-		padding-bottom: $spacing-09;
-		height: auto;
-	}
-
-	.info-section__heading {
-		@include carbon--type-style("heading-01");
-		@include carbon--font-weight("semibold");
-	}
-
 	app-info-card {
 		margin-top: $spacing-09;
 	}
@@ -58,5 +43,20 @@
 			margin-top: 0;
 			border-left: 1px solid $ui-03;
 		}
+	}
+
+	@include info-section-background;
+	display: flex;
+	height: fit-content;
+
+	&.info-section__r1 {
+		padding-top: $spacing-09;
+		padding-bottom: $spacing-09;
+		height: auto;
+	}
+
+	.info-section__heading {
+		@include carbon--type-style("heading-01");
+		@include carbon--font-weight("semibold");
 	}
 }
