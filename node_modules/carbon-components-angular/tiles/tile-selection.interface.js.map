@@ -1,0 +1,1 @@
+{"version":3,"file":"tile-selection.interface.js","sourceRoot":"","sources":["../src/tiles/tile-selection.interface.ts"],"names":[],"mappings":"","sourcesContent":["export interface TileSelection {\n\tvalue: string;\n\tselected: boolean;\n\tname: string;\n}\n"]}
