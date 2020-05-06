@@ -14,7 +14,7 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ],
+			declarations: [LandingPageComponent],
 			imports: [
 				BreadcrumbModule,
 				ButtonModule,
@@ -22,7 +22,7 @@ describe('LandingPageComponent', () => {
 				TabsModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

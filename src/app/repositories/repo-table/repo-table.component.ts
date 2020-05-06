@@ -1,13 +1,18 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import {
+	Component,
+	OnInit,
+	ViewChild,
+	TemplateRef
+} from '@angular/core';
 
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
 import {
 	Table,
 	TableModel,
 	TableItem,
 	TableHeaderItem
 } from 'carbon-components-angular';
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
 	selector: 'app-repo-table',
@@ -15,19 +20,18 @@ import {
 	styleUrls: ['./repo-table.component.scss']
 })
 export class RepoTableComponent implements OnInit {
-
-	model = Table.skeletonModel(2, 6);
-	skeleton = true;
 	data = [];
+	model: TableModel;
+	skeletonModel = Table.skeletonModel(10, 6);
+	skeleton = true;
 
-
-	@ViewChild('linkTemplate', null) protected linkTemplate: TemplateRef<any>;
+	@ViewChild('linkTemplate', null)
+	protected linkTemplate: TemplateRef<any>;
 
 	constructor(private apollo: Apollo) { }
 
 	ngOnInit() {
-
-
+		this.model = new TableModel();
 		this.model.header = [
 			new TableHeaderItem({ data: 'Name' }),
 			new TableHeaderItem({ data: 'Created' }),
@@ -36,6 +40,7 @@ export class RepoTableComponent implements OnInit {
 			new TableHeaderItem({ data: 'Stars' }),
 			new TableHeaderItem({ data: 'Links' })
 		];
+		this.model.pageLength = 10;
 
 		this.apollo.watchQuery({
 			query: gql`
@@ -70,28 +75,24 @@ export class RepoTableComponent implements OnInit {
 				  }
 				}
 			  }
-			`
-		}).valueChanges.subscribe((response: any) => {
-			if (response.error) {
-				const errorData = [];
-				errorData.push([
-					new TableItem({ data: 'error!' })
-				]);
-				this.model.data = errorData;
-			} else if (response.loading) {
-				// Add loading state
-				this.skeleton = true;
-			} else {
-				this.skeleton = false;
-				// this.model.data = this.prepareData(response.data.organization.repositories.nodes);
-
-				this.data = response.data.organization.repositories.nodes;
-				this.model.pageLength = 10;
-				this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				this.selectPage(1);
-
-			}
-		});
+			`,
+		})
+			.valueChanges.subscribe((response: any) => {
+				if (response.error) {
+					const errorData = [];
+					errorData.push([
+						new TableItem({ data: 'error!' })
+					]);
+					this.model.data = errorData;
+				} else if (response.loading) {
+					this.skeleton = true;
+				} else {
+					// If we're here, we've got our data!
+					this.data = response.data.organization.repositories.nodes;
+					this.model.totalDataLength = response.data.organization.repositories.totalCount;
+					this.selectPage(1);
+				}
+			});
 	}
 
 	selectPage(page) {
@@ -102,7 +103,9 @@ export class RepoTableComponent implements OnInit {
 	}
 
 	prepareData(data) {
+		this.skeleton = false;
 		const newData = [];
+
 		for (const datum of data) {
 			newData.push([
 				new TableItem({ data: datum.name, expandedData: datum.description }),
