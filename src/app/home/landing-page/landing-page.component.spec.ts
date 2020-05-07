@@ -5,9 +5,8 @@ import {
 	BreadcrumbModule,
 	ButtonModule,
 	GridModule,
-	TabsModule,
-	} from 'carbon-components-angular';
-
+	TabsModule
+} from 'carbon-components-angular';
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -16,7 +15,12 @@ describe('LandingPageComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ LandingPageComponent ],
-			imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule]
+			imports: [
+				BreadcrumbModule,
+				ButtonModule,
+				GridModule,
+				TabsModule
+			]
 		})
 		.compileComponents();
 	}));

@@ -7,15 +7,18 @@ import {
 	BreadcrumbModule,
 	ButtonModule,
 	GridModule,
-	TabsModule,
-	} from 'carbon-components-angular';
+	TabsModule
+} from 'carbon-components-angular';
 
 @NgModule({
 	declarations: [LandingPageComponent],
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
-		BreadcrumbModule, ButtonModule, GridModule, TabsModule
+		BreadcrumbModule,
+		ButtonModule,
+		GridModule,
+		TabsModule
 	]
 })
 export class HomeModule { }
