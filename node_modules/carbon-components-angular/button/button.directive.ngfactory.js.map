@@ -1,0 +1,1 @@
+{"version":3,"file":"button.directive.ngfactory.js","sourceRoot":"","sources":["../src/button/button.directive.ngfactory.ts"],"names":[],"mappings":"","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n"]}
