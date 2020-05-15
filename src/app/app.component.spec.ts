@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
-import { TutorialHeaderModule } from './header/tutorial-header.module';
+import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
@@ -12,7 +12,7 @@ describe('AppComponent', () => {
 			],
 			imports: [
 				RouterTestingModule,
-				TutorialHeaderModule
+				HeaderComponent
 			]
 		}).compileComponents();
 	}));
