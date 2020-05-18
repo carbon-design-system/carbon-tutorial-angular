@@ -8,7 +8,7 @@ Kick start your application development with Carbon Angular.
 * [git](https://git-scm.com/) (`brew install git`)
 * [angular-cli](https://cli.angular.io/) (`sudo npm install -g @angular/cli`)
 
-## Download and install
+## Download and install 
 
 Run the following in the terminal:
 
