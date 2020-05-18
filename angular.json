@@ -17,11 +17,12 @@
 						"tsConfig": "src/tsconfig.app.json",
 						"polyfills": "src/polyfills.ts",
 						"assets": [
-							"src/assets",
-							"src/sw.js",
-							"src/manifest.json",
-							"src/favicon.ico"
-						],
+  "src/favicon.ico",
+  "src/assets",
+  "src/sw.js",
+  "src/manifest.json"
+],
+
 						"styles": ["src/styles.scss"],
 						"scripts": []
 					},
