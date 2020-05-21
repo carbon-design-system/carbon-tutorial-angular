@@ -5,21 +5,13 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"lib": [
-			"es2016",
-			"dom"
-		],
+		"lib": ["es2016", "dom", "esnext.asynciterable"],
 		"outDir": "../out-tsc/app",
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
 		"types": []
 	},
-	"include": [
-		"**/*"
-	],
-	"exclude": [
-		"test.ts",
-		"**/*.spec.ts"
-	]
+	"include": ["**/*"],
+	"exclude": ["test.ts", "**/*.spec.ts"]
 }
