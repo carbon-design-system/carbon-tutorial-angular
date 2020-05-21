@@ -16,7 +16,7 @@ describe('RepoPageComponent', () => {
 				TableModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
