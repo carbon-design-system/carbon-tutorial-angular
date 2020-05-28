@@ -1,15 +1,26 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import {
+	NotificationModule,
+	UserAvatarModule,
+	AppSwitcherModule
+} from '@carbon/icons-angular';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			imports: [
-				RouterTestingModule
+				RouterTestingModule,
+				NotificationModule,
+				UserAvatarModule,
+				AppSwitcherModule
 			],
 			declarations: [
-				AppComponent
+				AppComponent,
+				HeaderComponent,
 			],
 		}).compileComponents();
 	}));
