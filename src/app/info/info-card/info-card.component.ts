@@ -13,7 +13,7 @@ export class InfoCardComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		this.splitHeading = this.createArrayFromPhrase(this.heading);
+		this.splitHeading = this.heading ? this.createArrayFromPhrase(this.heading) : ['', ''];
 	}
 
 	// Take in a phrase and separate the third word in an array
