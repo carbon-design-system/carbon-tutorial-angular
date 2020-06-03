@@ -1,0 +1,29 @@
+<section ibmRow class="info-section info-section__r1">
+  <div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">
+    <h3 class="info-section__heading">{{heading}}</h3>
+  </div>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[0].heading"
+    [content]="items[0].content"
+  >
+    <ibm-icon-person-favorite32></ibm-icon-person-favorite32>
+  </app-info-card>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[1].heading"
+    [content]="items[1].content"
+  >
+    <ibm-icon-application32></ibm-icon-application32>
+  </app-info-card>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[2].heading"
+    [content]="items[2].content"
+  >
+    <ibm-icon-globe32></ibm-icon-globe32>
+  </app-info-card>
+</section>

@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
 		"sourceMap": true,
-		"declaration": false,
+    "declaration": false,
+    "resolveJsonModule": true,
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
@@ -10,7 +11,7 @@
 			"dom",
 			"esnext.asynciterable"
 		],
-		"outDir": "../out-tsc/app",
+    "outDir": "../out-tsc/app",
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
