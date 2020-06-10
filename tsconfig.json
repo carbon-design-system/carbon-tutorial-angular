@@ -9,9 +9,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2015",
+    "skipLibCheck": true,       // trick to avoid AsyncIterable error
     "lib": [
       "es2016",
-      "dom"
+      "dom",
+      "esnext"
     ],
     "module": "esnext",
     "baseUrl": "./"
