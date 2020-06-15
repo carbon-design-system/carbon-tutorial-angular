@@ -1,22 +1,38 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { RepoPageComponent } from './repo-page.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
-import { RepoTableComponent } from '../repo-table/repo-table.component';
+import { RepoPageComponent } from "./repo-page.component";
+import { RepoTableComponent } from "../repo-table/repo-table.component";
 
-describe('RepoPageComponent', () => {
+import {
+	GridModule,
+	TableModule,
+	LinkModule,
+	PaginationModule,
+} from "carbon-components-angular";
+
+import { ApolloModule } from "apollo-angular";
+import { HttpClientModule } from "@angular/common/http";
+import { GraphQLModule } from "../../graphql.module";
+import { HttpLinkModule } from "apollo-angular-link-http";
+
+describe("RepoPageComponent", () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent, RepoTableComponent ],
+			declarations: [RepoPageComponent, RepoTableComponent],
 			imports: [
 				GridModule,
-				TableModule
-			]
-		})
-		.compileComponents();
+				TableModule,
+				LinkModule,
+				PaginationModule,
+				ApolloModule,
+				HttpClientModule,
+				HttpLinkModule,
+				GraphQLModule,
+			],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -25,7 +41,7 @@ describe('RepoPageComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });
