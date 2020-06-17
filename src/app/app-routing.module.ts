@@ -17,14 +17,6 @@ const routes: Routes = [
 		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
 	},
 	{
-		path: '',
-		component: LandingPageComponent
-	},
-	{
-		path: '',
-		component: RepoPageComponent
-	}
-	{
 		path: 'catalog',
 		component: CatalogComponent
 	},
