@@ -1,0 +1,1 @@
+{"version":3,"file":"content-switcher-option.directive.ngfactory.js","sourceRoot":"","sources":["../src/content-switcher/content-switcher-option.directive.ngfactory.ts"],"names":[],"mappings":"","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n"]}
