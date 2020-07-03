@@ -1,30 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GridModule } from 'carbon-components-angular';
 import { PersonFavorite32Module } from '@carbon/icons-angular/lib/person--favorite/32';
 import { Globe32Module } from '@carbon/icons-angular/lib/globe/32';
 import { Application32Module } from '@carbon/icons-angular/lib/application/32';
 
-import { LandingPageComponent } from './landing-page.component';
-import { InfoSectionComponent } from '../../info/info-section/info-section.component';
-import { InfoCardComponent } from '../../info/info-card/info-card.component';
-import {
-	BreadcrumbModule,
-	ButtonModule,
-	GridModule,
-	TabsModule
-} from 'carbon-components-angular';
+import { InfoSectionComponent } from './info-section.component';
+import { InfoCardComponent } from '../info-card/info-card.component';
 
-describe('LandingPageComponent', () => {
-	let component: LandingPageComponent;
-	let fixture: ComponentFixture<LandingPageComponent>;
+describe('InfoSectionComponent', () => {
+	let component: InfoSectionComponent;
+	let fixture: ComponentFixture<InfoSectionComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent, InfoSectionComponent, InfoCardComponent ],
+			declarations: [ InfoSectionComponent, InfoCardComponent ],
 			imports: [
-				BreadcrumbModule,
-				ButtonModule,
 				GridModule,
-				TabsModule,
 				PersonFavorite32Module,
 				Globe32Module,
 				Application32Module
@@ -34,7 +25,7 @@ describe('LandingPageComponent', () => {
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(LandingPageComponent);
+		fixture = TestBed.createComponent(InfoSectionComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

@@ -1,0 +1,98 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add apollo-angular --silent
+
+PATH: 
+  C:\Python38\Scripts\;C:\Python38\;C:\Python37\Scripts\;C:\Python37\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\app\SHISHIRSAHA\product\11.2.0\dbhome_2\bin;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\IBM\Cloud\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git\cmd;C:\Users\SHISHIRSAHA\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\SHISHIRSAHA\.windows-build-tools\python27\;C:\Users\SHISHIRSAHA\.windows-build-tools\python27\;C:\Users\SHISHIRSAHA\.windows-build-tools\python27\;C:\Users\SHISHIRSAHA\AppData\Local\Microsoft\WindowsApps;C:\Users\SHISHIRSAHA\AppData\Local\Programs\Fiddler;C:\Users\SHISHIRSAHA\AppData\Local\Microsoft\WindowsApps;C:\Users\SHISHIRSAHA\AppData\Local\GitHubDesktop\bin;C:\Users\SHISHIRSAHA\AppData\Roaming\Python\Python37\Scripts;C:\Users\SHISHIRSAHA\AppData\Local\Programs\Microsoft VS Code\bin;C:\IBM_Cloud_CLI;C:\Users\SHISHIRSAHA\AppData\Local\Yarn\bin;C:\Users\SHISHIRSAHA\AppData\Roaming\npm;C:\Users\SHISHIRSAHA\AppData\Roaming\TinyTeX\bin\win32;C:\Users\SHISHIRSAHA\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  14.4.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@carbon/icons-angular/-/icons-angular-10.8.2.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141354:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:768:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:480:8)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
+
+npm manifest: 
+  {
+    "name": "carbon-angular-starter",
+    "version": "0.1.0",
+    "license": "",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build --prod --aot",
+      "test": "ng test",
+      "test:once": "ng test --watch=false",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "engines": {
+      "node": ">= 10.9"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^8.2.0",
+      "@angular/common": "^8.2.0",
+      "@angular/compiler": "^8.2.0",
+      "@angular/core": "^8.2.0",
+      "@angular/forms": "^8.2.0",
+      "@angular/platform-browser": "^8.2.0",
+      "@angular/platform-browser-dynamic": "^8.2.0",
+      "@angular/router": "^8.2.0",
+      "@carbon/icons-angular": "^10.4.0",
+      "apollo-angular": "^1.9.1",
+      "carbon-components": "^10.7.0",
+      "carbon-components-angular": "^3.21.2",
+      "core-js": "^2.5.2",
+      "rxjs": "^6.4.0",
+      "tslib": "^1.9.0",
+      "zone.js": "~0.9.1",
+      "apollo-angular-link-http": "^1.10.0",
+      "apollo-link": "^1.2.11",
+      "apollo-client": "^2.6.0",
+      "apollo-cache-inmemory": "^1.6.0",
+      "graphql-tag": "^2.10.0",
+      "graphql": "^14.6.0"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.802.1",
+      "@angular/cli": "^8.2.1",
+      "@angular/compiler-cli": "^8.2.0",
+      "@types/jasmine": "^2.8.2",
+      "@types/node": "~8.0.53",
+      "codelyzer": "^5.0.1",
+      "jasmine-core": "~3.4.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "^3.1.1",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-cli": "2.0.0",
+      "karma-coverage-istanbul-reporter": "^2.0.5",
+      "karma-jasmine": "~2.0.1",
+      "karma-jasmine-html-reporter": "^1.4.0",
+      "node-sass": "^4.12.0",
+      "postcss-loader": "3.0.0",
+      "protractor": "^5.4.2",
+      "ts-node": "~8.0.3",
+      "tslint": "^5.15.0",
+      "typescript": "3.5.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
