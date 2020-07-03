@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RepoTableComponent } from './repo-table.component';
+import { GraphQLModule } from '../../graphql.module';
 import { TableModule, LinkModule, PaginationModule } from 'carbon-components-angular';
 
 describe('RepoTableComponent', () => {
@@ -13,7 +15,9 @@ describe('RepoTableComponent', () => {
 			imports: [
 				TableModule,
 				LinkModule,
-				PaginationModule
+				PaginationModule,
+				GraphQLModule,
+				HttpClientModule
 			]
 		})
 		.compileComponents();
