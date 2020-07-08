@@ -8,7 +8,6 @@
 		"lib": [
 			"es2016",
 			"dom",
-			"ESNext",
 			"esnext.asynciterable"
 		],
 		"outDir": "../out-tsc/app",
