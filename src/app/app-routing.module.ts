@@ -5,6 +5,24 @@ import { DocsComponent } from './pages/docs/docs.component';
 import { SupportComponent } from './pages/support/support.component';
 import { Link1Component } from './pages/link1/link1.component';
 
+// const routes: Routes = [
+// 	{
+// 		path: 'catalog',
+// 		component: CatalogComponent
+// 	},
+// 	{
+// 		path: 'docs',
+// 		component: DocsComponent
+// 	},
+// 	{
+// 		path: 'support',
+// 		component: SupportComponent
+// 	},
+// 	{
+// 		path: 'link1',
+// 		component: Link1Component
+// 	}
+// ];
 const routes: Routes = [
 	{
 		path: '',
@@ -17,23 +35,8 @@ const routes: Routes = [
 				(m) => m.RepositoriesModule
 			),
 	},
-	{
-		path: 'catalog',
-		component: CatalogComponent
-	},
-	{
-		path: 'docs',
-		component: DocsComponent
-	},
-	{
-		path: 'support',
-		component: SupportComponent
-	},
-	{
-		path: 'link1',
-		component: Link1Component
-	}
 ];
+
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes, { useHash: true })],
