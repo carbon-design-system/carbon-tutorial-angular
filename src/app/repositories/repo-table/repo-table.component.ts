@@ -4,7 +4,6 @@ import {
 	TableModel,
 	TableItem,
 	TableHeaderItem,
-	TableModule
 } from 'carbon-components-angular';
 
 @Component({

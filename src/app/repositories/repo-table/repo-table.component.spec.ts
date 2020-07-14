@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TableModule } from 'carbon-components-angular';
+import { TableModule } from 'carbon-components-angular'; // here
 import { RepoTableComponent } from './repo-table.component';
 
 describe('RepoTableComponent', () => {
@@ -9,7 +9,7 @@ describe('RepoTableComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ RepoTableComponent ],
-			imports: [ TableModule ]
+			imports: [ TableModule ] // here
 		})
 		.compileComponents();
 	}));
@@ -24,4 +24,3 @@ describe('RepoTableComponent', () => {
 		expect(component).toBeTruthy();
 	});
 });
-
