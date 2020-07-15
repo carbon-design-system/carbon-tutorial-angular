@@ -5,9 +5,11 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"skipLibCheck": true,
 		"lib": [
 			"es2016",
-			"dom"
+			"dom",
+			"esnext.asynciterable"
 		],
 		"outDir": "../out-tsc/app",
 		"target": "es2015",
