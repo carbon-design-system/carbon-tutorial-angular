@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BreadcrumbModule, GridModule } from 'carbon-components-angular';
 
 @Component({
 	selector: 'app-landing-page',
