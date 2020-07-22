@@ -61,5 +61,8 @@
     "ts-node": "~8.0.3",
     "tslint": "^5.15.0",
     "typescript": "3.5.3"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.10.4"
   }
 }
