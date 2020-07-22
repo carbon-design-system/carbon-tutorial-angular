@@ -1,7 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RepoTableComponent } from './repo-table.component';
-import { TableModule } from 'carbon-components-angular';
+import {
+	TableModule,
+	LinkModule,
+	PaginationModule,
+} from 'carbon-components-angular';
 
 describe('RepoTableComponent', () => {
 	let component: RepoTableComponent;
@@ -9,12 +13,9 @@ describe('RepoTableComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoTableComponent ],
-			imports: [
-				TableModule
-			]
-		})
-		.compileComponents();
+			declarations: [RepoTableComponent],
+			imports: [TableModule, LinkModule, PaginationModule],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
