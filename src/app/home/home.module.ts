@@ -7,9 +7,9 @@ import {
 	BreadcrumbModule,
 	ButtonModule,
 	GridModule,
-	TabsModule
+	TabsModule,
 } from 'carbon-components-angular';
-
+import { InfoModule } from './../info/info.module';
 @NgModule({
 	declarations: [LandingPageComponent],
 	imports: [
@@ -18,7 +18,8 @@ import {
 		BreadcrumbModule,
 		ButtonModule,
 		GridModule,
-		TabsModule
-	]
+		TabsModule,
+		InfoModule,
+	],
 })
-export class HomeModule { }
+export class HomeModule {}
