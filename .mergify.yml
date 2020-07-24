@@ -1,8 +1,8 @@
 pull_request_rules:
   - name: Close when CI Passes Step 1
     conditions:
-	  - 'status-success=netlify/angular-step-1-carbon-tutorial/deploy-preview'
-	  - 'status-success=ci/circleci: step-one'
+    - 'status-success=netlify/angular-step-1-carbon-tutorial/deploy-preview'
+    - 'status-success=ci/circleci: step-one'
     actions:
       close:
         message: '👍 Looks good - 🎉 You are one step closer to completion of the Carbon Angular tutorial and earning the digital credential.'
@@ -11,8 +11,8 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 1
     conditions:
-	  - 'status-failure=netlify/angular-step-1-carbon-tutorial/deploy-preview'
-	  - 'status-failure=ci/circleci: step-one'
+    - 'status-failure=netlify/angular-step-1-carbon-tutorial/deploy-preview'
+    - 'status-failure=ci/circleci: step-one'
     actions:
       comment:
         message: 'Hi 👋 Looks like you are missing something, double check your code, your preview URL should match the [preview](https://www.carbondesignsystem.com/tutorial/angular/step-1#preview) in the tutorial. 🔎'
@@ -20,8 +20,8 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 2
     conditions:
-	  - 'status-success=netlify/angular-step-2-carbon-tutorial/deploy-preview'
-	  - 'status-success=ci/circleci: step-two'
+    - 'status-success=netlify/angular-step-2-carbon-tutorial/deploy-preview'
+    - 'status-success=ci/circleci: step-two'
     actions:
       close:
         message: '👍 Looks good - 🎉 You are one step closer to completion of the Carbon Angular tutorial and earning the digital credential.'
@@ -30,8 +30,8 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 2
     conditions:
-	  - 'status-failure=netlify/angular-step-2-carbon-tutorial/deploy-preview'
-	  - 'status-failure=ci/circleci: step-two'
+    - 'status-failure=netlify/angular-step-2-carbon-tutorial/deploy-preview'
+    - 'status-failure=ci/circleci: step-two'
     actions:
       comment:
         message: 'Hi 👋 Looks like you are missing something, double check your code, your preview URL should match the [preview](https://www.carbondesignsystem.com/tutorial/angular/step-2#preview) in the tutorial. 🔎'
@@ -39,8 +39,8 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 3
     conditions:
-	  - 'status-success=netlify/angular-step-3-carbon-tutorial/deploy-preview'
-	  - 'status-success=ci/circleci: step-three'
+    - 'status-success=netlify/angular-step-3-carbon-tutorial/deploy-preview'
+    - 'status-success=ci/circleci: step-three'
     actions:
       close:
         message: '👍 Looks good - 🎉 You are one step closer to completion of the Carbon Angular tutorial and earning the digital credential.'
@@ -49,8 +49,8 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 3
     conditions:
-	  - 'status-failure=netlify/angular-step-3-carbon-tutorial/deploy-preview'
-	  - 'status-failure=ci/circleci: step-three'
+    - 'status-failure=netlify/angular-step-3-carbon-tutorial/deploy-preview'
+    - 'status-failure=ci/circleci: step-three'
     actions:
       comment:
         message: 'Hi 👋 Looks like you are missing something, double check your code, your preview URL should match the [preview](https://www.carbondesignsystem.com/tutorial/angular/step-3#preview) in the tutorial. 🔎'
@@ -58,8 +58,8 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 4
     conditions:
-	  - 'status-success=netlify/angular-step-4-carbon-tutorial/deploy-preview'
-	  - 'status-success=ci/circleci: step-four'
+    - 'status-success=netlify/angular-step-4-carbon-tutorial/deploy-preview'
+    - 'status-success=ci/circleci: step-four'
     actions:
       close:
         message: '👍 Looks good - 🎉 You are one step closer to completion of the Carbon Angular tutorial and earning the digital credential.'
@@ -68,8 +68,8 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 4
     conditions:
-	  - 'status-failure=netlify/angular-step-4-carbon-tutorial/deploy-preview'
-	  - 'status-failure=ci/circleci: step-four'
+    - 'status-failure=netlify/angular-step-4-carbon-tutorial/deploy-preview'
+    - 'status-failure=ci/circleci: step-four'
     actions:
       comment:
         message: 'Hi 👋 Looks like you are missing something, double check your code, your preview URL should match the [preview](https://www.carbondesignsystem.com/tutorial/angular/step-4#preview) in the tutorial. 🔎'
@@ -87,8 +87,8 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 5
     conditions:
-	  - 'status-failure=netlify/angular-step-5-carbon-tutorial/deploy-preview'
-	  - 'status-failure=ci/circleci: step-five'
+    - 'status-failure=netlify/angular-step-5-carbon-tutorial/deploy-preview'
+    - 'status-failure=ci/circleci: step-five'
     actions:
       comment:
         message: 'Hi 👋 Looks like you are missing something, double check your the [instructions](https://www.carbondesignsystem.com/tutorial/angular/step-5) in step 5 of the tutorial. 🔎'
