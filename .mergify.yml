@@ -94,3 +94,10 @@ pull_request_rules:
         message: 'Hi 👋 Looks like you are missing something, double check your the [instructions](https://www.carbondesignsystem.com/tutorial/angular/step-5) in step 5 of the tutorial. 🔎'
       label:
         add: ['status: needs correction']
+pull_request_rules:
+  - name: Automatic merge on approval
+    conditions:
+      - "#approved-reviews-by>=1"
+    actions:
+      merge:
+        method: merge
