@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { ApolloTestingModule } from 'apollo-angular/testing';
 
 import { RepoTableComponent } from './repo-table.component';
 import { GraphQLModule } from '../../graphql.module';
@@ -16,8 +16,7 @@ describe('RepoTableComponent', () => {
 				TableModule,
 				LinkModule,
 				PaginationModule,
-				GraphQLModule,
-				HttpClientModule
+				ApolloTestingModule
 			]
 		})
 		.compileComponents();
