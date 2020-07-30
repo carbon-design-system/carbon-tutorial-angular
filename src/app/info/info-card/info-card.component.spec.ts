@@ -20,6 +20,7 @@ describe('InfoCardComponent', () => {
 	});
 
 	it('should create', () => {
+				component.heading = 'this is a test';
 		expect(component).toBeTruthy();
 	});
 });
