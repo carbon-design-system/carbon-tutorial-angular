@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --aot",
     "test": "ng test",
-    "test:once": "ng test",
+    "test:once": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
