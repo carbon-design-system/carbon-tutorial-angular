@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RepoTableComponent } from './repo-table.component';
-import { TableModule } from 'carbon-components-angular';
+import { GridModule, TableModule, PaginationModule, LinkModule } from 'carbon-components-angular';
 
 describe('RepoTableComponent', () => {
 	let component: RepoTableComponent;
@@ -11,8 +11,9 @@ describe('RepoTableComponent', () => {
 		TestBed.configureTestingModule({
 			declarations: [ RepoTableComponent ],
 			imports: [
-				TableModule
-			]
+				GridModule, TableModule, PaginationModule, LinkModule
+			],
+			schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 		})
 		.compileComponents();
 	}));
