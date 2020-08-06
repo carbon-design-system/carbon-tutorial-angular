@@ -9,7 +9,7 @@ $feature-flags: (
 // $carbon--theme: $carbon--theme--g10;
 
 @import './assets/scss/carbon-overrides.scss';
-
+//@import '~carbon-components/scss/globals/scss/styles';
 // Feature flags
 $css--font-face: true;
 $css--plex: true;
