@@ -7,9 +7,9 @@ import {
 	BreadcrumbModule,
 	ButtonModule,
 	GridModule,
-	TabsModule
+	TabsModule,
 } from 'carbon-components-angular';
-import { InfoModule } from "./../info/info.module";
+import { InfoModule } from './../info/info.module';
 
 @NgModule({
 	declarations: [LandingPageComponent],
