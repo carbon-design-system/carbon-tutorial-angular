@@ -1,7 +1,15 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RepoPageComponent } from './repo-page.component';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
+
+import {
+    BreadcrumbModule,
+    ButtonModule,
+    GridModule,
+    TabsModule
+} from 'carbon-components-angular';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -9,7 +17,14 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
+            imports: [
+                BreadcrumbModule,
+                ButtonModule,
+                GridModule,
+                TabsModule
+            ],
 			declarations: [ RepoPageComponent, RepoTableComponent ],
+						schemas: [CUSTOM_ELEMENTS_SCHEMA]
 		})
 		.compileComponents();
 	}));

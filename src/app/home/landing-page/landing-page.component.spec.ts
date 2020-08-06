@@ -1,13 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LandingPageComponent } from './landing-page.component';
 import {
-	BreadcrumbModule,
-	ButtonModule,
-	GridModule,
-	TabsModule,
-	} from 'carbon-components-angular';
-
+    BreadcrumbModule,
+    ButtonModule,
+    GridModule,
+    TabsModule
+} from 'carbon-components-angular';
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -15,7 +14,14 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ]
+            imports: [
+                BreadcrumbModule,
+                ButtonModule,
+                GridModule,
+                TabsModule
+            ],
+			declarations: [ LandingPageComponent ],
+						schemas: [CUSTOM_ELEMENTS_SCHEMA]
 		})
 		.compileComponents();
 	}));
@@ -30,4 +36,3 @@ describe('LandingPageComponent', () => {
 		expect(component).toBeTruthy();
 	});
 });
-
