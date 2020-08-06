@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LandingPageComponent } from './landing-page.component';
 import {
 	BreadcrumbModule,
@@ -15,7 +15,8 @@ describe('LandingPageComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [LandingPageComponent],
-			imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule]
+			imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule],
+			schemas: [CUSTOM_ELEMENTS_SCHEMA]
 		})
 		.compileComponents();
 	}));
