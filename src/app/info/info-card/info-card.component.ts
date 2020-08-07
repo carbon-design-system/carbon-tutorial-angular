@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./info-card.component.scss']
 })
 export class InfoCardComponent implements OnInit {
-
 	@Input() heading;
 	@Input() content;
 	splitHeading;
@@ -14,8 +13,8 @@ export class InfoCardComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		this.splitHeading = this.createArrayFromPhrase(this.heading);
-		console.log(this.splitHeading);
+		this.splitHeading = this.heading ? this.createArrayFromPhrase(this.heading) : ['', ''];
+		// this.splitHeading = this.createArrayFromPhrase(this.heading);
 	}
 
 	// Take in a phrase and separate the third word in an array
