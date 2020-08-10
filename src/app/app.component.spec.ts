@@ -8,6 +8,7 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
+
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
