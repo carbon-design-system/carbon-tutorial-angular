@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { InfoSectionComponent } from './info-section.component';
 
@@ -8,7 +9,8 @@ describe('InfoSectionComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ InfoSectionComponent ]
+			declarations: [ InfoSectionComponent ],
+						schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 		})
 		.compileComponents();
 	}));
