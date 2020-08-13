@@ -1,0 +1,62 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist/cb-aiops-inventory-lib-ui/*
+!/dist/cb-aiops-inventory-lib-ui/package.json
+/www
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+/.npmrc
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*~
+*.swp
+*.log
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+sonar-project.properties
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+/certs
+/coverage
+/.scannerwork
+properties.js
+/unit_test-results.xml
+unit_test-results.xml
+
+# e2e
+# /e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+.idea
+
+node_modules/*
+out-tsc/
+src/assets/testdata/*
+
+/projects/cb-aiops-inventory-lib-ui/node_modules
+/gulp/node_modules
