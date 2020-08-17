@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
     "@carbon/icons-angular": "^11.0.1",
+    "angular-svg-icon": "^6.0.0",
     "carbon-components": "^10.17.0",
     "carbon-components-angular": "^4.12.1",
     "rxjs": "~6.5.5",
