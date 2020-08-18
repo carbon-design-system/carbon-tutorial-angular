@@ -1,0 +1,1 @@
+{"version":3,"file":"optgroup.directive.ngfactory.js","sourceRoot":"","sources":["../src/select/optgroup.directive.ngfactory.ts"],"names":[],"mappings":"","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n"]}

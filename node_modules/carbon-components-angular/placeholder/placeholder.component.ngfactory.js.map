@@ -1,0 +1,1 @@
+{"version":3,"file":"placeholder.component.ngfactory.js","sourceRoot":"","sources":["../src/placeholder/placeholder.component.ngfactory.ts","../src/placeholder/placeholder.component.ts.Placeholder.html"],"names":[],"mappings":";;;;;;;;;;;;6GCAA,2GAAkB","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n","<div #placeholder></div>"]}
