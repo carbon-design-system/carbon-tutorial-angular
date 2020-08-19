@@ -1,0 +1,1 @@
+{"moduleName":null,"summaries":[{"symbol":{"__symbol":0,"members":[]},"metadata":{"__symbolic":"function","parameters":[],"value":{"__symbolic":"error","message":"Lambda not supported","fileName":"dist/src/modal/modal.decorator.ts"}}}],"symbols":[{"__symbol":0,"name":"Modal","filePath":"./modal.decorator"}]}
