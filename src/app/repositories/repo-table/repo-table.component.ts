@@ -40,7 +40,6 @@ export class RepoTableComponent implements OnInit {
 			new TableHeaderItem({data: 'Stars'}),
 			new TableHeaderItem({data: 'Links'})
 		];
-		this.model.pageLength = 10;
 
 		this.apollo.watchQuery({
 			query: gql`
@@ -75,7 +74,7 @@ export class RepoTableComponent implements OnInit {
 				  }
 				}
 			  }
-			`,
+			`
 		})
 		.valueChanges.subscribe((response: any) => {
 			if (response.error) {
@@ -89,6 +88,7 @@ export class RepoTableComponent implements OnInit {
 			} else {
 				// If we're here, we've got our data!
 				this.data = response.data.organization.repositories.nodes;
+				this.model.pageLength = 10;
 				this.model.totalDataLength = response.data.organization.repositories.totalCount;
 				this.selectPage(1);
 			}
