@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+
 
 @Component({
 	selector: 'app-repo-page',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoPageComponent implements OnInit {
 
+
 	constructor() { }
 
 	ngOnInit() {
 	}
+
 
 }
