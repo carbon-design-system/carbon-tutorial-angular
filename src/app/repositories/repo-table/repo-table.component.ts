@@ -6,13 +6,13 @@ import {
 } from '@angular/core';
 
 import {
-	Table,
 	TableModel,
 	TableItem,
 	TableHeaderItem
 } from 'carbon-components-angular';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { Table } from 'carbon-components-angular/table/table.component';
 
 @Component({
 	selector: 'app-repo-table',
