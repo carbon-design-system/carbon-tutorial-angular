@@ -3,7 +3,8 @@
 		"sourceMap": true,
 		"declaration": false,
 		"moduleResolution": "node",
-		"emitDecoratorMetadata": true,
+        "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
 		"experimentalDecorators": true,
 		"lib": [
 			"es2016",
