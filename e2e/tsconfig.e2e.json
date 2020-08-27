@@ -10,6 +10,10 @@
     ],
     "outDir": "../dist/out-tsc-e2e",
     "module": "commonjs",
-    "target": "es6"
+    "target": "es6",
+    "types":[
+      "jasmine",
+      "node"
+    ]
   }
 }

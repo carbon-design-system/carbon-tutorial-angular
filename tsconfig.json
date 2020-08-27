@@ -8,15 +8,12 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es2015",
     "lib": [
       "es2016",
-      "dom",
-      "esnext.asynciterable"
+      "dom"
     ],
     "module": "esnext",
     "baseUrl": "./"
   }
 }
-

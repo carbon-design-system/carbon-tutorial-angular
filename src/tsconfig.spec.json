@@ -5,11 +5,9 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"resolveJsonModule": true,
 		"lib": [
 			"dom",
-			"es2016",
-			"esnext.asynciterable"
+			"es2016"
 		],
 		"outDir": "../out-tsc/spec",
 		"module": "esnext",
