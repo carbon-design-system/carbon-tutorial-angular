@@ -13,8 +13,8 @@ import { Application32Module } from '@carbon/icons-angular/lib/application/32';
 		CommonModule,
 		GridModule,
 		PersonFavorite32Module,
-			Globe32Module,
-			Application32Module,
+		Globe32Module,
+		Application32Module,
 	],
 	exports:  [InfoCardComponent, InfoSectionComponent]
 })
