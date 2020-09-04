@@ -5,5 +5,5 @@
 
 export const environment = {
 	production: false,
-	githubPersonalAccessToken: '919185572643b17de1c72dd97be4223ad59d4432',
+	githubPersonalAccessToken: '45d17b8edc31d78c00458ce112b7204b15e4782a',
 };

@@ -6,6 +6,8 @@ import { RepoTableComponent } from '../repo-table/repo-table.component';
 
 import { LinkModule, PaginationModule } from 'carbon-components-angular';
 
+import { Apollo } from 'apollo-angular';
+
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
@@ -16,9 +18,10 @@ describe('RepoPageComponent', () => {
 			imports: [
 				GridModule,
 				TableModule,
-				LinkModule, 
+				LinkModule,
 				PaginationModule
-			]
+			],
+			providers: [ Apollo ]
 		})
 		.compileComponents();
 	}));
