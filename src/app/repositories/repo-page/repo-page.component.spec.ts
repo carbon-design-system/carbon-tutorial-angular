@@ -4,6 +4,8 @@ import { RepoPageComponent } from './repo-page.component';
 import { GridModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
 
+import { LinkModule, PaginationModule } from 'carbon-components-angular';
+
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
@@ -13,7 +15,9 @@ describe('RepoPageComponent', () => {
 			declarations: [ RepoPageComponent, RepoTableComponent ],
 			imports: [
 				GridModule,
-				TableModule
+				TableModule,
+				LinkModule, 
+				PaginationModule
 			]
 		})
 		.compileComponents();
