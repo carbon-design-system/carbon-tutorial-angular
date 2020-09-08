@@ -1,0 +1,1 @@
+{"version":3,"file":"modal-placeholder.component.ngfactory.js","sourceRoot":"","sources":["../src/modal/modal-placeholder.component.ngfactory.ts","../src/modal/modal-placeholder.component.ts.ModalPlaceholder.html"],"names":[],"mappings":";;;;;;;;;;;;kHCAA,gHAAuB","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n","<div #modalplaceholder></div>"]}
