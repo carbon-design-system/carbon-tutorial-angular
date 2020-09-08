@@ -1,3 +1,7 @@
+  
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family';
+@import '~carbon-components/scss/globals/scss/typography';
+
 @mixin landing-page-background() {
     background-color: $ui-01;
     position: relative;
@@ -13,9 +17,7 @@
       z-index: -1;
     }
   }
-  
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family';
-@import '~carbon-components/scss/globals/scss/typography';
+
 
 .landing-page__illo {
     max-width: 100%;
