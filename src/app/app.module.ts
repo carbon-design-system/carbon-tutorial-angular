@@ -14,6 +14,7 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpLink } from 'apollo-angular-link-http';
 
 @NgModule({
 	declarations: [
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
 		GraphQLModule,
 		HttpClientModule
 	],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	providers: [HttpLink]
 })
 export class AppModule { }

@@ -13,7 +13,8 @@ import gql from 'graphql-tag';
 @Component({
 	selector: 'app-repo-table',
 	templateUrl: './repo-table.component.html',
-	styleUrls: ['./repo-table.component.scss']
+	styleUrls: ['./repo-table.component.scss'],
+	providers: [Apollo]
 })
 export class RepoTableComponent implements OnInit {
 	model = new TableModel();
