@@ -35,11 +35,4 @@ describe('AppComponent', () => {
 		const app = fixture.debugElement.componentInstance;
 		expect(app.title).toEqual('carbon-angular-tutorial');
 	});
-
-	it('should render title', () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		fixture.detectChanges();
-		const compiled = fixture.debugElement.nativeElement;
-		expect(compiled.querySelector('.content span').textContent).toContain('carbon-angular-tutorial app is running!');
-	});
 });
