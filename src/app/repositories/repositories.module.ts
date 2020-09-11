@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RepositoriesRoutingModule } from './repositories-routing.module';
@@ -12,6 +12,7 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 		RepositoriesRoutingModule,
 		GridModule,
 		TableModule
-	]
+	],
+	schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class RepositoriesModule { }
