@@ -1,4 +1,9 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import {
+	Component,
+	OnInit,
+	ViewChild,
+	TemplateRef
+} from '@angular/core';
 
 import {
 	Table,
@@ -6,27 +11,36 @@ import {
 	TableItem,
 	TableHeaderItem
 } from 'carbon-components-angular';
-
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
 @Component({
 	selector: 'app-repo-table',
 	templateUrl: './repo-table.component.html',
-	styleUrls: ['./repo-table.component.scss'],
-	providers: [Apollo]
+	styleUrls: ['./repo-table.component.scss']
 })
 export class RepoTableComponent implements OnInit {
-	model = new TableModel();
+	data = [];
+	model: TableModel;
 	skeletonModel = Table.skeletonModel(10, 6);
 	skeleton = true;
-	data = [];
+
 	@ViewChild('linkTemplate', null)
 	protected linkTemplate: TemplateRef<any>;
 
 	constructor(private apollo: Apollo) { }
 
 	ngOnInit() {
+		this.model = new TableModel();
+		this.model.header = [
+			new TableHeaderItem({data: 'Name'}),
+			new TableHeaderItem({data: 'Created'}),
+			new TableHeaderItem({data: 'Updated'}),
+			new TableHeaderItem({data: 'Open Issues'}),
+			new TableHeaderItem({data: 'Stars'}),
+			new TableHeaderItem({data: 'Links'})
+		];
+		this.model.pageLength = 10;
 
 		this.apollo.watchQuery({
 			query: gql`
@@ -61,33 +75,24 @@ export class RepoTableComponent implements OnInit {
 				  }
 				}
 			  }
-			`
-		}).valueChanges.subscribe((response: any) => {
+			`,
+		})
+		.valueChanges.subscribe((response: any) => {
 			if (response.error) {
-			  const errorData = [];
-			  errorData.push([
-				new TableItem({data: 'error!' })
-			  ]);
-			  this.model.data = errorData;
+				const errorData = [];
+			 	errorData.push([
+					new TableItem({data: 'error!' })
+				]);
+				this.model.data = errorData;
 			} else if (response.loading) {
 				this.skeleton = true;
 			} else {
-				this.skeleton = false;
+				// If we're here, we've got our data!
 				this.data = response.data.organization.repositories.nodes;
-				this.model.pageLength = 10;
 				this.model.totalDataLength = response.data.organization.repositories.totalCount;
 				this.selectPage(1);
 			}
 		});
-
-		this.model.header = [
-			new TableHeaderItem({ data: 'Name' }),
-			new TableHeaderItem({ data: 'Created' }),
-			new TableHeaderItem({ data: 'Updated' }),
-			new TableHeaderItem({ data: 'Open Issues' }),
-			new TableHeaderItem({ data: 'Stars' }),
-			new TableHeaderItem({ data: 'Links' })
-		];
 	}
 
 	selectPage(page) {
@@ -98,6 +103,7 @@ export class RepoTableComponent implements OnInit {
 	}
 
 	prepareData(data) {
+		this.skeleton = false;
 		const newData = [];
 
 		for (const datum of data) {
