@@ -6,9 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { UIShellModule } from 'carbon-components-angular';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
+import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon/icons-angular';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,9 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 		FormsModule,
 		AppRoutingModule,
 		UIShellModule,
-		Notification20Module,
-		UserAvatar20Module,
-		AppSwitcher20Module,
+		NotificationModule,
+		UserAvatarModule,
+		AppSwitcherModule,
 		GraphQLModule,
 		HttpClientModule
 	],
