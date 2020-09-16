@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
+import { InfoModule } from '../../info/info.module';
 import {
 	BreadcrumbModule,
 	ButtonModule,
@@ -14,15 +15,16 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ],
+			declarations: [LandingPageComponent],
 			imports: [
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule
+				TabsModule,
+				InfoModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
