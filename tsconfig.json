@@ -13,6 +13,7 @@
     "target": "es2015",
     "lib": [
       "es2016",
+      "ES6",
       "dom",
       "esnext.asynciterable"
     ],
