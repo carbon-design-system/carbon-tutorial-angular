@@ -1,5 +1,5 @@
 <div ibmGrid class="bx--grid--full-width landing-page">
-	<section ibmRow class="landing-page__banner">
+	<div ibmRow class="landing-page__banner">
 		<div ibmCol [columnNumbers]="{'lg': 16}">
 			<ibm-breadcrumb noTrailingSlash="true" ariaLabel="Page navigation">
 				<ibm-breadcrumb-item href="/">
@@ -10,13 +10,13 @@
 				Design &amp; build with Carbon
 			</h1>
 		</div>
-	</section>
-	<section ibmRow class="info-section landing-page__r2">
+	</div>
+	<div ibmRow class="landing-page__r2">
 		<div ibmCol class="bx--no-gutter">
 			<ibm-tabs ariaLabel="Tab navigation">
 				<ibm-tab heading="About">
 					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
-						<section ibmRow class="landing-page__tab-content">
+						<div ibmRow class="landing-page__tab-content">
 							<div ibmCol [columnNumbers]="{'md': 4, 'lg': 7}">
 								<h2 class="landing-page__subheading">
 									What is Carbon?
@@ -37,29 +37,29 @@
 								alt="Carbon illustration"
 								/>
 							</div>
-						</section>
+						</div>
 					</div>
 				</ibm-tab>
 				<ibm-tab heading="Design">
 					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
-						<section ibmRow class="landing-page__tab-content">
+						<div ibmRow class="landing-page__tab-content">
 							<div ibmCol [columnNumbers]="{'lg': 16}">
 								Rapidly build beautiful and accessible experiences. The Carbon kit contains all resources you need to get started.
 							</div>
-						</section>
+						</div>
 					</div>
 				</ibm-tab>
 				<ibm-tab heading="Develop">
 					<div ibmGrid class="bx--grid--no-gutter bx--grid--full-width">
-						<section ibmRow class="landing-page__tab-content">
+						<div ibmRow class="landing-page__tab-content">
 							<div ibmCol [columnNumbers]="{'lg': 16}">
 								Carbon provides styles and components in Vanilla, React, Angular, and Vue for anyone building on the web.
 							</div>
-						</section>
+						</div>
 					</div>
 				</ibm-tab>
 			</ibm-tabs>
 		</div>
-	</section>
+	</div>
 	<app-info-section></app-info-section>
 </div>
