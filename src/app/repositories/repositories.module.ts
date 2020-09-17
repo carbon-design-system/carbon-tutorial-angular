@@ -13,8 +13,8 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 		RepositoriesRoutingModule,
 		GridModule,
 		TableModule,
-		LinkModule, 
-		PaginationModule 
+		LinkModule,
+		PaginationModule
 	]
 })
 export class RepositoriesModule { }
