@@ -1,14 +1,3 @@
-<ng-template #linkTemplate let-data="data">
-  <ul style="display: flex">
-    <li>
-      <a ibmLink [href]="data.github">Github</a>
-    </li>
-    <li *ngIf="data.homepage">
-      <span>&nbsp;|&nbsp;</span>
-      <a ibmLink [href]="data.homepage">HomePage</a>
-    </li>
-  </ul>
-</ng-template>
 <ibm-table-container>
 	<ibm-table-header>
 		<h4 ibmTableHeaderTitle>Carbon Repositories</h4>
@@ -21,3 +10,16 @@
         [striped]="false">
     </ibm-table>
 </ibm-table-container>
+
+<ng-template #linkTemplate let-data="data">
+    <ul style="display: flex">
+      <li>
+        <a ibmLink [href]="data.github">Github</a>
+      </li>
+      <li *ngIf="data.homepage">
+        <span>&nbsp;|&nbsp;</span>
+        <a ibmLink [href]="data.homepage">HomePage</a>
+      </li>
+    </ul>
+  </ng-template>
+  
