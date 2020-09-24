@@ -3,9 +3,10 @@
 // $carbon--theme: $carbon--theme--g100;
 // $carbon--theme: $carbon--theme--g90;
 // $carbon--theme: $carbon--theme--g10;
-
 @import "~carbon-components/scss/globals/scss/styles";
-
+@import './assets/scss/carbon-overrides.scss';
 .bx--header__nav {
-	display: block;
+    display: block;
 }
+
+$feature-flags: ( grid-columns-16: true);
