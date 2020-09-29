@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
+    "disableTypeScriptVersionCheck": true,
     "target": "es2015",
     "lib": [
       "es2016",
