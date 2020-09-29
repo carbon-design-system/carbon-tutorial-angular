@@ -5,6 +5,8 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports":true,
+		"skipLibCheck": true,
 		"lib": [
 			"es2016",
 			"ES6",
