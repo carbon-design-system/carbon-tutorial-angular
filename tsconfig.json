@@ -8,9 +8,11 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "target": "es2015",
     "lib": [
       "es2016",
+      "ES6",
       "dom",
       "esnext.asynciterable"
     ],
