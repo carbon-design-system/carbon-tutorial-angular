@@ -13,14 +13,14 @@ import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
 import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
-import { HttpClientModule } from '@angular/common/http';
+import { Apollo } from 'apollo-angular';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent
 	],
-	providers: [GraphQLModule],
+	providers: [Apollo],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
@@ -30,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 		Notification20Module,
 		UserAvatar20Module,
 		AppSwitcher20Module,
-		HttpClientModule,
+		GraphQLModule,
 	],
 	bootstrap: [AppComponent]
 })

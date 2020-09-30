@@ -3,7 +3,8 @@ import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import {
 	TableModel,
 	TableItem,
-	TableHeaderItem
+	TableHeaderItem,
+	Table,
 } from 'carbon-components-angular';
 import { gql, Apollo } from 'apollo-angular';
 
@@ -13,7 +14,10 @@ import { gql, Apollo } from 'apollo-angular';
 	styleUrls: ['./repo-table.component.scss']
 })
 export class RepoTableComponent implements OnInit {
+	data = [];
 	model = new TableModel();
+	skeletonModel = Table.skeletonModel(10, 6);
+	skeleton = true;
 
 	@ViewChild('linkTemplate', null)
 	protected linkTemplate: TemplateRef<any>;
@@ -22,6 +26,7 @@ export class RepoTableComponent implements OnInit {
 
 	prepareData(data) {
 		const newData = [];
+		this.skeleton = false;
 
 		for (const datum of data) {
 			newData.push([
@@ -42,33 +47,15 @@ export class RepoTableComponent implements OnInit {
 		return newData;
 	}
 
+	selectPage(page) {
+		const offset = this.model.pageLength * (page - 1);
+		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
+		this.model.data = this.prepareData(pageRawData);
+		this.model.currentPage = page;
+	}
+
 	ngOnInit() {
-		this.model.data = [
-			[
-				new TableItem({ data: 'Repo 1', expandedData: 'Row description' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: '123' }),
-				new TableItem({ data: '456' }),
-				new TableItem({ data: 'Links' })
-			],
-			[
-				new TableItem({ data: 'Repo 2', expandedData: 'Row description' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: '123' }),
-				new TableItem({ data: '456' }),
-				new TableItem({ data: 'Links' })
-			],
-			[
-				new TableItem({ data: 'Repo 3', expandedData: 'Row description' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: 'Date' }),
-				new TableItem({ data: '123' }),
-				new TableItem({ data: '456' }),
-				new TableItem({ data: 'Links' })
-			]
-		];
+		// this.model.data =[]
 		this.model.header = [
 			new TableHeaderItem({ data: 'Name' }),
 			new TableHeaderItem({ data: 'Created' }),
@@ -119,12 +106,18 @@ export class RepoTableComponent implements OnInit {
 				]);
 				this.model.data = errorData;
 			} else if (response.loading) {
-				// Add loading state
+				this.skeleton = true;
 			} else {
-				console.log(response);
+				console.log('apollo graphgql response : ');
+				// console.log(response);
+				// this.prepareData(response.data.organization.repositories.nodes);
+				this.data = response.data.organization.repositories.nodes;
+				this.model.pageLength = 10;
+				this.model.totalDataLength = response.data.organization.repositories.totalCount;
+				this.selectPage(1);
 			}
 		}, (error: any) => {
-			console.log("apollo error : ")
+			console.log('apollo error : ');
 			console.log(error);
 		});
 	}

@@ -16,6 +16,7 @@
       "esnext.asynciterable"
     ],
     "module": "esnext",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true
   }
 }
