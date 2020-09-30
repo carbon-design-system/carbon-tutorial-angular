@@ -6,6 +6,8 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
 		"lib": [
 			"dom",
 			"es2016",
@@ -22,8 +24,8 @@
 	},
 	"files": [
 		"test.ts",
-	  "polyfills.ts"
-  ],
+		"polyfills.ts"
+	],
 	"include": [
 		"**/*.spec.ts"
 	]
