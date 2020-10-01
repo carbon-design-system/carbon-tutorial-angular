@@ -1,0 +1,21 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PersonFavorite32Module } from '@carbon/icons-angular/lib/person--favorite/32';
+import { Globe32Module } from '@carbon/icons-angular/lib/globe/32';
+import { Application32Module } from '@carbon/icons-angular/lib/application/32';
+import { GridModule } from 'carbon-components-angular';
+import { InfoCardComponent } from './info-card/info-card.component';
+import { InfoSectionComponent } from './info-section/info-section.component';
+
+@NgModule({
+	exports: [InfoCardComponent, InfoSectionComponent],
+	declarations: [InfoCardComponent, InfoSectionComponent],
+	imports: [
+		CommonModule,
+		GridModule,
+		PersonFavorite32Module,
+		Globe32Module,
+		Application32Module
+	]
+})
+export class InfoModule { }

@@ -7,6 +7,9 @@ import {
 	GridModule,
 	TabsModule
 } from 'carbon-components-angular';
+import { InfoModule } from '../../info/info.module';
+// import { InfoCardComponent } from '../../info/info-card/info-card.component';
+// import { InfoSectionComponent } from '../../info/info-section/info-section.component';
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -14,15 +17,16 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ],
+			declarations: [LandingPageComponent],
 			imports: [
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule
+				TabsModule,
+				InfoModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

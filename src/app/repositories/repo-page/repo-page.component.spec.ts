@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Apollo } from 'apollo-angular';
 import { ApolloTestingModule } from 'apollo-angular/testing';
 
 import { RepoPageComponent } from './repo-page.component';
@@ -11,7 +12,8 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent, RepoTableComponent ],
+			declarations: [RepoPageComponent, RepoTableComponent],
+			providers: [Apollo],
 			imports: [
 				GridModule,
 				TableModule,
@@ -19,7 +21,7 @@ describe('RepoPageComponent', () => {
 				ApolloTestingModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

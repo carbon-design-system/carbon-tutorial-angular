@@ -12,7 +12,7 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-import { Apollo } from 'apollo-angular'
+import { Apollo } from 'apollo-angular';
 
 @NgModule({
 	declarations: [

@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Apollo } from 'apollo-angular';
 import { ApolloTestingModule } from 'apollo-angular/testing';
 
 import { UIShellModule } from 'carbon-components-angular';
@@ -10,6 +11,12 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
+import { GridModule } from 'carbon-components-angular';
+import { PersonFavorite32Module } from '@carbon/icons-angular/lib/person--favorite/32';
+import { Globe32Module } from '@carbon/icons-angular/lib/globe/32';
+import { Application32Module } from '@carbon/icons-angular/lib/application/32';
+
+
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
@@ -17,13 +24,18 @@ describe('AppComponent', () => {
 				AppComponent,
 				HeaderComponent
 			],
+			providers: [Apollo],
 			imports: [
 				RouterTestingModule,
 				UIShellModule,
 				Notification20Module,
 				UserAvatar20Module,
 				AppSwitcher20Module,
-				ApolloTestingModule
+				ApolloTestingModule,
+				GridModule,
+				PersonFavorite32Module,
+				Globe32Module,
+				Application32Module
 			]
 		}).compileComponents();
 	}));
