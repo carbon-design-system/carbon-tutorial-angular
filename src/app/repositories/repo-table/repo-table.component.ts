@@ -11,8 +11,7 @@ import {
 	TableItem,
 	TableHeaderItem
 } from 'carbon-components-angular';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
+import { gql, Apollo } from 'apollo-angular';
 
 @Component({
 	selector: 'app-repo-table',
@@ -33,12 +32,12 @@ export class RepoTableComponent implements OnInit {
 	ngOnInit() {
 		this.model = new TableModel();
 		this.model.header = [
-			new TableHeaderItem({data: 'Name'}),
-			new TableHeaderItem({data: 'Created'}),
-			new TableHeaderItem({data: 'Updated'}),
-			new TableHeaderItem({data: 'Open Issues'}),
-			new TableHeaderItem({data: 'Stars'}),
-			new TableHeaderItem({data: 'Links'})
+			new TableHeaderItem({ data: 'Name' }),
+			new TableHeaderItem({ data: 'Created' }),
+			new TableHeaderItem({ data: 'Updated' }),
+			new TableHeaderItem({ data: 'Open Issues' }),
+			new TableHeaderItem({ data: 'Stars' }),
+			new TableHeaderItem({ data: 'Links' })
 		];
 
 		this.apollo.watchQuery({
@@ -76,23 +75,23 @@ export class RepoTableComponent implements OnInit {
 			  }
 			`
 		})
-		.valueChanges.subscribe((response: any) => {
-			if (response.error) {
-				const errorData = [];
-			 	errorData.push([
-					new TableItem({data: 'error!' })
-				]);
-				this.model.data = errorData;
-			} else if (response.loading) {
-				this.skeleton = true;
-			} else {
-				// If we're here, we've got our data!
-				this.data = response.data.organization.repositories.nodes;
-				this.model.pageLength = 10;
-				this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				this.selectPage(1);
-			}
-		});
+			.valueChanges.subscribe((response: any) => {
+				if (response.error) {
+					const errorData = [];
+					errorData.push([
+						new TableItem({ data: 'error!' })
+					]);
+					this.model.data = errorData;
+				} else if (response.loading) {
+					this.skeleton = true;
+				} else {
+					// If we're here, we've got our data!
+					this.data = response.data.organization.repositories.nodes;
+					this.model.pageLength = 10;
+					this.model.totalDataLength = response.data.organization.repositories.totalCount;
+					this.selectPage(1);
+				}
+			});
 	}
 
 	selectPage(page) {
