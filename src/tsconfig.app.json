@@ -5,9 +5,10 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
 		"lib": [
 			"es2016",
-			"ES6",
 			"dom",
 			"esnext.asynciterable"
 		],
@@ -15,7 +16,7 @@
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
-		"types": []
+		"types": [],
 	},
 	"include": [
 		"**/*"
