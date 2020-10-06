@@ -4,6 +4,7 @@ import { ApolloTestingModule } from 'apollo-angular/testing';
 import { RepoPageComponent } from './repo-page.component';
 import { GridModule, TableModule, PaginationModule } from 'carbon-components-angular';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
+import { Apollo } from 'apollo-angular';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -12,6 +13,7 @@ describe('RepoPageComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ RepoPageComponent, RepoTableComponent ],
+			providers: [Apollo],
 			imports: [
 				GridModule,
 				TableModule,
