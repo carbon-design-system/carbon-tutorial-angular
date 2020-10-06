@@ -17,10 +17,26 @@ const routes: Routes = [
 				(m) => m.RepositoriesModule
 			),
 	},
+	{
+		path: 'catalog',
+		component: CatalogComponent
+	},
+	{
+		path: 'docs',
+		component: DocsComponent
+	},
+	{
+		path: 'support',
+		component: SupportComponent
+	},
+	{
+		path: 'link1',
+		component: Link1Component
+	}
 ];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes, { useHash: true })],
-	exports: [RouterModule],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }
