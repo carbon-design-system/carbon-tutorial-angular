@@ -13,10 +13,7 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent
-	],
+	declarations: [AppComponent, HeaderComponent],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
@@ -29,4 +26,4 @@ import { HeaderComponent } from './header/header.component';
 	],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
