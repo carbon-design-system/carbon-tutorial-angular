@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { RepoTableComponent } from './repo-table.component';
+import { RepoTableComponent } from "./repo-table.component";
+import { TableModule } from "carbon-components-angular";
 
-describe('RepoTableComponent', () => {
+describe("RepoTableComponent", () => {
 	let component: RepoTableComponent;
 	let fixture: ComponentFixture<RepoTableComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoTableComponent ]
-		})
-		.compileComponents();
+			declarations: [RepoTableComponent],
+			imports: [TableModule]
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -19,7 +20,7 @@ describe('RepoTableComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });
