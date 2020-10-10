@@ -11,9 +11,11 @@
     "target": "es2015",
     "lib": [
       "es2016",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "module": "esnext",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true
   }
 }
