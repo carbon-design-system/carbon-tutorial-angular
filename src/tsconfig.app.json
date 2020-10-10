@@ -5,22 +5,14 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"lib": [
-			"es2016",
-			"dom",
-			"esnext.asynciterable"
-		],
+		"lib": ["es2016", "dom", "esnext.asynciterable"],
 		"outDir": "../out-tsc/app",
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
-		"types": []
+		"types": [],
+		"resolveJsonModule": true
 	},
-	"include": [
-		"**/*"
-	],
-	"exclude": [
-		"test.ts",
-		"**/*.spec.ts"
-	]
+	"include": ["**/*"],
+	"exclude": ["test.ts", "**/*.spec.ts"]
 }
