@@ -5,6 +5,10 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"strictNullChecks": false,
+		"skipLibCheck": true,		
 		"resolveJsonModule": true,
 		"lib": [
 			"dom",
