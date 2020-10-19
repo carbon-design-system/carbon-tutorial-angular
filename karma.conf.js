@@ -30,7 +30,7 @@ module.exports = function (config) {
 		logLevel: config.LOG_INFO,
 		autoWatch: false,
 		captureTimeout: 120000,
-		browsers: ['Chromeheadless'],
+		browsers: ['ChromeHeadless'],
 		singleRun: true
 	});
 };
