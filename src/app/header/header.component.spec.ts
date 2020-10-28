@@ -10,9 +10,10 @@ describe('HeaderComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ HeaderComponent ],
-			imports: [ UIShellModule ]
+			imports: [UIShellModule]
 		})
 		.compileComponents();
+
 	}));
 
 	beforeEach(() => {

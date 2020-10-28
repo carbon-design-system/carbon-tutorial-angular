@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
 	selector: 'app-root',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+	declarations: [HeaderComponent];
+
+	@HostBinding('class.bx--header') headerClass = true;
+
 }
