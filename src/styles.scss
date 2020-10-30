@@ -9,6 +9,7 @@ $feature-flags: (
 );
 
 @import "~carbon-components/scss/globals/scss/styles";
+@import './assets/scss/carbon-overrides.scss';
 
 .bx--header__nav {
 	display: block;
