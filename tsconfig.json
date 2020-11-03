@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "skipLibCheck": true,
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -11,9 +12,12 @@
     "target": "es2015",
     "lib": [
       "es2016",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "module": "esnext",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop":true
   }
 }
