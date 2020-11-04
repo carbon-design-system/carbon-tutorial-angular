@@ -8,6 +8,8 @@ import {
 	TabsModule
 } from 'carbon-components-angular';
 
+import { InfoModule } from '../../info/info.module';
+
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
 	let fixture: ComponentFixture<LandingPageComponent>;
@@ -19,7 +21,8 @@ describe('LandingPageComponent', () => {
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule
+				TabsModule,
+				InfoModule
 			]
 		})
 		.compileComponents();
