@@ -17,10 +17,10 @@
 						"tsConfig": "src/tsconfig.app.json",
 						"polyfills": "src/polyfills.ts",
 						"assets": [
+							"src/favicon.ico",
 							"src/assets",
 							"src/sw.js",
-							"src/manifest.json",
-							"src/favicon.ico"
+							"src/manifest.json"
 						],
 						"styles": ["src/styles.scss"],
 						"scripts": []
@@ -72,10 +72,10 @@
 						"scripts": [],
 						"styles": ["src/styles.scss"],
 						"assets": [
+							"src/favicon.ico",
 							"src/assets",
 							"src/sw.js",
-							"src/manifest.json",
-							"src/favicon.ico"
+							"src/manifest.json"
 						]
 					}
 				},

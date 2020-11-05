@@ -14,6 +14,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<app-root>Loading...</app-root>
+	<app-root>Loading...
+		<script>
+			// Uncomment the following lines to activate the service worker
+			if (navigator.serviceWorker) {
+			   navigator.serviceWorker.register("sw.js").then(() => {
+			     console.log("Service worker installed");
+			   }, err => {
+			     console.error("Service worker error:", err);
+			   });
+			}
+			</script>
+	</app-root>
 </body>
 </html>
