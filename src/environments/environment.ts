@@ -4,5 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-	production: false
+	production: false,
+	githubPersonalAccessToken: '78f4d897a3376a1c3bd937e74a57976787d4769a',
 };
