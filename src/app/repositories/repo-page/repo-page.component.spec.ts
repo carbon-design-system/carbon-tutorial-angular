@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RepoPageComponent } from './repo-page.component';
-import { GridModule, TableModule, PaginationModule } from 'carbon-components-angular';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -9,12 +8,7 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent],
-			imports: [
-				GridModule,
-				TableModule,
-				PaginationModule
-			]
+			declarations: [ RepoPageComponent ]
 		})
 		.compileComponents();
 	}));
