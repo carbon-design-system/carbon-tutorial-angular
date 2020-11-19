@@ -2,12 +2,19 @@ $feature-flags: (
 	grid-columns-16: true,
 );
 
-// To change the theme uncomment the below import and which ever carbon theme you want to use
-// @import '~carbon-components/scss/globals/scss/vendor/@carbon/elements/scss/themes/theme-maps';
-// $carbon--theme: $carbon--theme--g100;
-// $carbon--theme: $carbon--theme--g90;
-// $carbon--theme: $carbon--theme--g10;
+// Feature flags
+$css--font-face: true;
+$css--plex: true;
 
-@import "~carbon-components/scss/globals/scss/styles";
+// Global styles
+@import "~carbon-components/scss/globals/scss/css--font-face";
+@import "~carbon-components/scss/globals/grid/grid";
 
-@import './assets/scss/carbon-overrides.scss';
+// Carbon components
+@import "~carbon-components/scss/components/breadcrumb/breadcrumb";
+@import "~carbon-components/scss/components/button/button";
+@import "~carbon-components/scss/components/data-table/data-table";
+@import "~carbon-components/scss/components/link/link";
+@import "~carbon-components/scss/components/pagination/pagination";
+@import "~carbon-components/scss/components/tabs/tabs";
+@import "~carbon-components/scss/components/ui-shell/ui-shell";
