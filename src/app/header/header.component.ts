@@ -1,4 +1,4 @@
-import { Component, OnInit , HostBinding } from '@angular/core';
+import { Component , HostBinding } from '@angular/core';
 
 @Component({
 	selector: 'app-header',
@@ -8,11 +8,8 @@ import { Component, OnInit , HostBinding } from '@angular/core';
 
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
 	@HostBinding('class.bx--header') headerClass = true;
 
-	constructor() { }
 
-	ngOnInit(): void {
-	}
 }

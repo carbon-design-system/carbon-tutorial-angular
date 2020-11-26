@@ -24,6 +24,7 @@ import { UIShellModule } from 'carbon-components-angular';
 	UserAvatarModule,
 	AppSwitcherModule
 	],
+	providers: [UIShellModule],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
