@@ -15,9 +15,9 @@ describe('AppComponent', () => {
 			imports: [
 				RouterTestingModule,
 				UIShellModule,
-			    NotificationModule,
-			    UserAvatarModule,
-			    AppSwitcherModule
+				NotificationModule,
+				UserAvatarModule,
+				AppSwitcherModule
 			],
 			declarations: [
 				AppComponent,
