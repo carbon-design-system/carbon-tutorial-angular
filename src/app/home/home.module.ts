@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { InfoModule } from './../info/info.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {
 	BreadcrumbModule,
@@ -18,7 +19,8 @@ import {
 		BreadcrumbModule,
 		ButtonModule,
 		GridModule,
-		TabsModule
+		TabsModule,
+		InfoModule
 	]
 })
 export class HomeModule { }
