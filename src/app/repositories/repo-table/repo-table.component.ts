@@ -17,6 +17,7 @@ export class RepoTableComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit() {
+		//added table
 		this.model.data = [
 			[
 				new TableItem({ data: 'Repo 1', expandedData: 'Row description' }),
