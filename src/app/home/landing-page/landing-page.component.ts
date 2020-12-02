@@ -9,8 +9,7 @@ export class LandingPageComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-		//landing page
+	ngOnInit() {
 	}
 
 }

@@ -9,7 +9,7 @@ export class RepoPageComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
+	ngOnInit() {
 	}
 
 }
