@@ -1,0 +1,1 @@
+{"version":3,"file":"tile.component.ngfactory.js","sourceRoot":"","sources":["../src/tiles/tile.component.ngfactory.ts","../src/tiles/tile.component.ts.Tile.html"],"names":[],"mappings":";;;;;;;;;;;qDCAA,eAAY","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n","<ng-content></ng-content>"]}

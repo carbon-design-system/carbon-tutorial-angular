@@ -1,0 +1,1 @@
+{"version":3,"file":"grid.directive.ngfactory.js","sourceRoot":"","sources":["../src/grid/grid.directive.ngfactory.ts"],"names":[],"mappings":"","sourcesContent":["import * as i0 from '@angular/core';\ni0.ComponentFactory;\n"]}

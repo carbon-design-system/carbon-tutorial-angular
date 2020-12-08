@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"BaseModal":{"__symbolic":"class","members":{"close":[{"__symbolic":"property","decorators":[{"__symbolic":"call","expression":{"__symbolic":"reference","module":"@angular/core","name":"Output","line":8,"character":2}}]}],"closeModal":[{"__symbolic":"method"}]}}}}]
