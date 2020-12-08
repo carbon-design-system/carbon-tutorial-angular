@@ -1,7 +1,7 @@
 # CARBON ANGULAR STARTER
 
 Kick start your application development with Carbon Angular.
-
+ 
 ## Prerequisites
 
 * [npm](https://www.npmjs.com/) (`brew install npm`)
