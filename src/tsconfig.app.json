@@ -4,6 +4,7 @@
 		"declaration": false,
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
+		"resolveJsonModule": true,
 		"experimentalDecorators": true,
 		"lib": [
 			"es2016",
@@ -15,7 +16,6 @@
 		"module": "esnext",
 		"baseUrl": "",
 		"types": [],
-		"resolveJsonModule": true,
 	},
 	"include": [
 		"**/*"
