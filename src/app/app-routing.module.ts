@@ -4,32 +4,33 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { DocsComponent } from './pages/docs/docs.component';
 import { SupportComponent } from './pages/support/support.component';
 import { Link1Component } from './pages/link1/link1.component';
+import { RepoPageComponent } from './repositories/repo-page/repo-page.component';
+import { LandingPageComponent } from './home/landing-page/landing-page.component';
 
 const routes: Routes = [
 	{
 		path: '',
-		loadChildren: () => import('./starter-home/starter-home.module').then(m => m.StarterHomeModule)
+		loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
 	},
 	{
-		path: 'catalog',
-		component: CatalogComponent
+		path: 'repos',
+		loadChildren: () =>
+		import('./repositories/repositories.module').then(
+			(m) => m.RepositoriesModule
+		),
 	},
 	{
-		path: 'docs',
-		component: DocsComponent
+		path: '',
+		component: LandingPageComponent,
 	},
 	{
-		path: 'support',
-		component: SupportComponent
+		path: '',
+		component: RepoPageComponent,
 	},
-	{
-		path: 'link1',
-		component: Link1Component
-	}
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes)],
+	imports: [RouterModule.forRoot(routes, { useHash: true })],
 	exports: [RouterModule]
 })
 export class AppRoutingModule { }
