@@ -2,15 +2,22 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
 
+import {
+	GridModule,
+	BreadcrumbModule,
+	ButtonModule,
+	TabsModule,
+} from 'carbon-components-angular';
+
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
 	let fixture: ComponentFixture<LandingPageComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ]
-		})
-		.compileComponents();
+			declarations: [LandingPageComponent],
+			imports: [GridModule, BreadcrumbModule, ButtonModule, TabsModule],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
