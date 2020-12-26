@@ -2,6 +2,7 @@
 	"name": "carbon-angular-starter",
 	"version": "0.1.0",
 	"license": "",
+	"deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
