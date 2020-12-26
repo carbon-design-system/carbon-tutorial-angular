@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LandingPageComponent } from './landing-page.component';
 import {
 	BreadcrumbModule,
@@ -7,6 +6,7 @@ import {
 	GridModule,
 	TabsModule
 } from 'carbon-components-angular';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -20,7 +20,10 @@ describe('LandingPageComponent', () => {
 				ButtonModule,
 				GridModule,
 				TabsModule
-			]
+			],
+			schemas: [
+				CUSTOM_ELEMENTS_SCHEMA,
+				NO_ERRORS_SCHEMA]
 		})
 		.compileComponents();
 	}));
