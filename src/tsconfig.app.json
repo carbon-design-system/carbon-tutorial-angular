@@ -1,11 +1,25 @@
 {
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../out-tsc/app",
-    "types": []
-  },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ]
+	"compilerOptions": {
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": [
+			"es2016",
+			"dom"
+		],
+		"outDir": "../out-tsc/app",
+		"target": "es2015",
+		"module": "esnext",
+		"baseUrl": "",
+		"types": []
+	},
+	"include": [
+		"**/*"
+	],
+	"exclude": [
+		"test.ts",
+		"**/*.spec.ts"
+	]
 }
