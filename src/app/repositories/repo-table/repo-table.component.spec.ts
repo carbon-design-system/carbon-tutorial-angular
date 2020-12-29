@@ -10,7 +10,7 @@ describe('RepoTableComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ RepoTableComponent ],
-			imports:[TableModule]
+			imports: [TableModule]
 		})
 		.compileComponents();
 	}));
