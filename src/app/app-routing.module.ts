@@ -9,22 +9,6 @@ const routes: Routes = [
 	{
 		path: '',
 		loadChildren: () => import('./starter-home/starter-home.module').then(m => m.StarterHomeModule)
-	},
-	{
-		path: 'catalog',
-		component: CatalogComponent
-	},
-	{
-		path: 'docs',
-		component: DocsComponent
-	},
-	{
-		path: 'support',
-		component: SupportComponent
-	},
-	{
-		path: 'link1',
-		component: Link1Component
 	}
 ];
 
