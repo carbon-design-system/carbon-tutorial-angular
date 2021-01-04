@@ -14,8 +14,8 @@
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
-		"resolveJsonModule": true,
-		"types": []
+		"types": [],
+		"resolveJsonModule": true
 	},
 	"include": [
 		"**/*"
