@@ -12,7 +12,7 @@ describe('TutorialHeaderComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ HeaderComponent ],
+			declarations: [HeaderComponent ],
 			imports: [
 				HeaderModule,
 				Notification20Module,
