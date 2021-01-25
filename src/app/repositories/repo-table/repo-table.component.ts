@@ -1,6 +1,4 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
 
 import {
 	TableModel,
@@ -8,6 +6,9 @@ import {
 	TableHeaderItem,
 	Table
 } from 'carbon-components-angular';
+
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
 	selector: 'app-repo-table',
@@ -24,32 +25,6 @@ export class RepoTableComponent implements OnInit {
 	constructor(private apollo: Apollo) { }
 
 	ngOnInit() {
-		this.model.data = [
-			[
-				new TableItem({data: 'Repo 1', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			],
-			[
-				new TableItem({data: 'Repo 2', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			],
-			[
-				new TableItem({data: 'Repo 3', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			]
-		];
 		this.model.header = [
 			new TableHeaderItem({data: 'Name'}),
 			new TableHeaderItem({data: 'Created'}),
@@ -100,7 +75,6 @@ export class RepoTableComponent implements OnInit {
 				]);
 				this.model.data = errorData;
 			} else if (response.loading) {
-				// Add loading state
 				this.skeleton = true;
 			} else {
 				this.data = response.data.organization.repositories.nodes;
@@ -109,12 +83,6 @@ export class RepoTableComponent implements OnInit {
 				this.selectPage(1);
 			}
 		});
-	}
-	selectPage(page) {
-		const offset = this.model.pageLength * (page - 1);
-		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
-		this.model.data = this.prepareData(pageRawData);
-		this.model.currentPage = page;
 	}
 	prepareData(data) {
 		this.skeleton = false;
@@ -137,5 +105,11 @@ export class RepoTableComponent implements OnInit {
 			]);
 		}
 		return newData;
+	}
+	selectPage(page) {
+		const offset = this.model.pageLength * (page - 1);
+		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
+		this.model.data = this.prepareData(pageRawData);
+		this.model.currentPage = page;
 	}
 }
