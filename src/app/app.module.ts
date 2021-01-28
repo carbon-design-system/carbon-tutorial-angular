@@ -27,13 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
 		UIShellModule,
 		Notification20Module,
 		UserAvatar20Module,
-<<<<<<< HEAD
 		AppSwitcher20Module,
 		GraphQLModule,
 		HttpClientModule
-=======
-		AppSwitcher20Module
->>>>>>> a7d2473ff5c6b6a7612bad6bc253bf17f487b76c
 	],
 	bootstrap: [AppComponent]
 })

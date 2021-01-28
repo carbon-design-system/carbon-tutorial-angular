@@ -32,36 +32,7 @@ export class RepoTableComponent implements OnInit {
 	constructor(private apollo: Apollo) { }
 
 	ngOnInit() {
-<<<<<<< HEAD
 		this.model = new TableModel();
-=======
-		this.model.data = [
-			[
-				new TableItem({data: 'Repo 1', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			],
-			[
-				new TableItem({data: 'Repo 2', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			],
-			[
-				new TableItem({data: 'Repo 3', expandedData: 'Row description'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: 'Date'}),
-				new TableItem({data: '123'}),
-				new TableItem({data: '456'}),
-				new TableItem({data: 'Links'})
-			]
-		];
->>>>>>> a7d2473ff5c6b6a7612bad6bc253bf17f487b76c
 		this.model.header = [
 			new TableHeaderItem({data: 'Name'}),
 			new TableHeaderItem({data: 'Created'}),
