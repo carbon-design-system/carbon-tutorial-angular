@@ -22,8 +22,12 @@ describe('AppComponent', () => {
 				UIShellModule,
 				Notification20Module,
 				UserAvatar20Module,
+<<<<<<< HEAD
 				AppSwitcher20Module,
 				ApolloTestingModule
+=======
+				AppSwitcher20Module
+>>>>>>> a7d2473ff5c6b6a7612bad6bc253bf17f487b76c
 			]
 		}).compileComponents();
 	}));
