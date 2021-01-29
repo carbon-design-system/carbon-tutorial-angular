@@ -1,5 +1,5 @@
 <div class="info-card">
-    <h4 class="info-card__heading">
+    <h4 *ngIf="splitHeading" class="info-card__heading">
       {{splitHeading[0]}}
       <strong>{{splitHeading[1]}}</strong>
     </h4>

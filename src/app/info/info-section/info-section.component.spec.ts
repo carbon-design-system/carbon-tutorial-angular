@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { InfoSectionComponent } from './info-section.component';
+import { PersonFavorite32Module } from '@carbon/icons-angular/lib/person--favorite/32';
+import { Globe32Module } from '@carbon/icons-angular/lib/globe/32';
+import { Application32Module } from '@carbon/icons-angular/lib/application/32';
+import { InfoCardComponent } from '../info-card/info-card.component';
+import { GridModule } from 'carbon-components-angular';
 
 describe('InfoSectionComponent', () => {
 	let component: InfoSectionComponent;
@@ -8,7 +14,13 @@ describe('InfoSectionComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ InfoSectionComponent ]
+			declarations: [ InfoSectionComponent, InfoCardComponent ],
+			imports: [
+				PersonFavorite32Module,
+				Globe32Module,
+				Application32Module,
+				GridModule
+			]
 		})
 		.compileComponents();
 	}));
