@@ -1,12 +1,18 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
 import {
+	Component,
+	OnInit,
+	ViewChild,
+	TemplateRef
+} from '@angular/core';
+
+import {
+	Table,
 	TableModel,
 	TableItem,
-	TableHeaderItem,
-	Table
+	TableHeaderItem
 } from 'carbon-components-angular';
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
 	selector: 'app-repo-table',
@@ -113,7 +119,7 @@ export class RepoTableComponent implements OnInit {
 						homepage: datum.homepageUrl
 					},
 					template: this.linkTemplate
-				}) 
+				})
 			]);
 		}
 		return newData;
