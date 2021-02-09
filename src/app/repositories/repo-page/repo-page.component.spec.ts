@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ApolloTestingModule } from 'apollo-angular/testing';
 
 import { RepoPageComponent } from './repo-page.component';
 import { GridModule, TableModule, PaginationModule } from 'carbon-components-angular';
@@ -14,7 +15,8 @@ describe('RepoPageComponent', () => {
 			imports: [
 				GridModule,
 				TableModule,
-				PaginationModule
+				PaginationModule,
+				ApolloTestingModule
 			]
 		})
 		.compileComponents();
