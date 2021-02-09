@@ -23,3 +23,4 @@ describe('InfoCardComponent', () => {
 		expect(component).toBeTruthy();
 	});
 });
+
