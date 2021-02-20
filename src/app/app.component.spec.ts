@@ -30,13 +30,6 @@ describe('AppComponent', () => {
 		expect(app.title).toEqual('carbon-angular-tutorial');
 	});
 
-	it('should render title', () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		fixture.detectChanges();
-		const compiled = fixture.nativeElement;
-		expect(compiled.querySelector('.content span').textContent).toContain('carbon-angular-tutorial app is running!');
-	});
-
 	TestBed.configureTestingModule({
 		declarations: [HeaderComponent],
 		imports: [UIShellModule]
