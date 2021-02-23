@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ["./info-card.component.scss"],
 })
 export class InfoCardComponent implements OnInit {
-	@Input() heading;
+	@Input() heading = "";
 	@Input() content;
 	splitHeading;
 
