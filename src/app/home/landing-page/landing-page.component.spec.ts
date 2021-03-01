@@ -7,7 +7,6 @@ import {
 	GridModule,
 	TabsModule
 } from 'carbon-components-angular';
-import { InfoModule } from '../../info/info.module';
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -20,8 +19,7 @@ describe('LandingPageComponent', () => {
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule,
-				InfoModule
+				TabsModule
 			]
 		})
 		.compileComponents();
