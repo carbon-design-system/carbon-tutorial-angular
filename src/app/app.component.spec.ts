@@ -1,6 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ApolloTestingModule } from 'apollo-angular/testing';
 
 import { UIShellModule } from 'carbon-components-angular';
 import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
@@ -22,8 +21,7 @@ describe('AppComponent', () => {
 				UIShellModule,
 				Notification20Module,
 				UserAvatar20Module,
-				AppSwitcher20Module,
-				ApolloTestingModule
+				AppSwitcher20Module
 			]
 		}).compileComponents();
 	}));
