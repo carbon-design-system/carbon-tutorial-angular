@@ -5,6 +5,11 @@
 // $carbon--theme: $carbon--theme--g10;
 
 @import "~carbon-components/scss/globals/scss/styles";
+@import './assets/scss/carbon-overrides.scss';
+
+$feature-flags: (
+  grid-columns-16: true
+);
 
 .bx--header__nav {
 	display: block;
