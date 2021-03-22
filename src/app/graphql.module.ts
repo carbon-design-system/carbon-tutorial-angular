@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 
 const uri = 'https://api.github.com/graphql'; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink) {
+
 	return {
 		link: httpLink.create({
 			uri,
