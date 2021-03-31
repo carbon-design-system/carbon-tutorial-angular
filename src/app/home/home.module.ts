@@ -1,3 +1,4 @@
+import { BreadcrumbModule, ButtonModule, GridModule, TabsModule } from 'carbon-components-angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +9,11 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 	declarations: [LandingPageComponent],
 	imports: [
 		CommonModule,
-		HomeRoutingModule
+		HomeRoutingModule,
+		GridModule,
+		BreadcrumbModule,
+		ButtonModule,
+		TabsModule
 	]
 })
 export class HomeModule { }
