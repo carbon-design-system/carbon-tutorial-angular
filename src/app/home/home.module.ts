@@ -6,12 +6,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
-  declarations: [
-    LandingPageComponent
-  ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+	declarations: [LandingPageComponent],
+	imports: [
+		CommonModule,
+		HomeRoutingModule
+	]
 })
 export class HomeModule { }

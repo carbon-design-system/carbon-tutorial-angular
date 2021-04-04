@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/carbon-tutorial-angular'),
+      dir: require('path').join(__dirname, './coverage/carbon-angular-tutorial'),
       subdir: '.',
       reporters: [
         { type: 'html' },
