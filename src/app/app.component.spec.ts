@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
+import { UIShellModule } from 'carbon-components-angular';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
