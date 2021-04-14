@@ -1,3 +1,4 @@
+import { InfoModule } from './../../info/info.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
@@ -19,7 +20,8 @@ describe('LandingPageComponent', () => {
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule
+				TabsModule,
+				InfoModule
 			]
 		})
 		.compileComponents();
