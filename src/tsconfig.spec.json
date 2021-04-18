@@ -5,6 +5,10 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"strictNullChecks": false,
+		"skipLibCheck": true,
 		"resolveJsonModule": true,
 		"lib": [
 			"dom",
@@ -22,8 +26,8 @@
 	},
 	"files": [
 		"test.ts",
-	  "polyfills.ts"
-  ],
+		"polyfills.ts"
+	],
 	"include": [
 		"**/*.spec.ts"
 	]
