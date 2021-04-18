@@ -8,21 +8,21 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { LinkModule, PaginationModule } from 'carbon-components-angular';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [
-				AppComponent,
-				HeaderComponent
-			],
+			declarations: [AppComponent, HeaderComponent],
 			imports: [
 				RouterTestingModule,
 				UIShellModule,
 				Notification20Module,
 				UserAvatar20Module,
-				AppSwitcher20Module
-			]
+				AppSwitcher20Module,
+				LinkModule,
+				PaginationModule,
+			],
 		}).compileComponents();
 	}));
 
