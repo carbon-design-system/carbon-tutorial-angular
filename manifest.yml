@@ -1,5 +1,5 @@
 ---
 applications:
-  - name: carbon-tutorial-angular-USERNAME
+  - name: carbon-tutorial-angular-pmagnard
     memory: 64M
     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
