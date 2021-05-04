@@ -4,7 +4,7 @@
 	"license": "",
 	"scripts": {
 		"ng": "ng",
-		"start": "ng serve",
+		"start": "ng serve --host=0.0.0.0 --disableHostCheck=true",
 		"build": "ng build --prod --aot",
 		"test": "ng test",
 		"test:once": "ng test --watch=false",
