@@ -23,7 +23,7 @@ describe('LandingPageComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(LandingPageComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		//fixture.detectChanges();
 	});
 
 	it('should create', () => {
