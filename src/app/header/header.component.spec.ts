@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeaderComponent } from './header.component';
 import { UIShellModule } from 'carbon-components-angular';
 
@@ -18,7 +17,7 @@ describe('HeaderComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(HeaderComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		// fixture.detectChanges();
 	});
 
 	it('should create', () => {
