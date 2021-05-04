@@ -1,10 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeaderModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
-
+import { HeaderModule } from 'carbon-components-angular';
 import { HeaderComponent } from './header.component';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
+import { UIShellModule } from 'carbon-components-angular';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('TutorialHeaderComponent', () => {
 	let component: HeaderComponent;
@@ -15,9 +13,8 @@ describe('TutorialHeaderComponent', () => {
 			declarations: [HeaderComponent ],
 			imports: [
 				HeaderModule,
-				Notification20Module,
-				UserAvatar20Module,
-				AppSwitcher20Module
+				UIShellModule,
+				RouterTestingModule
 			]
 		})
 		.compileComponents();
@@ -26,7 +23,7 @@ describe('TutorialHeaderComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(HeaderComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		// fixture.detectChanges();
 	});
 
 	it('should create', () => {
