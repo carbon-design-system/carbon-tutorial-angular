@@ -5,5 +5,6 @@ import { Component } from '@angular/core';
 	templateUrl: './repo-page.component.html',
 	styleUrls: ['./repo-page.component.scss']
 })
+
 export class RepoPageComponent {
 }
