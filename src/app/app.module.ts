@@ -4,19 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { UIShellModule } from 'carbon-components-angular';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
+import { UIShellModule, IconModule, IconService  } from 'carbon-components-angular';
 import { HeaderComponent } from './header/header.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LinkModule, PaginationModule } from 'carbon-components-angular';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HeaderComponent
+		HeaderComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -24,12 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
 		FormsModule,
 		AppRoutingModule,
 		UIShellModule,
-		Notification20Module,
-		UserAvatar20Module,
-		AppSwitcher20Module,
 		GraphQLModule,
-		HttpClientModule
+		HttpClientModule,
+		IconModule,
+		PaginationModule,
+		LinkModule
 	],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

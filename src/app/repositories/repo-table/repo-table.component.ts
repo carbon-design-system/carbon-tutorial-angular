@@ -1,37 +1,61 @@
-import {
-	Component,
-	OnInit,
-	ViewChild,
-	TemplateRef
-} from '@angular/core';
-
-import {
-	Table,
-	TableModel,
-	TableItem,
-	TableHeaderItem
-} from 'carbon-components-angular';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import {
+	TableModel,
+	TableItem,
+	TableHeaderItem,
+	Table
+} from 'carbon-components-angular';
 
 @Component({
 	selector: 'app-repo-table',
 	templateUrl: './repo-table.component.html',
 	styleUrls: ['./repo-table.component.scss']
 })
+
 export class RepoTableComponent implements OnInit {
-	data = [];
-	model: TableModel;
+	model = new TableModel();
 	skeletonModel = Table.skeletonModel(10, 6);
 	skeleton = true;
+	data = [];
 
-	@ViewChild('linkTemplate', null)
+	// @ViewChild('linkTemplate', null)
+	@ViewChild('linkTemplate', { static: false })
 	protected linkTemplate: TemplateRef<any>;
 
-	constructor(private apollo: Apollo) { }
+	// constructor() { }
+	constructor(private apollo: Apollo) {
 
-	ngOnInit() {
-		this.model = new TableModel();
+	}
+
+	ngOnInit(): void {
+		this.model.data = [
+			[
+				new TableItem({data: 'Repo 1', expandedData: 'Row description'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: '123'}),
+				new TableItem({data: '456'}),
+				new TableItem({data: 'Links'})
+			],
+			[
+				new TableItem({data: 'Repo 2', expandedData: 'Row description'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: '123'}),
+				new TableItem({data: '456'}),
+				new TableItem({data: 'Links'})
+			],
+			[
+				new TableItem({data: 'Repo 3', expandedData: 'Row description'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: 'Date'}),
+				new TableItem({data: '123'}),
+				new TableItem({data: '456'}),
+				new TableItem({data: 'Links'})
+			]
+		];
 		this.model.header = [
 			new TableHeaderItem({data: 'Name'}),
 			new TableHeaderItem({data: 'Created'}),
@@ -40,7 +64,6 @@ export class RepoTableComponent implements OnInit {
 			new TableHeaderItem({data: 'Stars'}),
 			new TableHeaderItem({data: 'Links'})
 		];
-		this.model.pageLength = 10;
 
 		this.apollo.watchQuery({
 			query: gql`
@@ -75,53 +98,57 @@ export class RepoTableComponent implements OnInit {
 				  }
 				}
 			  }
-			`,
-		})
-		.valueChanges.subscribe((response: any) => {
+			`
+		  })
+
+		  .valueChanges.subscribe((response: any) => {
 			if (response.error) {
-				const errorData = [];
-			 	errorData.push([
-					new TableItem({data: 'error!' })
-				]);
-				this.model.data = errorData;
+			  const errorData = [];
+			  errorData.push([
+				new TableItem({data: 'error!' })
+			  ]);
+			  this.model.data = errorData;
 			} else if (response.loading) {
-				this.skeleton = true;
+			  // Add loading state
+			  this.skeleton = true;
 			} else {
-				// If we're here, we've got our data!
-				this.data = response.data.organization.repositories.nodes;
-				this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				this.selectPage(1);
+			  // console.log(response);
+			  // If we're here, we've got our data!
+			  // this.prepareData(response.data.organization.repositories.nodes);
+			  this.data = response.data.organization.repositories.nodes;
+			  this.model.pageLength = 10;
+			  this.model.totalDataLength = response.data.organization.repositories.totalCount;
+			  this.selectPage(1);
+
 			}
-		});
+		  });
+
 	}
 
-	selectPage(page) {
+	selectPage(page): void {
 		const offset = this.model.pageLength * (page - 1);
 		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
 		this.model.data = this.prepareData(pageRawData);
 		this.model.currentPage = page;
-	}
+	  }
 
-	prepareData(data) {
+	prepareData(data): any {
 		this.skeleton = false;
 		const newData = [];
 
 		for (const datum of data) {
-			newData.push([
-				new TableItem({ data: datum.name, expandedData: datum.description }),
-				new TableItem({ data: new Date(datum.createdAt).toLocaleDateString() }),
-				new TableItem({ data: new Date(datum.updatedAt).toLocaleDateString() }),
-				new TableItem({ data: datum.issues.totalCount }),
-				new TableItem({ data: datum.stargazers.totalCount }),
-				new TableItem({
-					data: {
-						github: datum.url,
-						homepage: datum.homepageUrl
-					},
-					template: this.linkTemplate
-				})
-			]);
+		  newData.push([
+			new TableItem({ data: datum.name, expandedData: datum.description }),
+			new TableItem({ data: new Date(datum.createdAt).toLocaleDateString() }),
+			new TableItem({ data: new Date(datum.updatedAt).toLocaleDateString() }),
+			new TableItem({ data: datum.issues.totalCount }),
+			new TableItem({ data: datum.stargazers.totalCount }),
+			new TableItem({
+			  data: datum.url
+			})
+		  ]);
 		}
 		return newData;
-	}
+	  }
+
 }
