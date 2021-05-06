@@ -17,8 +17,9 @@
 }
 
 // aligns the tabs to the right
-.landing-page__r2 .bx--tabs__nav {
+.landing-page__r2 .bx--tabs--scrollable {
 	right: 0;
+	justify-content: flex-end;
 }
 
 // forces the navigation items to be displayed at all viewport sizes
