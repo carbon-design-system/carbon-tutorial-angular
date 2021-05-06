@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RepositoriesRoutingModule } from './repositories-routing.module';
 import { RepoPageComponent } from './repo-page/repo-page.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
+import { GridModule, LinkModule, PaginationModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from './repo-table/repo-table.component';
 
 @NgModule({
@@ -12,6 +12,8 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 		CommonModule,
 		RepositoriesRoutingModule,
 		GridModule,
+		LinkModule,
+		PaginationModule,
  		TableModule
 	]
 })
