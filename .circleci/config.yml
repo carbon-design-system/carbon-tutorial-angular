@@ -8,6 +8,8 @@ jobs:
       - checkout
       - run: pwd
       - run: ls -la
+      - run: cd carbon-angular-tutorial
+      - run: ls -la
       - run: npm install
       - run: npm run test:once
       - run: npm run build
