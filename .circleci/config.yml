@@ -8,8 +8,7 @@ jobs:
       - checkout
       - run: pwd
       - run: ls -lR
-      - run: ls -lR | more
-      - run: cd carbon-angular-tutorial
+      - run: cd ./carbon-angular-tutorial
       - run: pwd
       - run: ls -lR
       - run: npm install
