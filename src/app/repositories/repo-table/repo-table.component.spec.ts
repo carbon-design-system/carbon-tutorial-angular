@@ -4,9 +4,11 @@ import { RepoTableComponent } from './repo-table.component';
 import { TableModule, LinkModule, PaginationModule } from 'carbon-components-angular';
 import { Apollo } from 'apollo-angular';
 
-class mockApollo {
-	watchQuery = [];
-  }
+export class MockApollo {
+	watchQuery() {
+		let valueChanges = "";
+	}
+}
 
 describe('RepoTableComponent', () => {
 	let component: RepoTableComponent;
@@ -14,16 +16,16 @@ describe('RepoTableComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoTableComponent ],
+			declarations: [RepoTableComponent],
 			imports: [
 				TableModule,
 				LinkModule,
 				PaginationModule
 			],
-			providers: [{ provide: Apollo, useClass: mockApollo }],
+			providers: [{ provide: Apollo, useClass: MockApollo }],
 			schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
