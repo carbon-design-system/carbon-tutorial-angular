@@ -26,7 +26,7 @@ describe('RepoPageComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(RepoPageComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		// fixture.detectChanges();
 	});
 
 	it('should create', () => {

@@ -6,7 +6,7 @@ import { Apollo } from 'apollo-angular';
 
 export class MockApollo {
 	watchQuery() {
-		let valueChanges = "";
+		const valueChanges = '';
 	}
 }
 
@@ -31,7 +31,7 @@ describe('RepoTableComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(RepoTableComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		// fixture.detectChanges();
 	});
 
 	it('should create', () => {
