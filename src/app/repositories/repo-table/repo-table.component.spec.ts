@@ -1,7 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RepoTableComponent } from './repo-table.component';
-import { TableModule } from 'carbon-components-angular';
+import { TableModule, LinkModule, PaginationModule } from 'carbon-components-angular';
+import { Apollo } from 'apollo-angular';
+
+export class MockApollo {
+	watchQuery() {
+		const valueChanges = '';
+	}
+}
 
 describe('RepoTableComponent', () => {
 	let component: RepoTableComponent;
@@ -9,18 +16,22 @@ describe('RepoTableComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoTableComponent ],
+			declarations: [RepoTableComponent],
 			imports: [
-				TableModule
-			]
+				TableModule,
+				LinkModule,
+				PaginationModule
+			],
+			providers: [{ provide: Apollo, useClass: MockApollo }],
+			schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(RepoTableComponent);
 		component = fixture.componentInstance;
-		fixture.detectChanges();
+		// fixture.detectChanges();
 	});
 
 	it('should create', () => {
