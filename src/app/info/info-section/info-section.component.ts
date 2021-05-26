@@ -8,7 +8,7 @@ import * as data from '../info.json';
 })
 export class InfoSectionComponent implements OnInit {
 	heading = data.title;
-    items = data.items;
+	items = data.items;
 	constructor() { }
 
 	ngOnInit() {

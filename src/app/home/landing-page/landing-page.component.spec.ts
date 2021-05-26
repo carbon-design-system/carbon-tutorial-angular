@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA, SimpleChange, SimpleChanges } from '@angular/core';
 import { LandingPageComponent } from './landing-page.component';
 import {
 	BreadcrumbModule,
@@ -20,7 +20,8 @@ describe('LandingPageComponent', () => {
 				ButtonModule,
 				GridModule,
 				TabsModule
-			]
+			],
+			schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 		})
 		.compileComponents();
 	}));
