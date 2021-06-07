@@ -20,7 +20,9 @@ export class RepoTableComponent implements OnInit {
 	model = new TableModel();
 	skeletonModel = Table.skeletonModel(10, 6);
 	skeleton = true;
-	data: any;
+	data: [];
+	@ViewChild('linkTemplate', null)
+	protected linkTemplate: TemplateRef<any>;
 
 	constructor(private apollo: Apollo) { }
 
@@ -107,11 +109,10 @@ export class RepoTableComponent implements OnInit {
 			} else {
 			  // If we're here, we've got our data!
 			  	this.skeleton = false;
-				  const data = [];
-				  this.data = response.data.organization.repositories.nodes;
-				  this.model.pageLength = 10;
-				  this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				  this.selectPage(1);
+				this.data = response.data.organization.repositories.nodes;
+				this.model.pageLength = 10;
+				this.model.totalDataLength = response.data.organization.repositories.totalCount;
+				this.selectPage(1);
 
 			}
 		  });
@@ -122,8 +123,6 @@ export class RepoTableComponent implements OnInit {
 		this.model.data = this.prepareData(pageRawData);
 		this.model.currentPage = page;
 	  }
-	@ViewChild('linkTemplate', null)
-	protected linkTemplate: TemplateRef<any>;
 	prepareData(data) {
 		const newData = [];
 
