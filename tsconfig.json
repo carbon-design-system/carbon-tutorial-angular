@@ -8,7 +8,8 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
+    "target": "es2016",
+	"resolveJsonModule": true,
     "lib": [
       "es2016",
       "dom",
