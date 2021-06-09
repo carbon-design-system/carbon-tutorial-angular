@@ -97,55 +97,55 @@ export class RepoTableComponent implements OnInit {
 				}
 			  }
 			`
-		  }).valueChanges.subscribe((response: any) => {
-			if (response.error) {
-			  const errorData = [];
-			  errorData.push([
-				new TableItem({data: 'error!' })
-			  ]);
-			  this.model.data = errorData;
-			} else if (response.loading) {
-				this.skeleton = true;
-			} else {
-			  // If we're here, we've got our data!
-			  	this.skeleton = false;
-				this.data = response.data.organization.repositories.nodes;
-				this.model.pageLength = 10;
-				this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				this.selectPage(1);
+			}).valueChanges.subscribe((response: any) => {
+				if (response.error) {
+				const errorData = [];
+				errorData.push([
+					new TableItem({data: 'error!' })
+				]);
+				this.model.data = errorData;
+				} else if (response.loading) {
+					this.skeleton = true;
+				} else {
+				// If we're here, we've got our data!
+					this.skeleton = false;
+					this.data = response.data.organization.repositories.nodes;
+					this.model.pageLength = 10;
+					this.model.totalDataLength = response.data.organization.repositories.totalCount;
+					this.selectPage(1);
 
-			}
-		  });
-	}
-	selectPage(page) {
-		const offset = this.model.pageLength * (page - 1);
-		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
-		this.model.data = this.prepareData(pageRawData);
-		this.model.currentPage = page;
-	  }
-	prepareData(data) {
-		const newData = [];
-
-		for (const datum of data) {
-		  newData.push([
-			new TableItem({ data: datum.name, expandedData: datum.description }),
-			new TableItem({ data: new Date(datum.createdAt).toLocaleDateString() }),
-			new TableItem({ data: new Date(datum.updatedAt).toLocaleDateString() }),
-			new TableItem({ data: datum.issues.totalCount }),
-			new TableItem({ data: datum.stargazers.totalCount }),
-			new TableItem({
-			  data: {
-				github: datum.url,
-				homepage: datum.homepageUrl
-			  },
-			  template: this.linkTemplate
-			})
-		  ]);
+				}
+			});
 		}
-		return newData;
+		selectPage(page) {
+			const offset = this.model.pageLength * (page - 1);
+			const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
+			this.model.data = this.prepareData(pageRawData);
+			this.model.currentPage = page;
+		}
+		prepareData(data) {
+			const newData = [];
+
+			for (const datum of data) {
+			newData.push([
+				new TableItem({ data: datum.name, expandedData: datum.description }),
+				new TableItem({ data: new Date(datum.createdAt).toLocaleDateString() }),
+				new TableItem({ data: new Date(datum.updatedAt).toLocaleDateString() }),
+				new TableItem({ data: datum.issues.totalCount }),
+				new TableItem({ data: datum.stargazers.totalCount }),
+				new TableItem({
+				data: {
+					github: datum.url,
+					homepage: datum.homepageUrl
+				},
+				template: this.linkTemplate
+				})
+			]);
+			}
+			return newData;
 
 
-	  }
+		}
 
 
 }
