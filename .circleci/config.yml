@@ -2,15 +2,18 @@ version: 2.1
 jobs:
   step-one:
     docker:
-      - image: circleci/node:12.18.2-browsers
+      - image: circleci/node:16.4.0
     working_directory: ~/repo
     steps:
       - checkout
+      - run: cd .\carbon-angular-tutorial\
       - run: npm install
-      - run: npm run test:once
-      - run: npm run build
+      - run: ng lint --fix
+      - run: npm run lint && npm test
 
 workflows:
-    main:
-      jobs:
-        - step-one
+  version: 2.1
+  main:
+    jobs:
+      - step-one
+`
