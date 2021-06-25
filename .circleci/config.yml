@@ -1,18 +1,16 @@
-version: 2
+version: 2.1
 jobs:
-  build-and-test:
+  step-one:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:12.18.2-browsers
     working_directory: ~/repo
     steps:
       - checkout
-        steps:
-          - run: npm install
-          - run: npm run build
-workflows:
+      - run: npm install
+      - run: npm run test:once
+      - run: npm run build
 
 workflows:
-  version: 2
   main:
     jobs:
-      - build-and-test
+      - step-one
