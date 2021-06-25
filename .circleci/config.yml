@@ -7,8 +7,6 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm install -g @angular/cli@8.3.29
-      - run: ng lint --fix
       - run: npm run lint && npm test
 
 workflows:
