@@ -1,28 +1,29 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LandingPageComponent } from './landing-page.component';
+import { LandingPageComponent } from "./landing-page.component";
 import {
 	BreadcrumbModule,
 	ButtonModule,
 	GridModule,
-	TabsModule
-} from 'carbon-components-angular';
+	TabsModule,
+} from "carbon-components-angular";
+import { InfoModule } from "../../info/info.module";
 
-describe('LandingPageComponent', () => {
+describe("LandingPageComponent", () => {
 	let component: LandingPageComponent;
 	let fixture: ComponentFixture<LandingPageComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ],
+			declarations: [LandingPageComponent],
 			imports: [
 				BreadcrumbModule,
 				ButtonModule,
 				GridModule,
-				TabsModule
-			]
-		})
-		.compileComponents();
+				TabsModule,
+				InfoModule,
+			],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -31,7 +32,7 @@ describe('LandingPageComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });
