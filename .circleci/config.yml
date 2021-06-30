@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: npm install
       # - run: npm run test:once
+      - run: npm run test
       - run: npm run build
 
 workflows:
