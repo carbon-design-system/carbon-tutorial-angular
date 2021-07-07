@@ -9,7 +9,8 @@
 		"test": "ng test",
 		"test:once": "ng test --watch=false",
 		"lint": "ng lint",
-		"e2e": "ng e2e"
+		"e2e": "ng e2e",
+		"deploy": "rm -rf ./dist && ng build --prod --aot && cf push -f manifest.yml"
 	},
 	"engines": {
 		"node": ">= 10.9"
