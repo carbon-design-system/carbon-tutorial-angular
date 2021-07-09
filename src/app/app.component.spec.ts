@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
-import { UIShellModule, IconModule } from 'carbon-components-angular';
+import { UIShellModule } from 'carbon-components-angular';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
