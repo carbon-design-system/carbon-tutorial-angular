@@ -3,7 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './header/header.component';
-import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
+
+// carbon-components-angular default imports
+import { UIShellModule, IconModule } from 'carbon-components-angular';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

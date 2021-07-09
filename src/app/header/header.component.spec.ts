@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 
+// carbon-components-angular default imports
+import { UIShellModule, IconModule } from 'carbon-components-angular';
 import { HeaderComponent } from './header.component';
 
 
