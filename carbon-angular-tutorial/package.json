@@ -20,8 +20,9 @@
     "@angular/platform-browser-dynamic": "~12.1.1",
     "@angular/router": "~12.1.1",
     "@carbon/icons": "^10.35.0",
+    "@carbon/icons-angular": "^11.2.2",
     "carbon-components": "^10.39.0",
-    "carbon-components-angular": "^4.53.3",
+    "carbon-components-angular": "^4.53.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

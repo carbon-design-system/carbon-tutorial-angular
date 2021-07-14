@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
-import { UIShellModule, IconModule } from 'carbon-components-angular';
+import { UIShellModule, IconModule, IconService } from 'carbon-components-angular';
+//import { Notification16 } from '@carbon/icons/es/notification/16';
+import { Notification16 } from '@carbon/icons/es/add/16';
+import { AddModule } from '@carbon/icons-angular';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,16 @@ import { UIShellModule, IconModule } from 'carbon-components-angular';
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
-    IconModule
+    IconModule,
+    AddModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(protected iconService: IconService) {
+    /*iconService.registerAll([
+      Notification16
+    ]);*/
+  }
+}
