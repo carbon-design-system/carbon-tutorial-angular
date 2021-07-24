@@ -1,43 +1,33 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { UIShellModule } from 'carbon-components-angular';
+import { NotificationModule } from '@carbon/icons-angular';
+import { UserAvatarModule } from '@carbon/icons-angular/';
+import { AppSwitcherModule } from '@carbon/icons-angular';
 import { AppComponent } from './app.component';
-import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 import { HeaderComponent } from './header/header.component';
 
-import { NotificationModule } from '@carbon/icons-angular';
-import { UserAvatarModule } from '@carbon/icons-angular';
-import { AppSwitcherModule } from '@carbon/icons-angular';
-
-
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        NotificationModule,
-        UserAvatarModule,
-        AppSwitcherModule
-      ],
-      declarations: [
-        AppComponent,
-        HeaderComponent
-      ],
-    }).compileComponents();
-  });
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [
+				AppComponent,
+				HeaderComponent
+			],
+			imports: [
+				RouterTestingModule,
+				UIShellModule,
+				NotificationModule,
+				UserAvatarModule,
+				AppSwitcherModule
+			]
+		}).compileComponents();
+	}));
 
-  beforeEach(async () => {
-    TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
-      imports: [UIShellModule]
-    });
-  });
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-
-
+	it('should create the app', async(() => {
+		const fixture = TestBed.createComponent(AppComponent);
+		const app = fixture.debugElement.componentInstance;
+		expect(app).toBeTruthy();
+	}));
 });
