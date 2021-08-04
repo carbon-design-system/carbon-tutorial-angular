@@ -7,12 +7,15 @@ import { HostBinding } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
+
   @HostBinding('class.bx--header') headerClass = true;
 
-  constructor() { }
+  constructor() {
+    // do nothing.
+  };
 
   ngOnInit(): void {
-  }
+    // do nothing.
+  };
 
 }
