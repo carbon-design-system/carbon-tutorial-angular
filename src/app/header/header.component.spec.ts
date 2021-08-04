@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import { UIShellModule } from 'carbon-components-angular';
 import { NotificationModule } from 'carbon-components-angular';
 import { UserAvatarModule } from '@carbon/icons-angular';
 import { AppSwitcherModule } from '@carbon/icons-angular';
@@ -12,7 +13,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      declarations: [HeaderComponent], imports: [UIShellModule]
     })
       .compileComponents();
   });

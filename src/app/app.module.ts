@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
 import { IconModule } from 'carbon-components-angular';
+import { UIShellModule } from 'carbon-components-angular';
 import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon/icons-angular'
 
 
@@ -18,6 +19,7 @@ import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    UIShellModule,
     IconModule,
     NotificationModule,
     UserAvatarModule,
