@@ -10,9 +10,9 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ]
+			declarations: [LandingPageComponent], imports: [GridModule, ButtonModule, BreadcrumbModule, TabsModule]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

@@ -10,7 +10,7 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [RepoPageComponent]
+			declarations: [RepoPageComponent, RepoTableComponent], imports: [GridModule, TableModule]
 		})
 			.compileComponents();
 	}));
