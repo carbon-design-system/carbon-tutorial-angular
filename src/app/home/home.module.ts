@@ -5,6 +5,9 @@ import { HomeRoutingModule } from './home-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { InfoModule } from "./../info/info.module";
 import { BreadcrumbModule, ButtonModule, GridModule, TabsModule } from 'carbon-components-angular';
+import { PersonFavorite32Module } from "@carbon/icons-angular/lib/person--favorite/32";
+import { Globe32Module } from "@carbon/icons-angular/lib/globe/32";
+import { Application32Module } from "@carbon/icons-angular/lib/application/32";
 
 @NgModule({
 	declarations: [LandingPageComponent],
@@ -15,7 +18,10 @@ import { BreadcrumbModule, ButtonModule, GridModule, TabsModule } from 'carbon-c
 		ButtonModule,
 		GridModule,
 		TabsModule,
-		InfoModule
+		InfoModule,
+		PersonFavorite32Module,
+		Globe32Module,
+		Application32Module
 	]
 })
 export class HomeModule { }
