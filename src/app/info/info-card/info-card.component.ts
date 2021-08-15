@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-	selector: "app-info-card",
-	templateUrl: "./info-card.component.html",
-	styleUrls: ["./info-card.component.scss"],
+	selector: 'app-info-card',
+	templateUrl: './info-card.component.html',
+	styleUrls: ['./info-card.component.scss'],
 })
 export class InfoCardComponent implements OnInit {
-	@Input() heading;
-	@Input() content;
+	@Input() heading = '';
+	@Input() content = '';
 	splitHeading;
 
 	constructor() {}
@@ -17,8 +17,8 @@ export class InfoCardComponent implements OnInit {
 	}
 	// Take in a phrase and separate the third word in an array
 	createArrayFromPhrase(phrase) {
-		const splitPhrase = phrase.split(" ");
+		const splitPhrase = phrase.split(' ');
 		const thirdWord = splitPhrase.pop();
-		return [splitPhrase.join(" "), thirdWord];
+		return [splitPhrase.join(' '), thirdWord];
 	}
 }
