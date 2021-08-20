@@ -11,7 +11,7 @@ import { Notification20Module } from '@carbon/icons-angular/lib/notification/20'
 import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
 import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
-import { RepoTableComponent } from './src/app/repositories/repo-table/repo-table.component';
+import { RepoTableComponent } from './repositories/repo-table/repo-table.component';
 
 @NgModule({
 	declarations: [
