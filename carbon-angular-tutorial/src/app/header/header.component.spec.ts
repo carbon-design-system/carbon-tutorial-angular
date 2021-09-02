@@ -10,8 +10,8 @@ describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+      TestBed.configureTestingModule({
       declarations: [
         HeaderComponent
       ],

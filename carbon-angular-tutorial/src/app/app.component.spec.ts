@@ -10,8 +10,8 @@ import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon
 
 describe('AppComponent', () => {
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
         UIShellModule,
