@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@carbon/icons": "^10.37.0",
+    "carbon-components": "^10.43.0",
+    "carbon-components-angular": "^4.55.2"
+  }
+}
