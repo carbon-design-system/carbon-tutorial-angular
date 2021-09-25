@@ -1,5 +1,8 @@
 {
 	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"cli": {
+		"analytics": false
+	},
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
@@ -36,12 +39,10 @@
 							"extractLicenses": true,
 							"vendorChunk": false,
 							"buildOptimizer": true,
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
-								}
-							]
+							"fileReplacements": [{
+								"replace": "src/environments/environment.ts",
+								"with": "src/environments/environment.prod.ts"
+							}]
 						}
 					}
 				},
@@ -116,8 +117,7 @@
 	"defaultProject": "carbon-angular-starter",
 	"schematics": {
 		"@schematics/angular:component": {
-			"prefix": "app",
-			"styleext": "scss"
+			"prefix": "app"
 		},
 		"@schematics/angular:directive": {
 			"prefix": "app"
