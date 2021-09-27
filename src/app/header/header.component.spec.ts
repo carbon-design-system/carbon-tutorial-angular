@@ -1,26 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeaderModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { UIShellModule } from "carbon-components-angular";
 
-import { HeaderComponent } from './header.component';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
+import { HeaderComponent } from "./header.component";
+import { NotificationModule } from "@carbon/icons-angular";
+import { UserAvatarModule } from "@carbon/icons-angular";
+import { AppSwitcherModule } from "@carbon/icons-angular";
 
-describe('TutorialHeaderComponent', () => {
+describe("TutorialHeaderComponent", () => {
 	let component: HeaderComponent;
 	let fixture: ComponentFixture<HeaderComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ HeaderComponent ],
+			declarations: [HeaderComponent],
 			imports: [
-				HeaderModule,
-				Notification20Module,
-				UserAvatar20Module,
-				AppSwitcher20Module
-			]
-		})
-		.compileComponents();
+				UIShellModule,
+				NotificationModule,
+				UserAvatarModule,
+				AppSwitcherModule,
+			],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -29,7 +28,7 @@ describe('TutorialHeaderComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });
