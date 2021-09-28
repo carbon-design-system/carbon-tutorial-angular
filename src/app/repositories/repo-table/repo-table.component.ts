@@ -25,7 +25,7 @@ export class RepoTableComponent implements OnInit {
 
 	ngOnInit() {
 		this.apollo
-			.watchQuery({
+			.watchQuery<any>({
 				query: gql`
 					query REPO_QUERY {
 						# Let's use carbon as our organization

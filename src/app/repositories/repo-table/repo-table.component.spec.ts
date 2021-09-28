@@ -5,7 +5,7 @@ import {
 	TableModule,
 } from "carbon-components-angular";
 import { RepoTableComponent } from "./repo-table.component";
-
+import { GraphQLModule } from '../../graphql.module';
 describe("RepoTableComponent", () => {
 	let component: RepoTableComponent;
 	let fixture: ComponentFixture<RepoTableComponent>;
@@ -13,7 +13,7 @@ describe("RepoTableComponent", () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [RepoTableComponent],
-			imports: [TableModule, LinkModule, PaginationModule],
+			imports: [TableModule, LinkModule, PaginationModule, GraphQLModule],
 		}).compileComponents();
 	}));
 
