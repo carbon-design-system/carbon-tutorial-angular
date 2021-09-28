@@ -3,7 +3,7 @@
 // 	id: string;
 // };
 
-declare const environment: {
-	production: boolean;
-	githubPersonalAccessToken: string;
-};
+// declare const environment: {
+// 	production: boolean;
+// 	githubPersonalAccessToken: string;
+// };

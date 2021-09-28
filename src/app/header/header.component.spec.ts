@@ -2,9 +2,9 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { UIShellModule } from "carbon-components-angular";
 
 import { HeaderComponent } from "./header.component";
-import { NotificationModule } from "@carbon/icons-angular";
-import { UserAvatarModule } from "@carbon/icons-angular";
-import { AppSwitcherModule } from "@carbon/icons-angular";
+import { Notification20Module } from "@carbon/icons-angular/lib/notification/20";
+import { UserAvatar20Module } from "@carbon/icons-angular/lib/user--avatar/20";
+import { AppSwitcher20Module } from "@carbon/icons-angular/lib/app-switcher/20";
 
 describe("TutorialHeaderComponent", () => {
 	let component: HeaderComponent;
@@ -15,9 +15,9 @@ describe("TutorialHeaderComponent", () => {
 			declarations: [HeaderComponent],
 			imports: [
 				UIShellModule,
-				NotificationModule,
-				UserAvatarModule,
-				AppSwitcherModule,
+				Notification20Module,
+				UserAvatar20Module,
+				AppSwitcher20Module,
 			],
 		}).compileComponents();
 	}));
