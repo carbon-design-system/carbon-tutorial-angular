@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "carbon-angular-tutorial": {
+    "carbon-tutorial-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/carbon-angular-tutorial",
+            "outputPath": "dist/carbon-tutorial-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "carbon-angular-tutorial:build:production"
+              "browserTarget": "carbon-tutorial-angular:build:production"
             },
             "development": {
-              "browserTarget": "carbon-angular-tutorial:build:development"
+              "browserTarget": "carbon-tutorial-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "carbon-angular-tutorial:build"
+            "browserTarget": "carbon-tutorial-angular:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "carbon-angular-tutorial"
+  "defaultProject": "carbon-tutorial-angular"
 }
