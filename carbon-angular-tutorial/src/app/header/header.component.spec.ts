@@ -17,7 +17,6 @@ describe('HeaderComponent', () => {
        ],
       imports: [
         UIShellModule,
-        UIShellModule,
         IconModule
       ]
     })
