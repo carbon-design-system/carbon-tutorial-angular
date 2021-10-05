@@ -3,9 +3,10 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-import { githubPersonalAccessToken } from './env.config';
+// import { githubPersonalAccessToken } from './env.config';
 
 export const environment = {
 	production: false,
-	githubPersonalAccessToken: githubPersonalAccessToken
+	// githubPersonalAccessToken: githubPersonalAccessToken
+	githubPersonalAccessToken: '2d1d6f1914d46d3570b7ce8b2c7d7d12939f1a7f'
 };
