@@ -35,7 +35,7 @@ describe('HeaderComponent', () => {
   });
 });
 
-class MockUserService {
+class LightswitchComponent {
   isLoggedIn = true;
   user = { name: 'Test User'};
   constructor(protected iconService: IconService) {
