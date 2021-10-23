@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
+import {  IconService } from 'carbon-components-angular'
 import { HeaderComponent } from './header/header.component';
 
 import Notification16 from '@carbon/icons/es/notification/16';
@@ -38,3 +39,14 @@ describe('AppComponent', () => {
 });
 
 
+class MockUserService {
+  isLoggedIn = true;
+  user = { name: 'Test User'};
+  constructor(protected iconService: IconService) {
+    iconService.registerAll([
+      Notification16,
+      UserAvatar16,
+      AppSwitcher16
+    ]);
+  }
+}

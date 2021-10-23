@@ -21,6 +21,7 @@
     "@carbon/icons": "^10.41.0",
     "carbon-components": "^10.46.0",
     "carbon-components-angular": "^4.55.4",
+    "lint": "^0.7.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
