@@ -8,9 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { UIShellModule, IconModule, IconService } from 'carbon-components-angular';
 
 //ICONS
-import Notification16 from '@carbon/icons/es/notification/16';
-import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
-import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
+import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon/icons-angular';
+
 
  
 @NgModule({
@@ -22,17 +21,16 @@ import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
-    IconModule
+    IconModule,
+    NotificationModule,
+    UserAvatarModule,
+    AppSwitcherModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  constructor(protected iconService: IconService) {
-    iconService.registerAll([
-      Notification16,
-      UserAvatar16,
-      AppSwitcher16
-    ]);
+  constructor() {
+  
   }
 }
