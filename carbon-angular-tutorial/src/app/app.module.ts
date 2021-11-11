@@ -1,36 +1,31 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
 import { UIShellModule, IconModule, IconService } from 'carbon-components-angular';
-
-//ICONS
 import { NotificationModule, UserAvatarModule, AppSwitcherModule } from '@carbon/icons-angular';
 
-
- 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
     IconModule,
-    NotificationModule,
     UserAvatarModule,
+    NotificationModule,
     AppSwitcherModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  constructor() {
-  
+export class AppModule {
+  constructor(){
   }
 }
