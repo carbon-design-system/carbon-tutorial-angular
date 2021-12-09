@@ -9,12 +9,16 @@ import { HeaderComponent } from './header/header.component';
 // import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
 // import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
 
+// TestBed.configureTestingModule({
+//   declarations: [HeaderComponent],
+//   imports: [UIShellModule]
+// });
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule,
-        UIShellModule
+        RouterTestingModule
       ],
       declarations: [
         AppComponent,
@@ -30,9 +34,4 @@ describe('AppComponent', () => {
   });
 
 
-});
-
-TestBed.configureTestingModule({
-  declarations: [HeaderComponent],
-  imports: [UIShellModule]
 });

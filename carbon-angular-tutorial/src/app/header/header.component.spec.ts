@@ -10,6 +10,10 @@ import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.modul
 // import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
 
 import { Component, HostBinding } from '@angular/core';
+// TestBed.configureTestingModule({
+//   declarations: [HeaderComponent],
+//   imports: [UIShellModule]
+// });
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -18,8 +22,7 @@ describe('HeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule,
-        UIShellModule
+        RouterTestingModule
       ],
       declarations: [ HeaderComponent ]
     })
@@ -37,9 +40,5 @@ describe('HeaderComponent', () => {
   });
 });
 
-TestBed.configureTestingModule({
-  declarations: [HeaderComponent],
-  imports: [UIShellModule]
-});
 
 //@HostBinding('class.bx--header') headerClass = true;
