@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("RepoPageComponent constructor...")
+  }
 
   ngOnInit(): void {
+    console.log("RepoPageComponent ngOnInit...")
   }
 
 }

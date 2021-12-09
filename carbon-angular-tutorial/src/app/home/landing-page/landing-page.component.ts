@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   console.log("LandingPageComponent constructor...")
+  }
 
   ngOnInit(): void {
+    console.log("LandingPageComponent ngOnInit...")
   }
 
 }

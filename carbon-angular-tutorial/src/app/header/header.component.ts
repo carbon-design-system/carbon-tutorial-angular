@@ -10,9 +10,12 @@ import { HostBinding } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("HeaderComponent constructor...")
+  }
 
   ngOnInit(): void {
+    console.log("HeaderComponent ngOnInit...")
   }
 
 }
