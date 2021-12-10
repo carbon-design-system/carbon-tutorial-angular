@@ -1,0 +1,3 @@
+ibmcloud login -sso
+ibmcloud target -o "ibml-techops" -s dev
+ibmcloud cf push -f manifest.yml
