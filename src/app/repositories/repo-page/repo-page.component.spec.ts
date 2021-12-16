@@ -5,6 +5,7 @@ import { GridModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
 import { LinkModule, PaginationModule } from 'carbon-components-angular';
 import { Apollo } from 'apollo-angular';
+import { ApolloTestingModule } from 'apollo-angular/testing';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -16,7 +17,7 @@ describe('RepoPageComponent', () => {
 			providers: [ Apollo ],
 			imports: [
 				GridModule,
-				TableModule, LinkModule, PaginationModule 
+				TableModule, LinkModule, PaginationModule, ApolloTestingModule
 			]
 		})
 		.compileComponents();

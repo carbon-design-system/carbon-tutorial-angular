@@ -4,6 +4,7 @@ import { RepoTableComponent } from './repo-table.component';
 import { TableModule } from 'carbon-components-angular';
 import { LinkModule, PaginationModule } from 'carbon-components-angular';
 import { Apollo } from 'apollo-angular';
+import { ApolloTestingModule } from 'apollo-angular/testing';
 
 describe('RepoTableComponent', () => {
 	let component: RepoTableComponent;
@@ -14,7 +15,7 @@ describe('RepoTableComponent', () => {
 			declarations: [ RepoTableComponent ],
 			providers: [ Apollo ],
 			imports: [
-				TableModule, LinkModule, PaginationModule
+				TableModule, LinkModule, PaginationModule, ApolloTestingModule
 			]
 		})
 		.compileComponents();
