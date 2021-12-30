@@ -1,9 +1,9 @@
 import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 import { TestBed} from '@angular/core/testing';
 import { HeaderComponent } from './header/header.component';
-import Notification16 from '@carbon/icons/es/notification/16';
-import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
-import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
+import Notification20 from '@carbon/icons/es/notification/20';
+import UserAvatar20 from '@carbon/icons/es/user--avatar/20';
+import AppSwitcher20 from '@carbon/icons/es/app-switcher/20';
 
 TestBed.configureTestingModule({
   declarations: [HeaderComponent],
