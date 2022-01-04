@@ -21,17 +21,11 @@ import { UIShellModule, IconModule, IconService } from 'carbon-components-angula
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
-    IconModule
+    IconModule,
+    NotificationModule,
+    UserAvatarModule,
+    AppSwitcherModule
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(protected iconService: IconService) {
-    iconService.registerAll([
-      NotificationModule,
-      UserAvatarModule,
-      AppSwitcherModule
-    ]);
-  }
-  
- }
+export class AppModule { }
