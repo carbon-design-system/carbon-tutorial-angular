@@ -3,9 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 
-import { Notification16 } from '@carbon/icons/es/notification/16';
-import { UserAvatar16 } from '@carbon/icons/es/user--avatar/16';
-import { AppSwitcher16 } from '@carbon/icons/es/app-switcher/16';
+import { NotificationModule } from '@carbon/icons-angular';
+import { UserAvatarModule } from '@carbon/icons-angular';
+import { AppSwitcherModule } from '@carbon/icons-angular';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
