@@ -7,10 +7,12 @@ import * as data from '../info.json';
 	styleUrls: ['./info-section.component.scss'],
 })
 export class InfoSectionComponent implements OnInit {
-	heading = data.title;
-	items = data.items;
-
+	heading= '';
+	items = [];
 	constructor() {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		this.heading = data.title;
+		this.items = data.items;	
+	}
 }

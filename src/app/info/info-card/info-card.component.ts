@@ -8,13 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InfoCardComponent implements OnInit {
 	@Input() heading;
 	@Input() content;
-	splitHeading;
+	splitHeading = [];
 
 	constructor() {}
 
 	ngOnInit() {
 		// create the split title to get bold styles
-		this.splitHeading = this.createArrayFromPhrase(this.heading);
+		if(this.heading){
+			this.splitHeading = this.createArrayFromPhrase(this.heading);
+		}
 	}
 
 	// Take in a phrase and separate the third word in an array
