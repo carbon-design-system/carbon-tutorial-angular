@@ -18,6 +18,9 @@ module.exports = function (config) {
 		files: [
 			
 		],
+		proxies: {
+			'/assets/': '/src/assets/'
+		},
 		preprocessors: {
 			
 		},
