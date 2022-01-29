@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   step-one:
     docker:
-      - image: circleci/node:12.18.2-browsers
+      - image: circleci/node:12.20-browsers
     working_directory: ~/repo
     steps:
       - checkout
