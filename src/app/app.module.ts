@@ -1,5 +1,5 @@
-//import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +32,7 @@ import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
     providers: [IconService],
     bootstrap: [AppComponent]
     
-//    ,schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    ,schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
   })
 
   export class AppModule {

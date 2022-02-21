@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
   @HostBinding('class.bx--header') headerClass = true;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('header ngOnInit');
