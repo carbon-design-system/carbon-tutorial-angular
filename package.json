@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^11.2.5",
     "@angular/router": "^11.2.5",
     "array-unique": "^0.3.2",
+    "@carbon/icons": "^10.27.0",
     "@carbon/icons-angular": "^11.2.1",
     "carbon-components": "^10.24.0",
     "carbon-components-angular": "^4.42.0",
