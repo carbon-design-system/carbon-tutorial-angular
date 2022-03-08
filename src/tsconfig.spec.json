@@ -13,7 +13,7 @@
 		],
 		"outDir": "../out-tsc/spec",
 		"module": "esnext",
-		"target": "es2015",
+		"target": "es2018",
 		"baseUrl": "",
 		"types": [
 			"jasmine",
