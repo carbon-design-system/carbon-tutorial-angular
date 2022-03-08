@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import Notification16 from '@carbon/icons/es/notification/16';
 import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
 import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
+import { UIShellModule } from 'carbon-components-angular';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        UIShellModule
       ],
       declarations: [
         AppComponent,
