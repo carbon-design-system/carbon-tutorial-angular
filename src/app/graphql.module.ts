@@ -14,7 +14,7 @@ export function createApollo(httpLink: HttpLink) {
 				'Authorization': `Bearer ${environment.githubPersonalAccessToken}`
 			})
 		}),
-		cache: new InMemoryCache(),
+		cache: new InMemoryCache()
 	};
 }
 
@@ -24,8 +24,8 @@ export function createApollo(httpLink: HttpLink) {
 		{
 			provide: APOLLO_OPTIONS,
 			useFactory: createApollo,
-			deps: [HttpLink],
-		},
-	],
+			deps: [HttpLink]
+		}
+	]
 })
 export class GraphQLModule {}

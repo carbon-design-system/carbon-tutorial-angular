@@ -1,0 +1,21 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2016",
+	"resolveJsonModule": true,
+    "lib": [
+      "es2016",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "module": "esnext",
+    "baseUrl": "./"
+  }
+}
