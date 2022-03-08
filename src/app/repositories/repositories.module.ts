@@ -11,7 +11,8 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 	imports: [
 		CommonModule,
 		RepositoriesRoutingModule,
-		GridModule, TableModule
+		GridModule,
+ 		TableModule
 	]
 })
 export class RepositoriesModule { }
