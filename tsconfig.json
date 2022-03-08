@@ -8,15 +8,12 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
-    "lib": [
-      "es2016",
-      "dom"
-    ],
+    "target": "es5",
+    "lib": ["es2016", "dom"],
     "module": "es2020",
     "baseUrl": "./"
   },
   "angularCompilerOptions": {
-	  "strictTemplates": true
+    "strictTemplates": true
   }
 }
