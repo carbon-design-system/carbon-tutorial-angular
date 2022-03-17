@@ -31,8 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/carbon-components/scss/globals/scss/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
