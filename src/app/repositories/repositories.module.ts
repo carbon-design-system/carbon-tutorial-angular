@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RepositoriesRoutingModule } from './repositories-routing.module';
 import { RepoPageComponent } from './repo-page/repo-page.component';
 import { RepoTableComponent } from './repo-table/repo-table.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
+import { GridModule, PaginationModule, TableModule } from 'carbon-components-angular';
 
 
 
@@ -17,7 +17,8 @@ import { GridModule, TableModule } from 'carbon-components-angular';
     CommonModule,
     RepositoriesRoutingModule,
     TableModule,
-    GridModule
+    GridModule,
+    PaginationModule
   ]
 })
 export class RepositoriesModule { }

@@ -5,10 +5,23 @@
         <p ibmTableHeaderDescription > A collection of public Carbon repositories </p>
     </ibm-table-header>
     <ibm-table
-    [model]='model'
+    [model]='skeleton ? skeletonModel : model'
+    [skeleton]="skeleton"
     [showSelectionColumn]='false'
     [striped]="true"
-    >
-      
-    </ibm-table>
+    ></ibm-table>
 </ibm-table-container>
+
+<ibm-pagination [model]="model" (selectPage)="selectPage($event)" ></ibm-pagination>
+
+<ng-template #linkTemplate let-data="data">
+    <ul style="display: flex">
+      <li>
+        <a ibmLink [href]="data.github">Github</a>
+      </li>
+      <li *ngIf="data.homepage">
+        <span>&nbsp;|&nbsp;</span>
+        <a ibmLink [href]="data.homepage">HomePage</a>
+      </li>
+    </ul>
+  </ng-template>

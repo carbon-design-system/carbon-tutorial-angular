@@ -20,6 +20,7 @@
     "@angular/router": "~13.2.0",
     "@carbon/icons": "^10.48.0",
     "@carbon/icons-angular": "^11.2.2",
+    "apollo-angular": "^3.0.0",
     "carbon-components": "^10.55.1",
     "carbon-components-angular": "^4.57.10",
     "rxjs": "~7.5.0",
