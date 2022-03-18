@@ -1,33 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-// carbon-components-angular default imports
-import { UIShellModule } from 'carbon-components-angular';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 import { HeaderComponent } from './header/header.component';
 
+import { UIShellModule, IconModule } from 'carbon-components-angular';
+import { IconsModule } from './shared/icons/icons.module';
+import { GraphqlModule } from './graphql.module';
+
 @NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent
-	],
-	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		FormsModule,
-		AppRoutingModule,
-		UIShellModule,
-		Notification20Module,
-		UserAvatar20Module,
-		AppSwitcher20Module
-	],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeaderComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    UIShellModule,
+    IconModule,
+    IconsModule,
+    HttpClientModule,
+    GraphqlModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
