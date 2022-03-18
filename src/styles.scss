@@ -6,3 +6,7 @@ $feature-flags: (
 );
 
 @import "~carbon-components/scss/globals/scss/styles";
+
+.bx--header__nav {
+	display: block;
+}
