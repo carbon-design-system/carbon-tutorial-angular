@@ -103,9 +103,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "carbon-angular-tutorial"
+  "defaultProject": "carbon-angular-tutorial",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
