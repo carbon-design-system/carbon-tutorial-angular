@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { IconService, UIShellModule, IconModule } from 'carbon-components-angular';
 import Notification20 from '@carbon/icons/es/notification/20';
 import UserAvatar20 from '@carbon/icons/es/user--avatar/20';
+import Switcher20 from '@carbon/icons/es/switcher/20';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ export class AppModule {
   constructor(protected iconService: IconService) {
     iconService.registerAll([
       Notification20,
-      UserAvatar20
+      UserAvatar20,
+      Switcher20
     ])
   }
 }
