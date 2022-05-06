@@ -5,12 +5,9 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @HostBinding('class.cds--header') headerClass = true;
   
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
