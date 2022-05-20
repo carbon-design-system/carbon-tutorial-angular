@@ -9,6 +9,7 @@ import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { InfoModule } from './info/info.module';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
@@ -23,7 +24,7 @@ describe('AppComponent', () => {
 				Notification20Module,
 				UserAvatar20Module,
 				AppSwitcher20Module,
-				ApolloTestingModule
+				ApolloTestingModule,
 			]
 		}).compileComponents();
 	}));
