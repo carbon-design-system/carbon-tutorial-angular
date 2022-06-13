@@ -5,7 +5,6 @@ jobs:
       - image: circleci/node:12.18.2-browsers
     working_directory: ~/carbon-angular-tutorial
     steps:
-      - run: echo ls
       - checkout
       - run: npm install
       - run: npm run test:once
