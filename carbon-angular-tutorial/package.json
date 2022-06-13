@@ -5,10 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:once": "ng test --watch=false",
     "lint": "ng lint",
-    "test:once": "ng test"
+    "e2e": "ng e2e",
+    "watch": "ng build --watch --configuration development",
   },
   "private": true,
   "dependencies": {
@@ -48,5 +49,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
+  },
+  "engines": {
+    "node": ">= 10.9"
   }
 }
