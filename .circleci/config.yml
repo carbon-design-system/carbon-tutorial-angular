@@ -3,9 +3,9 @@ jobs:
   step-one:
     docker:
       - image: circleci/node:12.18.2-browsers
-    working_directory: ~/repo
+    working_directory: ~/carbon-angular-tutorial
     steps:
-      - ls
+      - run: ls
       - checkout
       - run: npm install
       - run: npm run test:once
