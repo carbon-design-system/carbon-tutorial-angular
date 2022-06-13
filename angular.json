@@ -116,7 +116,7 @@
       }
     }
   },
-  "defaultProject": "carbon-angular-tutorial",
+  "defaultProject": "carbon-tutorial-angular",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

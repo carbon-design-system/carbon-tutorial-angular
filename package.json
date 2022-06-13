@@ -9,7 +9,7 @@
     "test:once": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {
