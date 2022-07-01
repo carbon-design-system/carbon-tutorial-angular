@@ -1,7 +1,8 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.0.2
+  node:
+  version: 14
   
 jobs:
   step-one:
