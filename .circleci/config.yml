@@ -1,8 +1,7 @@
 version: 2.1
 
-orbs:
   node:
-  version: stable
+  version: 14
   
 jobs:
   step-one:
