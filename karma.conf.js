@@ -10,7 +10,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       // require('karma-firefox-launcher'),
-      // require('karma-phantomjs-launcher'),
+      require('karma-phantomjs-launcher'),
       // require('karma-phantomjs2-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
@@ -53,7 +53,7 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
   //     browsers: ['ChromeHeadless'],
   //   customLaunchers: {
   //     'ChromeHeadless': {
