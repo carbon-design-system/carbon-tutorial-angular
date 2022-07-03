@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --no-watch --code-coverage --browsers ChromeHeadless --source-map=false",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "test": "ng test",
+    "test:once": "ng test --watch=false",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
