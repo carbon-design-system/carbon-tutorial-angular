@@ -52,7 +52,7 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS2'],
   //     browsers: ['ChromeHeadless'],
   //   customLaunchers: {
   //     'ChromeHeadless': {

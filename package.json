@@ -48,6 +48,7 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "karma-phantomjs-launcher": "^1.0.4",
+    "karma-phantomjs2-launcher": "^0.5.0",
     "phantomjs-prebuilt": "^2.1.16",
     "tslint": "^5.12.0",
     "typescript": "~4.7.2"
