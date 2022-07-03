@@ -37,9 +37,6 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    // browsers: ['ChromeHeadlessNoSandbox'],
-    // browsers: ['Firefox'],
-    // browsers: ['Chrome'], 
     browsers: ['FirefoxHeadless'],
     customLaunchers: {
       'FirefoxHeadless': {
@@ -52,23 +49,6 @@ module.exports = function (config) {
           }
       }
   },
-//  customLaunchers: { 
-//    Headless: { 
-//      base: 'ChromeHeadless', 
-//      flags: ['--no-sandbox',
-//     '--disable-setup-sandbox'] 
-//    },
-// //    'FirefoxHeadless': {
-// //     base: 'Firefox',
-// //     flags: [
-// //        '-headless',
-// //     ],
-// //  }
-//   //  FirefoxHeadless: { 
-//   //    base: 'Firefox', 
-//   //    flags: ['-headless'], 
-//   //  }, 
-//  },
     singleRun: false,
     restartOnFileChange: true
   });
