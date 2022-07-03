@@ -2,7 +2,7 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
-  process.env.FIREFOX_BIN = require('puppeteer').executablePath();
+  process.env.CHROME_BIN = require('puppeteer').executablePath();
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -39,11 +39,22 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['FirefoxHeadless'],
-    // browsers: ['Firefox', 'FirefoxDeveloper', 'FirefoxAurora', 'FirefoxNightly'],
+    // browsers: ['FirefoxHeadless'],
+  //   customLaunchers: {
+  //     'FirefoxHeadless': {
+  //         base: 'Firefox',
+  //         flags: [
+  //             '-headless',
+  //         ],
+  //         prefs: {
+  //             'network.proxy.type': 0
+  //         }
+  //     }
+  // },
+      browsers: ['ChromeHeadless'],
     customLaunchers: {
-      'FirefoxHeadless': {
-          base: 'Firefox',
+      'ChromeHeadless': {
+          base: 'Chrome',
           flags: [
               '-headless',
           ],
