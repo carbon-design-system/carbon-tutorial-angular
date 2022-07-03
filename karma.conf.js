@@ -2,7 +2,7 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
-  process.env.CHROME_BIN = require('puppeteer').executablePath();
+  // process.env.CHROME_BIN = require('puppeteer').executablePath();
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -10,6 +10,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-firefox-launcher'),
+      require('karma-phantomjs-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -51,18 +52,19 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-      browsers: ['ChromeHeadless'],
-    customLaunchers: {
-      'ChromeHeadless': {
-          base: 'Chrome',
-          flags: [
-              '-headless',
-          ],
-          prefs: {
-              'network.proxy.type': 0
-          }
-      }
-  },
+    browsers: ['PhantomJS'],
+  //     browsers: ['ChromeHeadless'],
+  //   customLaunchers: {
+  //     'ChromeHeadless': {
+  //         base: 'Chrome',
+  //         flags: [
+  //             '-headless',
+  //         ],
+  //         prefs: {
+  //             'network.proxy.type': 0
+  //         }
+  //     }
+  // },
     singleRun: false,
     restartOnFileChange: true
   });
