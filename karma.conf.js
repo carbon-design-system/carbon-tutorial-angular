@@ -39,16 +39,20 @@ module.exports = function (config) {
     autoWatch: true,
     // browsers: ['ChromeHeadlessNoSandbox'],
     // browsers: ['Firefox'],
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-      base: 'ChromeHeadless',
-      flags: [
-      '--no-sandbox',
-      '--user-data-dir=/tmp/chrome-test',
-      '--disable-web-security'
-      ]
-      }
-      },
+    browsers: ['Chrome', 'CircleCI_ChromeHeadless'],
+        customLaunchers: {
+          CircleCI_ChromeHeadless: {
+            base: 'ChromeHeadless',
+            flags: [
+              '--headless',
+              '--disable-gpu',
+              '--disable-translate',
+              '--disable-extensions',
+              '--no-sandbox',  // Added to fix an issue where of Failed to connect to chrome browser
+             '--remote-debugging-port=9222',
+            ],
+          }
+        },
     singleRun: false,
     restartOnFileChange: true
   });
