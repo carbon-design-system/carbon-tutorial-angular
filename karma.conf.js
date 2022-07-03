@@ -44,11 +44,17 @@ module.exports = function (config) {
    ChromeHeadlessNoSandbox: { 
      base: 'ChromeHeadless', 
      flags: ['--no-sandbox'] 
-   }, 
-   FirefoxHeadless: { 
-     base: 'Firefox', 
-     flags: ['-headless'], 
-   }, 
+   },
+   'FirefoxHeadless': {
+    base: 'Firefox',
+    flags: [
+       '-headless',
+    ],
+ }
+  //  FirefoxHeadless: { 
+  //    base: 'Firefox', 
+  //    flags: ['-headless'], 
+  //  }, 
  },
     singleRun: false,
     restartOnFileChange: true
