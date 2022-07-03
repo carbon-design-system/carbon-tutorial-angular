@@ -39,24 +39,33 @@ module.exports = function (config) {
     autoWatch: true,
     // browsers: ['ChromeHeadlessNoSandbox'],
     // browsers: ['Firefox'],
-    browsers: ['Chrome'], 
- customLaunchers: { 
-   Headless: { 
-     base: 'ChromeHeadless', 
-     flags: ['--no-sandbox',
-    '--disable-setup-sandbox'] 
+    // browsers: ['Chrome'], 
+    browsers: ['FirefoxHeadless'],
+    customLaunchers: {
+      'FirefoxHeadless': {
+         base: 'Firefox',
+         flags: [
+            '-headless',
+         ],
+      }
    },
-//    'FirefoxHeadless': {
-//     base: 'Firefox',
-//     flags: [
-//        '-headless',
-//     ],
-//  }
-  //  FirefoxHeadless: { 
-  //    base: 'Firefox', 
-  //    flags: ['-headless'], 
-  //  }, 
- },
+//  customLaunchers: { 
+//    Headless: { 
+//      base: 'ChromeHeadless', 
+//      flags: ['--no-sandbox',
+//     '--disable-setup-sandbox'] 
+//    },
+// //    'FirefoxHeadless': {
+// //     base: 'Firefox',
+// //     flags: [
+// //        '-headless',
+// //     ],
+// //  }
+//   //  FirefoxHeadless: { 
+//   //    base: 'Firefox', 
+//   //    flags: ['-headless'], 
+//   //  }, 
+//  },
     singleRun: false,
     restartOnFileChange: true
   });
