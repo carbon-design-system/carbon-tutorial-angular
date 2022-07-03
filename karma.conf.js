@@ -39,18 +39,19 @@ module.exports = function (config) {
     autoWatch: true,
     // browsers: ['ChromeHeadlessNoSandbox'],
     // browsers: ['Firefox'],
-    browsers: ['ChromeHeadlessNoSandbox', 'FirefoxHeadless'], 
+    browsers: ['Chrome'], 
  customLaunchers: { 
-   ChromeHeadlessNoSandbox: { 
+   Headless: { 
      base: 'ChromeHeadless', 
-     flags: ['--no-sandbox'] 
+     flags: ['--no-sandbox',
+    '--disable-setup-sandbox'] 
    },
-   'FirefoxHeadless': {
-    base: 'Firefox',
-    flags: [
-       '-headless',
-    ],
- }
+//    'FirefoxHeadless': {
+//     base: 'Firefox',
+//     flags: [
+//        '-headless',
+//     ],
+//  }
   //  FirefoxHeadless: { 
   //    base: 'Firefox', 
   //    flags: ['-headless'], 
