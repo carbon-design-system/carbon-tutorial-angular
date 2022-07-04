@@ -2,6 +2,9 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
+  const puppeteer = require('puppeteer');
+  process.env.CHROME_BIN = puppeteer.executablePath();
+  console.log(process.env.CHROME_BIN)
   // process.env.CHROME_BIN = require('puppeteer').executablePath();
   config.set({
     basePath: '',
@@ -66,14 +69,22 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-  browsers: ['Chrome'], 
-  customLaunchers: {
-    chrome_without_security: {
-      base: 'Chrome',
-      flags: ['--disable-web-security'],
-      displayName: 'Chrome w/o security'
+  // browsers: ['Chrome'], 
+  // customLaunchers: {
+  //   chrome_without_security: {
+  //     base: 'Chrome',
+  //     flags: ['--disable-web-security'],
+  //     displayName: 'Chrome w/o security'
+  //   }
+  // },
+  capabilities: {
+    'browserName': 'chrome',
+    chromeOptions: {
+      args: ["--headless", "--disable-gpu", "--window-size=1200,900"],
+      binary: process.env.CHROME_BIN
     }
   },
+  browsers: ['ChromeHeadless'],
     singleRun: false,
     restartOnFileChange: true
   });
