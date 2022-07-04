@@ -56,27 +56,27 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-    browsers: ['PhantomJS'],
-  //     browsers: ['ChromeHeadless'],
-  //   customLaunchers: {
-  //     'ChromeHeadless': {
-  //         base: 'Chrome',
-  //         flags: [
-  //             '-headless',
-  //         ],
-  //         prefs: {
-  //             'network.proxy.type': 0
-  //         }
-  //     }
-  // },
-  browsers: ['Chrome'], 
-  customLaunchers: {
-    chrome_without_security: {
-      base: 'Chrome',
-      flags: ['--disable-web-security'],
-      displayName: 'Chrome w/o security'
-    }
+    // browsers: ['PhantomJS'],
+      browsers: ['ChromeHeadless'],
+    customLaunchers: {
+      'ChromeHeadless': {
+          base: 'Chrome',
+          flags: [
+              '-headless',
+          ],
+          prefs: {
+              'network.proxy.type': 0
+          }
+      }
   },
+  // browsers: ['Chrome'], 
+  // customLaunchers: {
+  //   chrome_without_security: {
+  //     base: 'Chrome',
+  //     flags: ['--disable-web-security'],
+  //     displayName: 'Chrome w/o security'
+  //   }
+  // },
   // capabilities: {
   //   'browserName': 'chrome',
   //   chromeOptions: {
