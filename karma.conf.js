@@ -9,7 +9,7 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-firefox-launcher'),
+      // require('karma-firefox-launcher'),
       require('karma-phantomjs-launcher'),
       // require('karma-phantomjs2-launcher'),
       require('karma-jasmine-html-reporter'),
@@ -66,16 +66,13 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-  browsers: ['ChromeHeadlessNoSandbox', 'FirefoxHeadless'], 
-  customLaunchers: { 
-    ChromeHeadlessNoSandbox: { 
-      base: 'ChromeHeadless', 
-      flags: ['--no-sandbox'] 
-    }, 
-    FirefoxHeadless: { 
-      base: 'Firefox', 
-      flags: ['-headless'], 
-    }, 
+  browsers: ['Chrome'], 
+  customLaunchers: {
+    chrome_without_security: {
+      base: 'Chrome',
+      flags: ['--disable-web-security'],
+      displayName: 'Chrome w/o security'
+    }
   },
     singleRun: false,
     restartOnFileChange: true
