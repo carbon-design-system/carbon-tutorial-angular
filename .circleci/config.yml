@@ -4,8 +4,9 @@ jobs:
   step-one:
     docker:
       - image: cimg/node:14.19.3
-      environment:
-        CHROME_BIN: /usr/bin/google-chrome
+        environment:
+          CHROME_BIN: /usr/bin/google-chrome
+      - image: cimg/node:14.19.3
 
     working_directory: ~/repo
     steps:
