@@ -53,7 +53,7 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-    browsers: ['PhantomJS'],
+    // browsers: ['PhantomJS'],
   //     browsers: ['ChromeHeadless'],
   //   customLaunchers: {
   //     'ChromeHeadless': {
@@ -66,6 +66,17 @@ module.exports = function (config) {
   //         }
   //     }
   // },
+  browsers: ['ChromeHeadlessNoSandbox', 'FirefoxHeadless'], 
+  customLaunchers: { 
+    ChromeHeadlessNoSandbox: { 
+      base: 'ChromeHeadless', 
+      flags: ['--no-sandbox'] 
+    }, 
+    FirefoxHeadless: { 
+      base: 'Firefox', 
+      flags: ['-headless'], 
+    }, 
+  },
     singleRun: false,
     restartOnFileChange: true
   });
