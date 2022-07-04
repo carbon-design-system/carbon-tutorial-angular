@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/node:14.19.3
         environment:
-          CHROME_BIN: /usr/bin/firefox
+          FIREFOX_BIN: /usr/bin/firefox
 
     working_directory: ~/repo
     steps:
