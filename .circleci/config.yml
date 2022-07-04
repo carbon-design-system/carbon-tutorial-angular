@@ -16,6 +16,3 @@ workflows:
     main:
       jobs:
         - step-one
-
-  before_install:
-  - export CHROME_BIN=chromium-browser
