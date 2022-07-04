@@ -2,9 +2,6 @@ version: 2.1
 
 jobs:
   step-one:
-  before_install:
-  - export CHROME_BIN=chromium-browser
-  
     docker:
       - image: cimg/node:14.19.3
 
@@ -15,7 +12,9 @@ jobs:
       - run: npm run test:once
       - run: npm run build
       
-      
+        before_install:
+  - export CHROME_BIN=chromium-browser
+  
 workflows:
     main:
       jobs:
