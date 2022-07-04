@@ -91,7 +91,7 @@ module.exports = function (config) {
   //     flags: ['--no-sandbox','--disable-setuid-sandbox']
   //   }
   // },
-    singleRun: true,
+    singleRun: false,
     restartOnFileChange: true
   });
 };
