@@ -8,13 +8,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - browser-tools/install-chrome
       - run: npm install
       - run: npm run test:once
       - run: npm run build
-      - run:
-          name: Run TestCafe tests on headless Chrome
-          command: npm run test:chrome:headless
       
 workflows:
     main:

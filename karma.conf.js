@@ -13,7 +13,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       // require('karma-firefox-launcher'),
-      require('karma-phantomjs-launcher'),
+      // require('karma-phantomjs-launcher'),
       // require('karma-phantomjs2-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
@@ -77,20 +77,19 @@ module.exports = function (config) {
   //     displayName: 'Chrome w/o security'
   //   }
   // },
-  capabilities: {
-    'browserName': 'chrome',
-    chromeOptions: {
-      args: ["--headless", "--disable-gpu", "--window-size=1200,900"],
-      binary: process.env.CHROME_BIN
-    }
-  },
-  browsers: ['Chrome'],
-  // browsers: ['ChromeHeadless'],
+  // capabilities: {
+  //   'browserName': 'chrome',
+  //   chromeOptions: {
+  //     args: ["--headless", "--disable-gpu", "--window-size=1200,900"],
+  //     binary: process.env.CHROME_BIN
+  //   }
+  // },
+  browsers: ['ChromeHeadlessNoSandbox'],
   customLaunchers: {
-    chrome_without_security: {
-      base: 'Chrome',
-      flags: ['--disable-web-security']
-    },
+    ChromeHeadlessNoSandbox: {
+      base: 'ChromeHeadless',
+      flags: ['--no-sandbox','--disable-setuid-sandbox']
+    }
   },
     singleRun: false,
     restartOnFileChange: true
