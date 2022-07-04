@@ -11,9 +11,9 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
-      require('karma-chrome-launcher'),
+      // require('karma-chrome-launcher'),
       // require('karma-firefox-launcher'),
-      // require('karma-phantomjs-launcher'),
+      require('karma-phantomjs-launcher'),
       // require('karma-phantomjs2-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
@@ -56,7 +56,7 @@ module.exports = function (config) {
   //         }
   //     }
   // },
-    // browsers: ['PhantomJS'],
+    browsers: ['PhantomJS'],
   //     browsers: ['ChromeHeadless'],
   //   customLaunchers: {
   //     'ChromeHeadless': {
@@ -84,13 +84,13 @@ module.exports = function (config) {
   //     binary: process.env.CHROME_BIN
   //   }
   // },
-  browsers: ['ChromeHeadlessNoSandbox'],
-  customLaunchers: {
-    ChromeHeadlessNoSandbox: {
-      base: 'ChromeHeadless',
-      flags: ['--no-sandbox','--disable-setuid-sandbox']
-    }
-  },
+  // browsers: ['ChromeHeadlessNoSandbox'],
+  // customLaunchers: {
+  //   ChromeHeadlessNoSandbox: {
+  //     base: 'ChromeHeadless',
+  //     flags: ['--no-sandbox','--disable-setuid-sandbox']
+  //   }
+  // },
     singleRun: false,
     restartOnFileChange: true
   });
