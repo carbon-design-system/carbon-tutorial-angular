@@ -57,18 +57,18 @@ module.exports = function (config) {
   //     }
   // },
     // browsers: ['PhantomJS'],
-      browsers: ['ChromeHeadless'],
-    customLaunchers: {
-      'ChromeHeadless': {
-          base: 'Chrome',
-          flags: [
-              '-headless',
-          ],
-          prefs: {
-              'network.proxy.type': 0
-          }
-      }
-  },
+  //     browsers: ['ChromeHeadless'],
+  //   customLaunchers: {
+  //     'ChromeHeadless': {
+  //         base: 'Chrome',
+  //         flags: [
+  //             '-headless',
+  //         ],
+  //         prefs: {
+  //             'network.proxy.type': 0
+  //         }
+  //     }
+  // },
   // browsers: ['Chrome'], 
   // customLaunchers: {
   //   chrome_without_security: {
@@ -84,13 +84,13 @@ module.exports = function (config) {
   //     binary: process.env.CHROME_BIN
   //   }
   // },
-  // browsers: ['ChromeHeadlessNoSandbox'],
-  // customLaunchers: {
-  //   ChromeHeadlessNoSandbox: {
-  //     base: 'ChromeHeadless',
-  //     flags: ['--no-sandbox','--disable-setuid-sandbox']
-  //   }
-  // },
+  browsers: ['ChromeHeadlessNoSandbox'],
+  customLaunchers: {
+    ChromeHeadlessNoSandbox: {
+      base: 'ChromeHeadless',
+      flags: ['--no-sandbox','--disable-setuid-sandbox']
+    }
+  },
     singleRun: false,
     restartOnFileChange: true
   });
