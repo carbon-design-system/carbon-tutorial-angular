@@ -3,16 +3,16 @@
 
 module.exports = function (config) {
   const puppeteer = require('puppeteer');
-  process.env.FIREFOX_BIN = puppeteer.executablePath();
-  console.log(process.env.FIREFOX_BIN)
+  process.env.CHROME_BIN = puppeteer.executablePath();
+  console.log(process.env.CHROME_BIN)
   // process.env.CHROME_BIN = require('puppeteer').executablePath();
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
-      // require('karma-chrome-launcher'),
-      require('karma-firefox-launcher'),
+      require('karma-chrome-launcher'),
+      // require('karma-firefox-launcher'),
       // require('karma-phantomjs-launcher'),
       // require('karma-phantomjs2-launcher'),
       require('karma-jasmine-html-reporter'),
@@ -44,18 +44,18 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['FirefoxHeadless'],
-    customLaunchers: {
-      'FirefoxHeadless': {
-          base: 'Firefox',
-          flags: [
-              '-headless',
-          ],
-          prefs: {
-              'network.proxy.type': 0
-          }
-      }
-  },
+    // browsers: ['FirefoxHeadless'],
+  //   customLaunchers: {
+  //     'FirefoxHeadless': {
+  //         base: 'Firefox',
+  //         flags: [
+  //             '-headless',
+  //         ],
+  //         prefs: {
+  //             'network.proxy.type': 0
+  //         }
+  //     }
+  // },
     // browsers: ['PhantomJS'],
   //     browsers: ['ChromeHeadless'],
   //   customLaunchers: {
@@ -84,13 +84,13 @@ module.exports = function (config) {
   //     binary: process.env.CHROME_BIN
   //   }
   // },
-  // browsers: ['ChromeHeadlessNoSandbox'],
-  // customLaunchers: {
-  //   ChromeHeadlessNoSandbox: {
-  //     base: 'ChromeHeadless',
-  //     flags: ['--no-sandbox','--disable-setuid-sandbox']
-  //   }
-  // },
+  browsers: ['ChromeHeadlessNoSandbox'],
+  customLaunchers: {
+    ChromeHeadlessNoSandbox: {
+      base: 'ChromeHeadless',
+      flags: ['--no-sandbox','--disable-setuid-sandbox']
+    }
+  },
     singleRun: false,
     restartOnFileChange: true
   });
