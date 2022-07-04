@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   step-one:
     docker:
-      - image: cimg/node:latest-browsers
+      - image: circleci/node:latest-browsers
         environment:
           CHROME_BIN: /usr/bin/firefox
 
