@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:latest-browsers
         environment:
-          CHROME_BIN: /usr/bin/firefox
+          CHROME_BIN: /usr/bin/chrome
 
     working_directory: ~/repo
     steps:
