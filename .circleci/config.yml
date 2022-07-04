@@ -12,10 +12,10 @@ jobs:
       - run: npm run test:once
       - run: npm run build
       
-        before_install:
-  - export CHROME_BIN=chromium-browser
-  
 workflows:
     main:
       jobs:
         - step-one
+
+  before_install:
+  - export CHROME_BIN=chromium-browser
