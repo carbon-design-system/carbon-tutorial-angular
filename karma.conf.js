@@ -84,7 +84,14 @@ module.exports = function (config) {
       binary: process.env.CHROME_BIN
     }
   },
-  browsers: ['ChromeHeadless'],
+  browsers: ['Chrome'],
+  // browsers: ['ChromeHeadless'],
+  customLaunchers: {
+    chrome_without_security: {
+      base: 'Chrome',
+      flags: ['--disable-web-security']
+    },
+  },
     singleRun: false,
     restartOnFileChange: true
   });
