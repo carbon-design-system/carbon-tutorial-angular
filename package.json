@@ -24,6 +24,7 @@
     "@carbon/icons": "^10.48.0",
     "carbon-components": "^10.56.0",
     "carbon-components-angular": "^4.59.8",
+    "puppeteer": "^15.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
