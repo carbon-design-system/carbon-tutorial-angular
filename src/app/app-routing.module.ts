@@ -9,11 +9,16 @@ const routes: Routes = [
 	{
 		path: 'repos',
 		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+	},
+	{
+		path: '',
+		redirectTo: '',
+		pathMatch: 'full'
 	}
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, {useHash: true})],
+	imports: [RouterModule.forRoot(routes, { useHash: true })],
 	exports: [RouterModule]
 })
 export class AppRoutingModule { }
