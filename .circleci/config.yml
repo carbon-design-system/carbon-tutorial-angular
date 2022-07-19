@@ -6,6 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - run: cd ./carbon-angular-tutorial
       - run: npm install
       - run: npm run test
       - run: npm run build
