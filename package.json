@@ -21,6 +21,7 @@
     "@angular/router": "^14.0.0",
     "@carbon/icons": "^11.5.0",
     "carbon-components": "^10.56.0",
+    "puppeteer": "^15.3.0",
     "carbon-components-angular": "^4.59.9",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
