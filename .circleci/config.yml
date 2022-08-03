@@ -1,18 +1,17 @@
 version: 2.1
+orbs:
+  node: circleci/node@1.1.6
 jobs:
-  step-one:
-    docker:
-      - image: circleci/ruby:2.5-node-browsers-legacy
-        environment:
-          CHROME_BIN: /usr/bin/chrome
-    working_directory: ~/repo
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - run: npm install
-      - run: npm run test:once
-      - run: npm run build
-
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run build
 workflows:
-    main:
-      jobs:
-        - step-one
+  build-and-test:
+    jobs:
+      - build-and-test
