@@ -11,4 +11,4 @@ jobs:
       - browser-tools/install-chromedriver
       - checkout
       - run: npm install
-      - run: npm run test:once
+      - run: npm run test
