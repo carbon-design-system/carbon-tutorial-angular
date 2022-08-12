@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { IconModule, UIShellModule } from 'carbon-components-angular';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
+import { GraphQLModule } from "./graphql.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
 	declarations: [
@@ -19,10 +21,12 @@ import { AppRoutingModule } from "./app-routing.module";
 		BrowserModule,
 		BrowserAnimationsModule,
 		FormsModule,
-		RouterModule,
 		AppRoutingModule,
 		UIShellModule,
+		RouterModule,
 		IconModule,
+		GraphQLModule,
+		HttpClientModule
 	],
 	bootstrap: [AppComponent]
 })

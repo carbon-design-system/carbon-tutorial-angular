@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "target": "es2015",
     "lib": [
-      "es2016",
+      "es2020",
       "dom"
     ],
     "module": "esnext",
