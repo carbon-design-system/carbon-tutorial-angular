@@ -22,7 +22,7 @@ describe('LandingPageComponent', () => {
 				TabsModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
