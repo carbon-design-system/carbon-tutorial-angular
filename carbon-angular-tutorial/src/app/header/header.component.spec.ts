@@ -16,7 +16,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent ],
+      imports: [UIShellModule]
     })
     .compileComponents();
 
@@ -30,7 +31,3 @@ describe('HeaderComponent', () => {
   });
 });
 
-TestBed.configureTestingModule({
-  declarations: [HeaderComponent],
-  imports: [UIShellModule]
-});

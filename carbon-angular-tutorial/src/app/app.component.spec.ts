@@ -4,8 +4,6 @@ import { AppComponent } from './app.component';
 import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 import { HeaderComponent } from './header/header.component';
 
-
-
 import {
   NotificationModule,
   UserAvatarModule,
@@ -20,7 +18,8 @@ describe('AppComponent', () => {
         UIShellModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent
       ],
     }).compileComponents();
   });
@@ -30,9 +29,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-});
-
-TestBed.configureTestingModule({
-  declarations: [HeaderComponent],
-  imports: [UIShellModule]
 });
