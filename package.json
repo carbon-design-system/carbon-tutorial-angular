@@ -1,6 +1,6 @@
 {
 	"name": "carbon-angular-starter",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"license": "",
 	"scripts": {
 		"ng": "ng",
@@ -27,7 +27,7 @@
 		"@apollo/client": "^3.6.9",
 		"@carbon/icons": "^11.6.0",
 		"apollo-angular": "^3.0.1",
-		"carbon-components": "^10.56.0",
+		"carbon-components": "^10.57.2",
 		"carbon-components-angular": "^4.59.9",
 		"graphql": "^15.7.2",
 		"graphql-tag": "^2.12.6",
