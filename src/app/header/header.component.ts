@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import Notification20 from '@carbon/icons/es/notification/20';
-import Switcher20 from '@carbon/icons/es/switcher/20';
-import UserAvatar from '@carbon/icons/es/user--avatar/20';
+import Notification20 from '@carbon/icons/es/notification/20.js';
+import Switcher20 from '@carbon/icons/es/switcher/20.js';
+import UserAvatar from '@carbon/icons/es/user--avatar/20.js';
 
 import { IconService } from "carbon-components-angular";
 

@@ -1,10 +1,7 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { UIShellModule } from 'carbon-components-angular';
-import { Notification20Module } from '@carbon/icons/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons/lib/switcher/20';
+import { IconModule, UIShellModule } from 'carbon-components-angular';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,9 +16,7 @@ describe('AppComponent', () => {
 			imports: [
 				RouterTestingModule,
 				UIShellModule,
-				Notification20Module,
-				UserAvatar20Module,
-				AppSwitcher20Module
+				IconModule
 			]
 		}).compileComponents();
 	}));

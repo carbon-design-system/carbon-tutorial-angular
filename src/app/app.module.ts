@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
-import { IconModule, UIShellModule } from 'carbon-components-angular';
+import { IconModule, IconService, UIShellModule } from 'carbon-components-angular';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { GraphQLModule } from "./graphql.module";
 import { HttpClientModule } from "@angular/common/http";
+import { InfoModule } from "./info/info.module";
 
 @NgModule({
 	declarations: [
@@ -26,8 +27,12 @@ import { HttpClientModule } from "@angular/common/http";
 		RouterModule,
 		IconModule,
 		GraphQLModule,
-		HttpClientModule
+		HttpClientModule,
+		InfoModule
 	],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	providers: [
+		IconService
+	]
 })
 export class AppModule { }

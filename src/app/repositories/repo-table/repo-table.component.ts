@@ -7,7 +7,7 @@ import {
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
-const QUERY = gql(`
+export const QUERY = gql(`
 	query REPO_QUERY {
 	  # Let's use carbon as our organization
 	  organization(login: "carbon-design-system") {
@@ -70,6 +70,8 @@ export class RepoTableComponent implements OnInit {
 			new TableHeaderItem({ data: 'Stars' }),
 			new TableHeaderItem({ data: 'Links' })
 		];
+
+		console.log(this.apollo)
 
 		this.apollo.watchQuery({
 			query: QUERY
