@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 
 /src/environments/environment.ts
+
+node_modules/.cache
