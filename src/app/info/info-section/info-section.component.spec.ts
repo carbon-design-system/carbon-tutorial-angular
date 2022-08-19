@@ -1,27 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { InfoSectionComponent } from './info-section.component';
-import { PersonFavorite32Module } from '@carbon/icons-angular/lib/person--favorite/32';
-import { Globe32Module } from '@carbon/icons-angular/lib/globe/32';
-import { Application32Module } from '@carbon/icons-angular/lib/application/32';
-import { InfoCardComponent } from '../info-card/info-card.component';
-import { GridModule } from 'carbon-components-angular';
+import { IconService } from "carbon-components-angular";
+import { Component } from "@angular/core";
 
 describe('InfoSectionComponent', () => {
 	let component: InfoSectionComponent;
 	let fixture: ComponentFixture<InfoSectionComponent>;
 
-	beforeEach(async(() => {
+	beforeEach(waitForAsync( () => {
 		TestBed.configureTestingModule({
-			declarations: [ InfoSectionComponent, InfoCardComponent ],
-			imports: [
-				PersonFavorite32Module,
-				Globe32Module,
-				Application32Module,
-				GridModule
+			declarations: [InfoSectionComponent, InfoCardMockComponent],
+			providers:[
+				IconService
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -34,3 +28,12 @@ describe('InfoSectionComponent', () => {
 		expect(component).toBeTruthy();
 	});
 });
+
+
+@Component({
+	selector: 'app-info-card',
+	template: '<p>whatever</p>'
+})
+class InfoCardMockComponent {
+
+}

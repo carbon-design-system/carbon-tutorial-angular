@@ -1,18 +1,45 @@
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import {
-	Component,
-	OnInit,
-	ViewChild,
-	TemplateRef
-} from '@angular/core';
-
-import {
-	Table,
 	TableModel,
 	TableItem,
-	TableHeaderItem
+	TableHeaderItem, Table
 } from 'carbon-components-angular';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+
+export const QUERY = gql(`
+	query REPO_QUERY {
+	  # Let's use carbon as our organization
+	  organization(login: "carbon-design-system") {
+		# We'll grab all the repositories in one go. To load more resources
+		# continuously, see the advanced topics.
+		repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+		  totalCount
+		  nodes {
+			url
+			homepageUrl
+			issues(filterBy: { states: OPEN }) {
+			  totalCount
+			}
+			stargazers {
+			  totalCount
+			}
+			releases(first: 1) {
+			  totalCount
+			  nodes {
+				name
+			  }
+			}
+			name
+			updatedAt
+			createdAt
+			description
+			id
+		  }
+		}
+	  }
+	}
+	`)
 
 @Component({
 	selector: 'app-repo-table',
@@ -22,79 +49,52 @@ import gql from 'graphql-tag';
 export class RepoTableComponent implements OnInit {
 	data = [];
 	model: TableModel;
-	skeletonModel = Table.skeletonModel(10, 6);
-	skeleton = true;
-
-	@ViewChild('linkTemplate', null)
+	@ViewChild('linkTemplate', {})
 	protected linkTemplate: TemplateRef<any>;
+	skeletonModel: TableModel;
+	skeleton: boolean;
 
-	constructor(private apollo: Apollo) { }
-
-	ngOnInit() {
-		this.model = new TableModel();
-		this.model.header = [
-			new TableHeaderItem({data: 'Name'}),
-			new TableHeaderItem({data: 'Created'}),
-			new TableHeaderItem({data: 'Updated'}),
-			new TableHeaderItem({data: 'Open Issues'}),
-			new TableHeaderItem({data: 'Stars'}),
-			new TableHeaderItem({data: 'Links'})
-		];
-
-		this.apollo.watchQuery({
-			query: gql`
-			  query REPO_QUERY {
-				# Let's use carbon as our organization
-				organization(login: "carbon-design-system") {
-				  # We'll grab all the repositories in one go. To load more resources
-				  # continuously, see the advanced topics.
-				  repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
-					totalCount
-					nodes {
-					  url
-					  homepageUrl
-					  issues(filterBy: { states: OPEN }) {
-						totalCount
-					  }
-					  stargazers {
-						totalCount
-					  }
-					  releases(first: 1) {
-						totalCount
-						nodes {
-						  name
-						}
-					  }
-					  name
-					  updatedAt
-					  createdAt
-					  description
-					  id
-					}
-				  }
-				}
-			  }
-			`
-		})
-		.valueChanges.subscribe((response: any) => {
-			if (response.error) {
-				const errorData = [];
-			 	errorData.push([
-					new TableItem({data: 'error!' })
-				]);
-				this.model.data = errorData;
-			} else if (response.loading) {
-				this.skeleton = true;
-			} else {
-				// If we're here, we've got our data!
-				this.data = response.data.organization.repositories.nodes;
-				this.model.pageLength = 10;
-				this.model.totalDataLength = response.data.organization.repositories.totalCount;
-				this.selectPage(1);
-			}
-		});
+	constructor(private apollo: Apollo) {
 	}
 
+	ngOnInit() {
+		this.skeleton = true;
+		this.skeletonModel = Table.skeletonModel(10, 6)
+		this.model = new TableModel();
+
+		this.model.header = [
+			new TableHeaderItem({ data: 'Name' }),
+			new TableHeaderItem({ data: 'Created' }),
+			new TableHeaderItem({ data: 'Updated' }),
+			new TableHeaderItem({ data: 'Open Issues' }),
+			new TableHeaderItem({ data: 'Stars' }),
+			new TableHeaderItem({ data: 'Links' })
+		];
+
+		console.log(this.apollo)
+
+		this.apollo.watchQuery({
+			query: QUERY
+		}).valueChanges
+			.subscribe((results: any) => {
+				if (results.error) {
+					const errorData = [];
+					errorData.push([
+						new TableItem({ data: 'error!' })
+					]);
+					this.model.data = errorData;
+				} else if (results.loading) {
+					console.log('loading')
+					this.skeleton = true;
+				} else {
+					// If we're here, we've got our data!
+					this.data = results.data.organization.repositories.nodes;
+					this.model.pageLength = 10;
+					this.model.totalDataLength = results.data.organization.repositories.totalCount;
+					this.selectPage(1);
+				}
+			})
+	}
 	selectPage(page) {
 		const offset = this.model.pageLength * (page - 1);
 		const pageRawData = this.data.slice(offset, offset + this.model.pageLength);
@@ -102,7 +102,7 @@ export class RepoTableComponent implements OnInit {
 		this.model.currentPage = page;
 	}
 
-	prepareData(data) {
+	private prepareData(data) {
 		this.skeleton = false;
 		const newData = [];
 
