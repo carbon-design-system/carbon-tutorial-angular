@@ -20,8 +20,8 @@ import AppSwitcher20 from '@carbon/icons/es/app-switcher/20';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UIShellModule,
-    IconModule
+    IconModule,
+    UIShellModule
   ],
   providers: [],
   bootstrap: [AppComponent]
