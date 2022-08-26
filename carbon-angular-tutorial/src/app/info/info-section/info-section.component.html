@@ -1,0 +1,26 @@
+<section ibmRow class="info-section info-section__r1">
+  <div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">
+    <h3 class="info-section__heading">{{heading}}</h3>
+  </div>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[0].heading"
+    [content]="items[0].content"
+  >
+  </app-info-card>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[1].heading"
+    [content]="items[1].content"
+  >
+  </app-info-card>
+  <app-info-card
+    ibmCol
+    [columnNumbers]="{'md': 4, 'lg': 4}"
+    [heading]="items[2].heading"
+    [content]="items[2].content"
+  >
+  </app-info-card>
+</section>
