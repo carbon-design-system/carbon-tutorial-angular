@@ -1,4 +1,7 @@
-p{
-    margin: 100px;
-    text-align: center;
+@import '~carbon-components/scss/globals/scss/typography';
+
+.repo-page .repo-page__r1 {
+  padding-top: $spacing-10;
+  padding-bottom: $spacing-05;
+  
 }
