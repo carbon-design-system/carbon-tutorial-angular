@@ -4,8 +4,25 @@
         <p ibmTableHeaderDescription>A collection of public Carbon repositories.</p>
     </ibm-table-header>
     <ibm-table
-        [model]="model"
-        [showSelectionColumn]="false"
-        [striped]="false">
-    </ibm-table>
+  [skeleton]="skeleton"
+  [model]="skeleton ? skeletonModel : model"
+  [showSelectionColumn]="false"
+  [striped]="false">
+</ibm-table>
+<ibm-pagination
+  [model]="model"
+  (selectPage)="selectPage($event)">
+</ibm-pagination>
 </ibm-table-container>
+
+<ng-template #linkTemplate let-data="data">
+    <ul style="display: flex">
+        <li>
+            <a ibmLink [href]="data.github">Github</a>
+        </li>
+        <li *ngIf="data.homepage">
+            <span>&nbsp;|&nbsp;</span>
+            <a ibmLink [href]="data.homepage">HomePage</a>
+        </li>
+    </ul>
+</ng-template>

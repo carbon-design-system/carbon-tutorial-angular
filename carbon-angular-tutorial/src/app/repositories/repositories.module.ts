@@ -7,6 +7,8 @@ import { RepoPageComponent } from './repo-page/repo-page.component';
 import { GridModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from './repo-table/repo-table.component';
 
+import { LinkModule, PaginationModule } from 'carbon-components-angular';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
     CommonModule,
     RepositoriesRoutingModule,
     GridModule,
-    TableModule
+    TableModule,
+    LinkModule,
+    PaginationModule
   ]
 })
 export class RepositoriesModule { }

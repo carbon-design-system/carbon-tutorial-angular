@@ -12,6 +12,8 @@ import {
   UserAvatarModule,
   AppSwitcherModule
 } from '@carbon/icons-angular';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
-    IconModule
+    IconModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
