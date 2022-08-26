@@ -1,0 +1,37 @@
+@import "~carbon-components/scss/globals/scss/typography";
+@import "~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family";
+
+@mixin info-section-background() {
+  background-color: $ui-01;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -$spacing-05;
+    top: 0;
+    right: -$spacing-05;
+    bottom: 0;
+    background: $ui-01;
+    z-index: -1;
+  }
+}
+
+.info-section {
+  @include info-section-background;
+  display: flex;
+  height: fit-content;
+
+  &.info-section__r1 {
+    padding-top: $spacing-09;
+    padding-bottom: $spacing-09;
+    height: auto;
+  }
+
+  .info-section__heading {
+    @include type-style("heading-01");
+  }
+
+
+}
+
