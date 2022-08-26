@@ -1,0 +1,22 @@
+@import "~carbon-components/scss/globals/scss/typography";
+@import "~carbon-components/scss/globals/scss/layout";
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+
+  .info-card__heading {
+    @include type-style("productive-heading-03");
+  }
+
+  .info-card__body {
+    margin-top: $spacing-06;
+    flex-grow: 1;
+    @include type-style("body-long-01");
+
+    // prevent large line lengths between small and medium viewports
+    .info-card__icon {
+        margin-top: $spacing-09;
+      }
+  }
+}

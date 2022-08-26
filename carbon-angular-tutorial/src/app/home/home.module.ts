@@ -6,6 +6,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { GridModule, BreadcrumbModule, ButtonModule, TabsModule } from 'carbon-components-angular';
 
+import { InfoModule } from '../info/info.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { GridModule, BreadcrumbModule, ButtonModule, TabsModule } from 'carbon-c
     GridModule,
     BreadcrumbModule,
     ButtonModule,
-    TabsModule
+    TabsModule,
+    InfoModule
   ]
 })
 export class HomeModule { }
