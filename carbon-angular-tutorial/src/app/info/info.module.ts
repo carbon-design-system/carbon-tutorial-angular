@@ -7,6 +7,7 @@ import { GridModule } from 'carbon-components-angular';
 
 
 
+
 @NgModule({
   declarations: [
     InfoCardComponent,

@@ -1,0 +1,5 @@
+---
+applications:
+  - name: carbon-tutorial-angular-Amiya-1999
+    memory: 64M
+    buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
