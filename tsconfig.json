@@ -15,6 +15,7 @@
       "esnext.asynciterable"
     ],
     "module": "esnext",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "resolveJsonModule": true
   }
 }
