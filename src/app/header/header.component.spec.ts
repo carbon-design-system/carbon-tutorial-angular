@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { UIShellModule } from 'carbon-components-angular';
+import { IconModule, UIShellModule } from 'carbon-components-angular';
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent;
@@ -10,7 +11,7 @@ describe('HeaderComponent', () => {
 	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
 			declarations: [ HeaderComponent ],
-			imports: [ UIShellModule ]
+			imports: [ UIShellModule, IconModule, RouterTestingModule ]
 		})
 		.compileComponents();
 	}));
