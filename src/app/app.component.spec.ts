@@ -1,16 +1,16 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, fakeAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { UIShellModule } from 'carbon-components-angular';
-import { Notification20Module } from '@carbon/icons-angular/lib/notification/20';
-import { UserAvatar20Module } from '@carbon/icons-angular/lib/user--avatar/20';
-import { AppSwitcher20Module } from '@carbon/icons-angular/lib/app-switcher/20';
+import { Switcher20 } from '@carbon/icons/es/switcher/20';
+import { Notification20 } from '@carbon/icons/es/notification/20';
+import { UserAvatar20 } from '@carbon/icons/es/user--avatar/20';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
-	beforeEach(async(() => {
+	beforeEach(fakeAsync(() => {
 		TestBed.configureTestingModule({
 			declarations: [
 				AppComponent,
@@ -19,9 +19,9 @@ describe('AppComponent', () => {
 			imports: [
 				RouterTestingModule,
 				UIShellModule,
-				Notification20Module,
-				UserAvatar20Module,
-				AppSwitcher20Module
+				Notification20,
+				UserAvatar20,
+				Switcher20
 			]
 		}).compileComponents();
 	}));
