@@ -1,4 +1,4 @@
-import { TestBed, async, fakeAsync } from '@angular/core/testing';
+import { TestBed, fakeAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { UIShellModule } from 'carbon-components-angular';
@@ -20,7 +20,7 @@ describe('AppComponent', () => {
 		}).compileComponents();
 	}));
 
-	it('should create the app', async(() => {
+	it('should create the app', fakeAsync(() => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
