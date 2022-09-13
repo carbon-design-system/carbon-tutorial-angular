@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-    step-two:
+    step-one:
         docker:
             - image: circleci/node:circleci/node:16.13.1-browsers
         working_directory: ~/repo
