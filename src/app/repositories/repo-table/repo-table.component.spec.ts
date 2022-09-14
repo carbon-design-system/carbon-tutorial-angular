@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GridModule, TableModule, LinkModule, PaginationModule } from 'carbon-components-angular';
-
-
+import {
+  ApolloTestingModule,
+} from 'apollo-angular/testing';
+import { Apollo } from 'apollo-angular'
 import { RepoTableComponent } from './repo-table.component';
 
 describe('RepoTableComponent', () => {
@@ -15,8 +17,12 @@ describe('RepoTableComponent', () => {
         GridModule,
         TableModule,
         LinkModule,
-        PaginationModule
-      ]
+        PaginationModule,
+        ApolloTestingModule
+
+      ],
+      providers: [Apollo]
+
     })
       .compileComponents();
   });
