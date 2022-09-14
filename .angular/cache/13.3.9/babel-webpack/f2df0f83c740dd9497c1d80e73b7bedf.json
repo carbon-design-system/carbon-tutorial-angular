@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function graphQLResultHasError(result) {\n  return result.errors && result.errors.length > 0 || false;\n} //# sourceMappingURL=errorHandling.js.map","map":null,"metadata":{},"sourceType":"module"}

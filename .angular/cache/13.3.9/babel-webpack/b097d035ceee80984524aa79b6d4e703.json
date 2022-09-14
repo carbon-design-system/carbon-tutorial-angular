@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Build a string describing the path.\n */\nexport function printPathArray(path) {\n  return path.map(key => typeof key === 'number' ? '[' + key.toString() + ']' : '.' + key).join('');\n}","map":null,"metadata":{},"sourceType":"module"}

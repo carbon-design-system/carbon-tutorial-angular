@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function devAssert(condition, message) {\n  var booleanCondition = Boolean(condition); // istanbul ignore else (See transformation done in './resources/inlineInvariant.js')\n\n  if (!booleanCondition) {\n    throw new Error(message);\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

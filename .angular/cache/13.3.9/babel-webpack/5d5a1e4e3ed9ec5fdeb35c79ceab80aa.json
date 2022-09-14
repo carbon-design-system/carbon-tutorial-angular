@@ -1,0 +1,1 @@
+{"ast":null,"code":"var prefixCounts = new Map();\nexport function makeUniqueId(prefix) {\n  var count = prefixCounts.get(prefix) || 1;\n  prefixCounts.set(prefix, count + 1);\n  return \"\".concat(prefix, \":\").concat(count, \":\").concat(Math.random().toString(36).slice(2));\n} //# sourceMappingURL=makeUniqueId.js.map","map":null,"metadata":{},"sourceType":"module"}
