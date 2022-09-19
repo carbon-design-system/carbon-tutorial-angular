@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { default as data} from '../info.json';
+import { default as data } from '../info.json';
 
 @Component({
   selector: 'app-info-section',
