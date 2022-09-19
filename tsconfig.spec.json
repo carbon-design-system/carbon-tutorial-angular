@@ -5,25 +5,27 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
 		"lib": [
-			"es2016",
 			"dom",
-			"esnext.asynciterable"
+			"es2016"
 		],
-		"outDir": "../out-tsc/app",
-		"target": "es2015",
+		"outDir": "../out-tsc/spec",
 		"module": "esnext",
+		"target": "es2015",
 		"baseUrl": "",
-		"types": [],
-		"resolveJsonModule": true
+		"types": [
+			"jasmine",
+			"node"
+		]
 	},
-	"include": [
-		"**/*"
-	],
-	"exclude": [
+	"files": [
 		"test.ts",
+	  "polyfills.ts"
+  ],
+	"include": [
 		"**/*.spec.ts"
 	]
 }
