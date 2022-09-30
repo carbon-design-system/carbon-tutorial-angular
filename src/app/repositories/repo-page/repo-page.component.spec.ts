@@ -1,20 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RepoPageComponent } from './repo-page.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
+import { GridModule, TableModule } from 'carbon-components-angular';
+import { Apollo } from 'apollo-angular'
+import {
+	ApolloTestingModule,
+  } from 'apollo-angular/testing';
+
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
 
-	beforeEach(async(() => {
+	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
+			imports: [GridModule, TableModule, ApolloTestingModule],
 			declarations: [ RepoPageComponent, RepoTableComponent ],
-			imports: [
-				GridModule,
-				TableModule
-			]
+			providers:[Apollo]
+
 		})
 		.compileComponents();
 	}));
