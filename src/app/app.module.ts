@@ -14,7 +14,7 @@ import {
 // icons
 import Notification20 from '@carbon/icons/es/notification/20';
 import UserAvatar20 from '@carbon/icons/es/user--avatar/20';
-import Switcher20 from '@carbon/icons/es/switcher/20';
+import AppSwitcher20 from '@carbon/icons/es/app-switcher/20';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -23,6 +23,6 @@ import Switcher20 from '@carbon/icons/es/switcher/20';
 })
 export class AppModule {
   constructor(protected iconService: IconService) {
-    this.iconService.registerAll([Notification20, UserAvatar20, Switcher20]);
+    this.iconService.registerAll([Notification20, UserAvatar20, AppSwitcher20]);
   }
 }
