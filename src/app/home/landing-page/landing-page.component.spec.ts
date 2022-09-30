@@ -1,19 +1,18 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
-import { BreadcrumbModule, ButtonModule, GridModule, TabsModule } from "carbon-components-angular";
-import { HomeRoutingModule } from "../home-routing.module";
-import { CommonModule } from "@angular/common";
-import { RouterTestingModule } from "@angular/router/testing";
+
+import { ButtonModule,	GridModule,	TabsModule, BreadcrumbModule } from 'carbon-components-angular';
+
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
 	let fixture: ComponentFixture<LandingPageComponent>;
 
-	beforeEach(waitForAsync(() => {
+	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ LandingPageComponent ],
-			imports: [ CommonModule, GridModule, BreadcrumbModule, TabsModule, ButtonModule, HomeRoutingModule, RouterTestingModule]
+			imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule]
 		})
 		.compileComponents();
 	}));

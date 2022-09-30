@@ -10,5 +10,11 @@
   "exclude": [
     "src/test.ts",
     "src/**/*.spec.ts"
-  ]
+  ],
+  "lib": [
+    "es2016",
+    "dom",
+    "esnext.asynciterable"
+  ],
+  "allowSyntheticDefaultImports":true
 }

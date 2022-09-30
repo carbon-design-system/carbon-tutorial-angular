@@ -1,4 +1,4 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { UIShellModule } from 'carbon-components-angular';
@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
-	beforeEach(waitForAsync(() => {
+	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [
 				AppComponent,
@@ -14,12 +14,12 @@ describe('AppComponent', () => {
 			],
 			imports: [
 				RouterTestingModule,
-				UIShellModule
+				UIShellModule,
 			]
 		}).compileComponents();
 	}));
 
-	it('should create the app', waitForAsync(() => {
+	it('should create the app', async(() => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
