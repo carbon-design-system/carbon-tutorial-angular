@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-info-card',
@@ -6,19 +6,23 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./info-card.component.scss']
 })
 export class InfoCardComponent implements OnInit {
-	@Input() heading = '';
-	@Input() content = '';
-	splitHeading = [];
+	@Input() heading;
+	@Input() content;
+	splitHeading;
 
-	ngOnInit() {
+	constructor() {
+	}
+
+	ngOnInit(): void {
 		// create the split title to get bold styles
 		this.splitHeading = this.createArrayFromPhrase(this.heading);
 	}
 
 	// Take in a phrase and separate the third word in an array
-	createArrayFromPhrase(phrase) {
-		const splitPhrase = phrase.split(' ');
+	createArrayFromPhrase(phrase: string) {
+		const splitPhrase = phrase.split(" ");
 		const thirdWord = splitPhrase.pop();
-		return [splitPhrase.join(' '), thirdWord];
+		return [splitPhrase.join(" "), thirdWord];
 	}
+
 }

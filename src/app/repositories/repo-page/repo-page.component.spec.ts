@@ -1,25 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ApolloTestingModule } from 'apollo-angular/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RepoPageComponent } from './repo-page.component';
-import { GridModule, TableModule, PaginationModule } from 'carbon-components-angular';
-import { RepoTableComponent } from '../repo-table/repo-table.component';
+import { GridModule } from 'carbon-components-angular';
+import { Component } from "@angular/core";
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
 	let fixture: ComponentFixture<RepoPageComponent>;
 
-	beforeEach(async(() => {
+	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent, RepoTableComponent ],
+			declarations: [ RepoPageComponent, RepoTableMockComponent ],
 			imports: [
 				GridModule,
-				TableModule,
-				PaginationModule,
-				ApolloTestingModule
 			]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -32,3 +28,11 @@ describe('RepoPageComponent', () => {
 		expect(component).toBeTruthy();
 	});
 });
+
+@Component({
+	selector: 'app-repo-table',
+	template: '<p>whatever</p>'
+})
+class RepoTableMockComponent {
+
+}

@@ -6,7 +6,7 @@
 	position: relative;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		left: -$spacing-05;
 		top: 0;
@@ -33,7 +33,7 @@
 		@include carbon--font-weight("semibold");
 	}
 
-	app-info-card {
+	.app-info-card {
 		margin-top: $spacing-09;
 	}
 
