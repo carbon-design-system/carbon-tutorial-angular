@@ -17,7 +17,6 @@ exports.config = {
 	jasmineNodeOpts: {
 		showColors: true,
 		defaultTimeoutInterval: 30000,
-		print: function() {}
 	},
 	beforeLaunch: function() {
 		require('ts-node').register({
@@ -25,6 +24,10 @@ exports.config = {
 		});
 	},
 	onPrepare() {
-		jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+		jasmine.getEnv().addReporter(new SpecReporter({
+			spec: {
+				displayStacktrace: true
+			}
+		}));
 	}
 };

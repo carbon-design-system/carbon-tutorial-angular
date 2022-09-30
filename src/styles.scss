@@ -9,5 +9,9 @@ $feature-flags: (
 // $carbon--theme: $carbon--theme--g10;
 
 @import "~carbon-components/scss/globals/scss/styles";
-
 @import './assets/scss/carbon-overrides.scss';
+// @import "~carbon-components/scss/globals/scss/styles.scss";
+
+.bx--header__nav {
+	display: block;
+}

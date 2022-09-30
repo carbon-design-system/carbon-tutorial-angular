@@ -5,6 +5,8 @@
 		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
 		"lib": [
 			"es2016",
 			"dom",
@@ -14,7 +16,8 @@
 		"target": "es2015",
 		"module": "esnext",
 		"baseUrl": "",
-		"types": []
+		"types": [],
+		"resolveJsonModule": true
 	},
 	"include": [
 		"**/*"
