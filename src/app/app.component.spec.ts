@@ -1,8 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { UIShellModule } from 'carbon-components-angular';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { UIShellModule } from 'carbon-components-angular/ui-shell/ui-shell.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -23,11 +24,10 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-  
+
   it(`should have as title 'carbon-angular-tutorial'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('carbon-angular-tutorial');
   });
-  
 });
