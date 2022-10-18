@@ -1,0 +1,21 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"lib": [
+			"es2016",
+			"dom",
+			"esnext.asynciterable"
+		],
+		"outDir": "../out-tsc/app",
+		"target": "es2015",
+		"module": "esnext",
+		"types": []
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"src/test.ts",
+		"**/*.spec.ts"
+	]
+}
