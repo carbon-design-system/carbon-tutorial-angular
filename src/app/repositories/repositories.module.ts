@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { RepositoriesRoutingModule } from './repositories-routing.module';
 import { RepoPageComponent } from './repo-page/repo-page.component';
+import { GridModule, TableModule } from 'carbon-components-angular';
 
 @NgModule({
 	declarations: [RepoPageComponent],
 	imports: [
 		CommonModule,
-		RepositoriesRoutingModule
+		RepositoriesRoutingModule,
+		GridModule,
+		TableModule
 	]
 })
 export class RepositoriesModule { }
