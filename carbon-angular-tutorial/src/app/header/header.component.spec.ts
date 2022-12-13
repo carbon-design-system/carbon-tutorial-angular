@@ -9,11 +9,10 @@ describe('HeaderComponent', () => {
   let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [HeaderComponent],
       imports: [UIShellModule]
-    })
-    .compileComponents();
+    });
   });
 
   beforeEach(() => {

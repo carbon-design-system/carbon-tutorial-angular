@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.iconService.registerAll([Notification]);
+    this.iconService.registerAll([Notification20]);
   }
 
 }

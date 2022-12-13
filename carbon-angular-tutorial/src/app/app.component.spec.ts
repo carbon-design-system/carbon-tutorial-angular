@@ -6,10 +6,10 @@ import { HeaderComponent } from './header/header.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [UIShellModule],
-    }).compileComponents();
+      imports: [UIShellModule]
+    });
   });
 
   it('should create the app', () => {
