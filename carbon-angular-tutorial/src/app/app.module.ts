@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
 import { UIShellModule, IconModule } from 'carbon-components-angular';
+// import Notification from '@carbon/icons/es/notification';
+// import UserAvatar from '@carbon/icons/es/user--avatar';
+// import AppSwitcher from '@carbon/icons/es/app-switcher';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { UIShellModule, IconModule } from 'carbon-components-angular';
     BrowserModule,
     AppRoutingModule,
     UIShellModule,
-    IconModule
+    IconModule,
+    // Notification,
+    // UserAvatar,
+    // AppSwitcher
   ],
   providers: [],
   bootstrap: [AppComponent]
