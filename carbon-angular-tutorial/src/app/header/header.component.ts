@@ -2,7 +2,7 @@ import { Component, HostBinding } from '@angular/core';
 import { IconService } from "carbon-components-angular";
 import Notification20 from '@carbon/icons/es/notification/20';
 import UserAvatar20 from '@carbon/icons/es/user--avatar/20';
-import AppSwitcher20 from '@carbon/icons/es/switch-layer-2/20';
+import AppSwitcher20 from '@carbon/icons/es/switcher/20';
 
 
 @Component({
