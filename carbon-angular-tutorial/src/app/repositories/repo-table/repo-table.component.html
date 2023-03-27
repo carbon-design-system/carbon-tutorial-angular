@@ -3,9 +3,53 @@
       <h4 ibmTableHeaderTitle>Carbon Repositories</h4>
       <p ibmTableHeaderDescription>A collection of public Carbon repositories.</p>
   </ibm-table-header>
-  <ibm-table
-      [model]="model"
-      [showSelectionColumn]="false"
-      [striped]="false">
+  <ibm-table-toolbar [model]="model" #toolbar>
+      <ibm-table-toolbar-actions>
+          <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+              Delete
+              <ibm-icon-delete size="16" class="bx--btn__icon"></ibm-icon-delete>
+          </button>
+          <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+              Save
+              <ibm-icon-save size="16" class="bx--btn__icon"></ibm-icon-save>
+          </button>
+          <button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+              Download
+              <ibm-icon-download size="16" class="bx--btn__icon"></ibm-icon-download>
+          </button>
+      </ibm-table-toolbar-actions>
+      <ibm-table-toolbar-content *ngIf="!toolbar.selected">
+          <ibm-table-toolbar-search ngDefaultControl [expandable]="true" [(ngModel)]="searchModel">
+          </ibm-table-toolbar-search>
+          <ibm-overflow-menu triggerClass="bx--toolbar-action" placement="bottom">
+              <ibm-overflow-menu-option>Option 1</ibm-overflow-menu-option>
+              <ibm-overflow-menu-option>Option 2</ibm-overflow-menu-option>
+              <ibm-overflow-menu-option>Disabled</ibm-overflow-menu-option>
+              <ibm-overflow-menu-option type="danger">Danger option</ibm-overflow-menu-option>
+          </ibm-overflow-menu>
+          <button ibmButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
+              Primary button<ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
+          </button>
+      </ibm-table-toolbar-content>
+  </ibm-table-toolbar>
+  <ibm-table [skeleton]="skeleton" [model]="skeleton ? skeletonModel : model" [showSelectionColumn]="true">
   </ibm-table>
+  <ibm-pagination [model]="model" (selectPage)="selectPage($event)"></ibm-pagination>
 </ibm-table-container>
+
+<ng-template #linkTemplate let-data="data">
+  <ul style="display: flex">
+      <li>
+          <a ibmLink [href]="data.github">Github</a>
+      </li>
+      <li *ngIf="data.homepage">
+          <span>&nbsp;|&nbsp;</span>
+          <a ibmLink [href]="data.homepage">HomePage</a>
+      </li>
+  </ul>
+</ng-template>
+
+<ibm-panel [expanded]="showSidePanel">
+  <ibm-toggle [checked]="showSidePanel" (change)="toggleSideBarVisibility()">
+  </ibm-toggle>
+</ibm-panel>
