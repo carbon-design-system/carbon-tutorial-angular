@@ -10,6 +10,8 @@ import {
   TabsModule,
 } from 'carbon-components-angular';
 
+import { InfoModule } from "./../info/info.module";
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import {
     GridModule,
     ButtonModule,
     TabsModule,
+    InfoModule
   ]
 })
 export class HomeModule { }
