@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {
+  BreadcrumbModule,
+  GridModule,
+  ButtonModule,
+  TabsModule,
+} from 'carbon-components-angular';
 
 
 @NgModule({
@@ -11,7 +17,11 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    BreadcrumbModule,
+    GridModule,
+    ButtonModule,
+    TabsModule,
   ]
 })
 export class HomeModule { }

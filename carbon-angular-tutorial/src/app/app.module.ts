@@ -12,7 +12,11 @@ import { UIShellModule, IconModule } from 'carbon-components-angular';
 // import AppSwitcher20 from '@carbon/icons/es/app-switcher/20';
 // import { AddModule } from '@carbon/icons-angular';
 
-
+import {
+  NotificationModule,
+  UserAvatarModule,
+  AppSwitcherModule
+} from '@carbon/icons-angular';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import { UIShellModule, IconModule } from 'carbon-components-angular';
     AppRoutingModule,
     UIShellModule,
     IconModule,
+    NotificationModule,
+    UserAvatarModule,
+    AppSwitcherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

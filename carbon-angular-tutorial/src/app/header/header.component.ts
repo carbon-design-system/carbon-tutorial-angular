@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { IconService } from "carbon-components-angular";
-// import Notification20 from '@carbon/icons/es/notification/20';
 
 @Component({
   selector: 'app-header',
