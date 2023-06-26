@@ -7,11 +7,10 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
+@HostBinding('class.bx--header') headerClass = true;
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }
