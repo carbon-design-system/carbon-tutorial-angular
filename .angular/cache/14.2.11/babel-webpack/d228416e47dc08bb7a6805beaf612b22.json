@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { remove } from \"ts-invariant/process/index.js\";\nimport { Source } from 'graphql';\nexport function removeTemporaryGlobals() {\n  return typeof Source === \"function\" ? remove() : remove();\n} //# sourceMappingURL=fix-graphql.js.map","map":null,"metadata":{},"sourceType":"module"}

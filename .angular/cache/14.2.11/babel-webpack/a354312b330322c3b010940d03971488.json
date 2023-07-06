@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { ApolloLink } from \"./ApolloLink.js\";\nexport var split = ApolloLink.split; //# sourceMappingURL=split.js.map","map":null,"metadata":{},"sourceType":"module"}

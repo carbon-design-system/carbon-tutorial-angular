@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function invariant(condition, message) {\n  const booleanCondition = Boolean(condition);\n\n  if (!booleanCondition) {\n    throw new Error(message != null ? message : 'Unexpected invariant triggered.');\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

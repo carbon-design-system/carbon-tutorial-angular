@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function maybe(thunk) {\n  try {\n    return thunk();\n  } catch (_a) {}\n} //# sourceMappingURL=maybe.js.map","map":null,"metadata":{},"sourceType":"module"}
