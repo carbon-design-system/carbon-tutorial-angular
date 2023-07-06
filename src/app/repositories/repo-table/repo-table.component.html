@@ -6,6 +6,9 @@
 	<ibm-table [skeleton]="skeleton" [model]="skeleton ? skeletonModel : model" [showSelectionColumn]="false"
 		[striped]="false">
 	</ibm-table>
+	<ibm-pagination [model]="model" 
+	(selectPage)="selectPage($event)">
+	</ibm-pagination>
 </ibm-table-container>
 <ng-template #linkTemplate let-data="data">
 	<ul style="display: flex">
