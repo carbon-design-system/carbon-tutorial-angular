@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function isNonNullObject(obj) {\n  return obj !== null && typeof obj === 'object';\n} //# sourceMappingURL=objects.js.map","map":null,"metadata":{},"sourceType":"module"}

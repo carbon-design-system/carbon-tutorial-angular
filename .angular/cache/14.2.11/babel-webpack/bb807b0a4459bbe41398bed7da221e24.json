@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function toObjMap(obj) {\n  if (obj == null) {\n    return Object.create(null);\n  }\n\n  if (Object.getPrototypeOf(obj) === null) {\n    return obj;\n  }\n\n  const map = Object.create(null);\n\n  for (const [key, value] of Object.entries(obj)) {\n    map[key] = value;\n  }\n\n  return map;\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { ApolloLink } from \"./ApolloLink.js\";\nexport var empty = ApolloLink.empty; //# sourceMappingURL=empty.js.map","map":null,"metadata":{},"sourceType":"module"}

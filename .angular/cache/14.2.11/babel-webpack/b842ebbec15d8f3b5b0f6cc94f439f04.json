@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var throwServerError = function (response, result, message) {\n  var error = new Error(message);\n  error.name = 'ServerError';\n  error.response = response;\n  error.statusCode = response.status;\n  error.result = result;\n  throw error;\n}; //# sourceMappingURL=throwServerError.js.map","map":null,"metadata":{},"sourceType":"module"}

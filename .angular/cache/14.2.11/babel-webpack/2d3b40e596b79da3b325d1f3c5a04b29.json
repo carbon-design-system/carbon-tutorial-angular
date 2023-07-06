@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function asyncIterator(source) {\n  var _a;\n\n  var iterator = source[Symbol.asyncIterator]();\n  return _a = {\n    next: function () {\n      return iterator.next();\n    }\n  }, _a[Symbol.asyncIterator] = function () {\n    return this;\n  }, _a;\n} //# sourceMappingURL=async.js.map","map":null,"metadata":{},"sourceType":"module"}

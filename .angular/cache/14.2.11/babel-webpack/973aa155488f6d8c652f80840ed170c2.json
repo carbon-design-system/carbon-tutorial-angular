@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function devAssert(condition, message) {\n  const booleanCondition = Boolean(condition);\n\n  if (!booleanCondition) {\n    throw new Error(message);\n  }\n}","map":null,"metadata":{},"sourceType":"module"}
