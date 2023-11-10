@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { LandingPageComponent } from './landing-page.component';
+import { BreadcrumbModule, ButtonModule, GridModule, TabsModule } from 'carbon-components-angular';
+
+// @NgModule({
+// 	declarations: [LandingPageComponent],
+// 	imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule]
+//   })
+//   export class LandingPageModule {}
 
 describe('LandingPageComponent', () => {
 	let component: LandingPageComponent;
@@ -8,7 +17,8 @@ describe('LandingPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LandingPageComponent ]
+			declarations: [ LandingPageComponent ],
+			imports: [BreadcrumbModule, ButtonModule, GridModule, TabsModule]
 		})
 		.compileComponents();
 	}));
