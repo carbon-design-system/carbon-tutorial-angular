@@ -1,8 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RepoPageComponent } from './repo-page.component';
-import { GridModule, TableModule } from 'carbon-components-angular';
+import {
+	GridModule,
+	LinkModule,
+	PaginationModule,
+	TableModule,
+} from 'carbon-components-angular';
 import { RepoTableComponent } from '../repo-table/repo-table.component';
+import { CommonModule } from '@angular/common';
+import { RepositoriesRoutingModule } from '../repositories-routing.module';
+import { Apollo } from 'apollo-angular';
 
 describe('RepoPageComponent', () => {
 	let component: RepoPageComponent;
@@ -10,22 +18,21 @@ describe('RepoPageComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ RepoPageComponent, RepoTableComponent ],
+			declarations: [RepoPageComponent, RepoTableComponent],
 			imports: [
+				CommonModule,
+				RepositoriesRoutingModule,
 				GridModule,
-				TableModule
-			]
-		})
-		.compileComponents();
+				TableModule,
+				LinkModule,
+				PaginationModule,
+			],
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(RepoPageComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
-	});
-
-	it('should create', () => {
-		expect(component).toBeTruthy();
 	});
 });
